@@ -1,2 +1,680 @@
 // portfolio2.scss
 /* portfolio2.css */
+
+@import "../common/variable";
+@import "../common/mixin";
+
+// *{
+//   font-family: $font_family_en, $font_family_common;
+// }
+#wrap {
+  width: 100%;
+  height: auto;
+  min-height: 800px;
+  background-color: $color_white;
+  padding: 0 162px;
+}
+@include pc {
+
+  /* header */
+  #headBox {
+    width: 100%;
+    height: auto;
+    position: sticky;
+    top: 0;
+    box-sizing: border-box;
+    z-index: 1000;
+    padding-top: 20px;
+  }
+  .headinner {
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    box-sizing: border-box;
+    display: flex;
+    h1 {
+      width: 95%;
+      height: 100%;
+
+      & button {
+        width: 100%;
+        height: 100%;
+        margin: auto;
+        color: $color_point_blue;
+        font-family: $font_family_en;
+        font-size: map-get($map:$font_size , $key:pointtitle);
+        font-weight: $font_weight_semibold;
+        text-align: left;
+        text-transform: uppercase;
+        letter-spacing: map-get($map: $letter-spacing, $key: title);
+      }
+    }
+  }
+  .unb {
+    width: 5%;
+    height: 52px;
+    margin: auto;
+    padding-top: 20px;
+  }
+
+    /* slide menu button */
+    #check_box {
+      display: none;
+      
+      + label {
+        width: 40px;
+        height: 64%;
+        margin: auto;
+        display: block;
+        position: relative;
+        z-index: 100;
+        cursor: pointer;
+        
+        > span {
+          width: 100%;
+          height: 2px;
+          display: block;
+          position: absolute;
+          transition: all 300ms;
+          border-radius: 5px;
+          background: $color_point_blue;
+        }
+      }
+    }
+    &:checked + label > span:nth-child(1) {
+      top: 50%;
+      /* transform: translate(0, -50%); */
+      transform: rotate(45deg);
+
+    }
+
+    #check_box + label > span:nth-child(2) {
+      top: 50%;
+      transform: translate(0, -50%);
+    }
+    &:checked + label > span:nth-child(2) {
+      opacity: 0;
+    }
+
+    #check_box + label > span:nth-child(3) {
+      bottom: 0;
+    }
+    &:checked + label > span:nth-child(3) {
+      top: 50%;
+      /* transform: translate(0, -50%); */
+      transform: rotate(-45deg);
+      ::after {
+      }
+    }
+
+    #check_box:checked + label + #slide_menu {
+      left: 30%;
+
+    }
+
+    /* #slide_menu ------------------------------ */
+    #slide_menu {
+      width: 100%;
+      height: 100%;
+      padding: 70px 16px 70px 16px;
+      margin-bottom: 50px;
+      position: fixed;
+      top: 0px;
+      left: 100%;
+      box-sizing: border-box;
+      overflow: auto;
+      transition: all 300ms;
+      text-transform: uppercase;
+      z-index: 1;
+      background-color: rgba($color_point_blue, 0.9);
+    }
+    input[id*="slide_btn"] {
+      display: none;
+      + label {
+        width: auto;
+        display: block;
+        padding: 20px;
+        position: relative;
+        border-bottom: $line2;
+        font-family: $font_family_en;
+        font-size: map-get($map:$font_size, $key:content1);
+        font-weight: $font_weight_normal;
+        color: $color_white;
+        letter-spacing: map-get($map:$letter-spacing, $key:content);
+        cursor: pointer;
+
+        &:hover {
+          background-color: $color_white;
+          color: $color_black;
+          font-weight: $font_weight_normal;
+        }
+      }
+    }
+  
+    /* all scroll animation */
+    // .scroll {
+    //   opacity: 0;
+    //   transition: all .9s steps(20);
+    // }
+
+    #home{
+      width: 100%;
+      height: 95vh;
+      margin: auto;
+      padding: 83px 0 102px 0;
+      position: relative;
+      display:  flex;
+      justify-content: center;
+      align-items: center;
+
+      & h2 {
+        font-size: map-get($map: $font-size, $key: pointtitle);
+        font-weight: $font_weight_normal;
+        letter-spacing: map-get($map: $letter-spacing, $key: title);
+        text-transform: uppercase;
+        text-align: center;
+      }
+      & img {
+        display: block;
+        margin: auto;
+        width: 80%;
+        @include pcWidth(314, $pcPercent)
+      }
+      & p {
+        font-size: map-get($map: $font_size, $key: pointtitle);
+        font-weight: $font_weight_normal;
+        letter-spacing: map-get($map: $letter-spacing, $key: content);
+        text-align: center;
+        
+        span {
+          color: $color_point_blue;
+        }
+      }
+    }
+    #about {
+      @include sectionBasic;
+
+      & h3 {
+        @include h3;
+      }
+      & .about_inner{
+        display: flex;
+        flex-wrap: nowrap;
+      }
+      & .about_left {
+        width: 48%;
+        height: auto;
+        margin-right: 12%;
+        display: flex;
+        flex-wrap: wrap;
+
+        & .aspiration {
+          width: 100%;
+          height: auto;
+          margin-bottom: 20px;
+          & p {
+            width: 100%;
+            font-size: map-get($map: $font_size, $key: pointtitle);
+            font-weight: $font_weight_normal;
+            color: $color_point_blue;
+            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          }
+        }
+        & .introduce {
+          width: 100%;
+        }
+        & span {
+          font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_thin;
+          color: $color_black;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+        }
+      }
+      & .about_right {
+        width: 40%;
+        height: auto;
+        margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+
+        & .name {
+          width: 100%;
+          height: auto;
+
+          & p {
+            font-size: map-get($map: $font-size, $key: content1);
+            font-weight: $font_weight_bold;
+            line-height: 22px;
+            letter-spacing: map-get($map: $letter-spacing, $key: content);
+            color: $color_point_blue;
+
+            & span {
+              font-size: map-get($map: $font-size, $key: content1);
+              font-weight: $font_weight_thin;
+              letter-spacing: map-get($map: $letter-spacing, $key: content);
+              color: $color_black;
+            }
+          }
+        }
+
+        & .eduction {
+          width: 100%;
+          height: auto;
+          margin-top: 26px;
+
+          & span {
+            font-size: map-get($map: $font-size, $key: pointtitle);
+            font-weight: $font_weight_bold;
+            line-height: 22px;
+            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+            color: $color_point_blue;
+          }
+          & p {
+            font-size: map-get($map: $font-size, $key: content1);
+            font-weight: $font_weight_thin;
+            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+            color: $color_black;
+          }
+        }
+      }
+      & .about_button {
+        width: 42%;
+        height: 35px;
+        margin-top: 26px;
+        display: flex;
+        line-height: 35px;
+
+        & a:nth-child(1) {
+          width: 82px;
+          height: 30px;
+          margin-right: 15px;
+          background-color: $color_point_blue;
+          border-radius: 20px;
+          font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_normal;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          color: $color_white;
+          text-align: center;
+          line-height: 30px;
+
+          &:hover {
+            width: 78px;
+            height: 30px;
+            color: $color_black;
+            background-color: $color_white;
+            border: $line3;
+          }
+        }
+
+        & a:nth-child(2) {
+          width: 94px;
+          height: 30px;
+          background-color: $color_point_blue;
+          border-radius: 20px;
+          font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_normal;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          color: $color_white;
+          text-align: center;
+          line-height: 30px;
+
+          &:hover {
+            width: 90px;
+            height: 30px;
+            color: $color_black;
+            background-color: $color_white;
+            border: $line3;
+          }
+        }
+      }
+    }
+    #banner {
+      width: 100%;
+      height: auto;
+      margin: auto;
+      overflow: hidden;
+      @keyframes marquee {
+        0% {
+          -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          -webkit-transform: translate3d(-220%, 0, 0);
+          transform: translate3d(-220%, 0, 0);
+        }
+      }
+
+      p {
+        white-space: nowrap;
+        will-change: transform;
+        animation: marquee 20s linear infinite;
+        width: 100%;
+        padding: 1rem;
+        position: relative;
+        display: -webkit-box;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-transition: -webkit-transform var(--d) var(--e);
+        transition: -webkit-transform var(--d) var(--e);
+        transition: transform var(--d) var(--e);
+        transition: transform var(--d) var(--e),-webkit-transform var(--d) var(--e);
+        z-index: 1;
+        font-family: $font_family_en, $font_family_common;
+        font-size: map-get($map:$font-size, $key: banner);
+        font-weight: $font_weight_bolder;
+        text-transform: uppercase;
+        color: $color_white;
+        text-shadow: -3px 0 $color_point_blue, 0 3px $color_point_blue, 3px 0 $color_point_blue,
+        0 -3px $color_point_blue;
+        letter-spacing: map-get($map: $letter-spacing, $key: content);
+        
+        &:hover{
+          animation-play-state: paused;
+        }
+      }
+    }
+    #advantage {
+      @include sectionBasic;
+
+      & .advantage_inner {
+        display: flex;
+
+        & .advantage_left {
+          width: 40%;
+          height: auto;
+          margin-right: 4%;
+          
+          & h3 {
+            margin-top: 20px;
+            margin-right: 60px;
+            font-size: map-get($map: $font-size, $key: title);
+            font-weight: $font_weight_bold;
+            text-align: right;
+            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+            color: $color_point_blue;
+          }
+          
+          & .advantage_3d {
+            width: 44.804%;
+            height: 47.15%;
+            margin: 150px;
+            @include img ($advantageImg)
+          }
+        }
+        & .advantage_right {
+          width: 56%;
+          height: auto;
+          display: flex;
+          flex-wrap: wrap;
+
+          & .Aright_inner {
+            margin-top: 20px;
+            & p {
+              font-size: map-get($map: $font-size, $key: pointtitle);
+              font-weight: $font_weight_bold;
+              text-transform: capitalize;
+            }
+            & span {
+              font-size: map-get($map: $font-size, $key: content1);
+              font-weight: $font_weight_thin;
+              letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+            }
+          }
+        }
+        &::before {
+          content: '';
+          border: $line1;
+          position: relative;
+          left: 39%;
+        }
+      }
+    }
+    #skill {
+      width: 100%;
+      @include sectionBasic;
+      height: 640px;
+
+      & h3 {
+        @include h3
+      }
+    }
+    #project {
+      @include sectionBasic;
+
+      & h3 {
+        @include h3;
+      }
+
+      & .project_inner {
+        display: flex;
+        flex-wrap: wrap;
+
+        & .project_text {
+          width: 56%;
+          
+          & p {
+            width: 100%;
+            height: auto;
+          }
+          :nth-child(1) {
+            font-size: map-get($map: $font-size, $key: pointtitle);
+            font-weight: $font_weight_bold;
+            letter-spacing: map-get($map: $letter-spacing, $key: content);
+          }
+          :nth-child(2) {
+            line-height: 24px;
+            font-size: map-get($map: $font-size, $key: content1);
+            font-weight: $font_weight_thin;
+            letter-spacing: map-get($map: $letter-spacing, $key: content);
+          }
+          :nth-child(3) {
+            margin-top: 15px;
+            font-size: map-get($map: $font-size, $key: content1);
+            font-weight: $font_weight_thin;
+            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          }
+        }
+        & button {
+          width: 86px;
+          height: 30px;
+          margin-top: 40px;
+          font-size: map-get($map: $font-size, $key: content1);
+          font-weight: $font_weight_normal;
+          color: $color_white;
+          border-radius: 20px;
+          background-color: $color_point_blue;
+        }
+      }
+      & .ohou {
+        width: 100%;
+        height: 230px;
+        display: flex;
+        padding: 0 50px;
+
+        & .device_img {
+          @include device_img;
+          @include img(nth($projectImg, 1));
+        }
+      }
+      & .ediya {
+        @include project_flex;
+
+        & .device_img {
+          @include device_img;
+          @include img(nth($projectImg, 2));
+        }
+      }
+      & .portfolio1 {
+        @include project_flex;
+
+        & .device_img {
+          @include device_img;
+          @include img(nth($projectImg, 3));
+        }
+      }
+      & .interactive {
+        @include project_flex;
+
+        & .device_img {
+          width: 27.756%;
+          height: 100%;
+          margin: auto;
+          margin-right: 110px;
+          @include img(nth($projectImg, 4));
+        }
+      }
+      & .portfolio2 {
+        @include project_flex;
+
+        & .device_img {
+          @include device_img;
+          @include img(nth($projectImg, 1));
+        }
+      }
+    }
+    #clone {
+      @include sectionBasic;
+
+      & h3 {
+        @include h3;
+      }
+
+      & .clone_inner {
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-auto-flow: column;
+        grid-gap: 90px;
+      }
+      & a {
+        width: 100%;
+        height: 100%;
+        display: block;
+      }
+      & p {
+        margin-top: 42px;
+        font-size: map-get($map: $font-size, $key: content1);
+        font-weight: $font_weight_thin;
+        text-align: center;
+      }
+      & span {
+        margin-top: 20px;
+        display: block;
+        font-size: map-get($map: $font-size, $key: pointtitle);
+        font-weight: $font_weight_semibold;
+        text-align: center;
+        color: $color_point_blue;
+      }
+
+      & .coupang {
+        width: 214px;
+        height: 214px;
+        margin: auto;
+        border-radius: 50%;
+        border: $line4;
+      
+        & img {
+          @include cloneImg;
+          top: 45%;
+          left: 15%;
+        }
+      }
+      & .naver {
+        width: 214px;
+        height: 214px;
+        margin: auto;
+        border-radius: 50%;
+        border: $line4;
+      
+        & img {
+          @include cloneImg;
+          top: 45%;
+          left: 17%;
+        }
+      }
+      & .google {
+        width: 214px;
+        height: 214px;
+        margin: auto;
+        border-radius: 50%;
+        border: $line4;
+      
+        & img {
+          @include cloneImg;
+          top: 41%;
+          left: 15%;
+        }
+      }
+      & .spotify {
+        width: 214px;
+        height: 214px;
+        margin: auto;
+        border-radius: 50%;
+        border: $line4;
+        background-color: $color_black;
+        
+        & img {
+          @include cloneImg;
+          top: 41%;
+          left: 17%;
+        }
+      }
+      & .small_text {
+        display: block;
+        width: 90%;
+        margin: auto;
+        margin-top: 70px;
+        font-size: 14px;
+        text-align: right;
+        color: #777;
+      }
+    }
+
+    #contact {
+      @include sectionBasic;
+      padding-bottom: 180px;
+
+      & .email_border::after {
+        content: '';
+        width: 0;
+        height: 126px;
+        margin: auto;
+        margin-bottom: 54px;
+        border: $line4;
+        align-items: center;
+        display: flex;
+      }
+
+      & ul {
+        margin-bottom: 50px;
+        line-height: 35px;
+        
+        & li {
+          font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_normal;
+          text-align: center;
+        }
+      }
+      & .email {
+        margin-top: 70px;
+        text-align: center;
+
+        & a {
+          font-size: map-get($map: $font-size, $key: contactemail);
+          font-weight: $font_weight_bold;
+          letter-spacing: map-get($map: $letter-spacing, $key: content);
+          color: $color_point_blue;
+        }
+      }
+    }
+    .capyright p {
+      font-size: map-get($map: $font-size, $key: content1);
+      font-weight: 300;
+      text-align: center;
+    }
+  }
+

@@ -30,8 +30,8 @@
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard.css" crossorigin>
   
-  <link rel="stylesheet" href="../css/common/reset.css">
-  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/reset.css">
+  <link rel="stylesheet" href="../css/src/common.css">
   <link rel="stylesheet" href="../css/src/portfolio2.css">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -92,7 +92,7 @@
               </label>
               <input type="checkbox" id="slide_btn04">
               <label for="slide_btn04">
-                <a href="#skill">advantage</a>
+                <a href="#skill">skill</a>
               </label>
               <input type="checkbox" id="slide_btn05">
               <label for="slide_btn05">
@@ -113,80 +113,249 @@
     </header>
     <main>
       <section id="home">
-        <p>oh - hyuna</p>
+        <h2>oh - hyuna</h2>
         <img src="../img/main_image.jpg" alt="오현아 인물사진">
         <p><span>오</span>늘도 <span>현</span>명하고 <span>아</span>름답게</p>
       </section>
       <section id="about">
         <h3>about</h3>
+        <div class="about_inner">
+          <div class="about_left">
+            <div class="aspiration">
+              <p>오늘보다 현명하고 아름다운 내일을 추구하는
+                퍼블리셔 오현아입니다.</p>
+            </div>
+            <div class="introduce">
+              <span>
+                퍼블리셔로서 능력을 함양하기 위해 개발 훈련 과정인 [UI&UX 프론트엔드_react.js] 과정을 수료 후 독학으로 sass와 react를 공부했습니다. <br>
+                향후에는 워드프레스, PHP 공부 계획과 정보처리사 자격증, SQLD 자격증 취득하여 약 4년 뒤 프론트엔드 개발자를 꿈꾸고 있습니다. <br>
+                퍼블리셔 공부를 하면서 이제는 현장에 직접 뛰어들어 경험을 쌓아 실전 능력을 키우고자는 했습니다. 그러나 저의 발전을 위해 귀사의 도움을 받는 것이 아닌 귀사에 도움이 되기 위해 공부하고 노력하여 끝엔 성장해있는 퍼블리셔가 되고 싶습니다.<br>
+                비서로 일하며 키운 커뮤니케이션 능력과 발전하고자 하는 열정, 침착함과 꼼꼼함으로 귀사의 성장에 도움을 주는 퍼블리셔가 되겠습니다.
+              </span>
+            </div>
+          </div>
+          <div class="about_right">
+            <div class="name">
+              <p>name <span>오현아</span></p>
+              <p>birth date <span>1999.03.23</span></p>
+              <p>phone number <span>010.6481.5231</span></p>
+              <p>e-mail <span>gusdk99323@gmail.com</span></p>
+            </div>
+            <div class="eduction">
+              <span>education</span>
+              <p>2021. 02 대림대학교 비서사무행정과 졸업</p>
+              <p>2018. 02 동안고등학교 졸업</p>
+              <span>work</span>
+              <p>2021. 09 - 2022. 01 UI&UX 프론트엔드_react.js 과정 수료</p>
+              <p>2021. 05 - 2022. 08 (주) 이지놈 인턴</p>
+            </div>
+            <div class="about_button">
+              <a href="../download/publisher.pdf" download="[퍼블리셔]자기소개서_오현아">이력서</a>
+              <a href="https://github.com/hyuna323">github</a>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="banner">
         <h3 class="blind">banner</h3>
-        <p>I'll show you Oh Hyuna's ability. Scroll down right now</p>
+        <p>I'll show you Oh Hyuna's ability. Scroll right now!!</p>
       </section>
       <section id="advantage">
-        <h3 class="advantage_title">제 장점은요-!</h3>
-        <div class="advantage_3d"></div>
-        <div class="basic_coding">
-          <p>✔️Basic Coding</p>
-          <span>웹 표준을 준수하고 시맨틱마크업을 사용하여 접근성을 향상 시키고 검색엔진 최적화(SEO)하여 효율적인 마크업을 합니다.</span>
-        </div>
-        <div class="basic_skill">
-          <p>✔️Basic Skill</p>
-          <span>HTML과 CSS를 오랜 시간 공부하여 지식이 풍부하고 미디어쿼리를 다룰 줄 알아 반응형에도 능숙한 실력을 갖고 있습니다.</span>
-        </div>
-        <div class="Steady_Study">
-          <p>✔️Steady Study</p>
-          <span>생산성 있는 코드와 협업 그리고 다양한 시도를 위해 javascript, sass, react, git 등을 꾸준히 공부하고 있습니다.</span>
-        </div>
-        <div class="Good_Communication">
-          <p>✔️Good Communication</p>
-          <span>비서사무행정과를 전공하며 배운 커뮤니케이션 능력으로 다양한 사람들과 원활한 의사소통을 합니다.</span>
-        </div>
-        <div class="For_theUser">
-          <p>✔️For the User</p>
-          <span>사용자를 위한 웹 페이지를 제작하기 위해 가독성과 필요한 정보를 빠르게 얻을 수 있도록 노력하며 동시에 디자인을 헤치지 않기 위해 노력합니다.</span>
+        <div class="advantage_inner">
+          <div class="advantage_left">
+            <h3>제 장점은요-!</h3>
+            <div class="advantage_3d"></div>
+          </div>
+          <div class="advantage_right">
+            <div class="Aright_inner">
+              <p>✔️ basic coding</p>
+              <span>웹 표준을 준수하고 시맨틱마크업을 사용하여 접근성을 향상 시키고 검색엔진 최적화(SEO)하여 효율적인 마크업을 합니다.</span>
+            </div>
+            <div class="Aright_inner">
+              <p>✔️ basic skill</p>
+              <span>HTML과 CSS를 오랜 시간 공부하여 지식이 풍부하고 미디어쿼리를 다룰 줄 알아 반응형에도 능숙한 실력을 갖고 있습니다.</span>
+            </div>
+            <div class="Aright_inner">
+              <p>✔️ steady study</p>
+              <span>생산성 있는 코드와 협업 그리고 다양한 시도를 위해 javascript, sass, react, git 등을 꾸준히 공부하고 있습니다.</span>
+            </div>
+            <div class="Aright_inner">
+              <p>✔️ good communication</p>
+              <span>비서사무행정과를 전공하며 배운 커뮤니케이션 능력으로 다양한 사람들과 원활한 의사소통을 합니다.</span>
+            </div>
+            <div class="Aright_inner">
+              <p>✔️ for the user</p>
+              <span>사용자를 위한 웹 페이지를 제작하기 위해 가독성과 필요한 정보를 빠르게 얻을 수 있도록 노력하며 동시에 디자인을 헤치지 않기 위해 노력합니다.</span>
+            </div>
+          </div>
         </div>
       </section>
       <section id="skill">
         <h3>skill</h3>
+        <div class="html">
+          <div class="skill_img"></div>
+          <div class="skill_text">
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="css">
+          <div class="skill_img"></div>
+          <div class="skill_text">
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="sass">
+          <div class="skill_img"></div>
+          <div class="skill_text">
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="javascript">
+          <div class="skill_img"></div>
+          <div class="skill_text">
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="figma">
+          <div class="skill_img"></div>
+          <div class="skill_text">
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="react">
+          <div class="skill_img"></div>
+          <div class="skill_text">
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
+        <div class="git">
+          <div class="skill_img"></div>
+          <div class="skill_text">
+            <ul>
+              <li></li>
+              <li></li>
+            </ul>
+          </div>
+        </div>
       </section>
       <section id="project">
         <h3>project</h3>
+        <div class="project_inner">
+          <div class="ohou">
+            <div class="device_img"></div>
+            <div class="project_text">
+              <p>오늘의집</p>
+              <p>#반응형 #웹표준</p>
+              <p>첫번째 프로젝트로 학원 수업 들으며 배운 내용을 반영하며 제작한 페이지로 미흡한 점이 보이지만 초반에 제작한 만큼 최대한 웹 표준을 준수하고 짜임새 있게 만들었습니다.</p>
+              <button class="btn" onclick="ohouplan()">plan</button>
+              <button class="web_btn" onclick="ohou()">web</button>
+            </div>
+          </div>
+          <div class="ediya">
+            <div class="device_img"></div>
+            <div class="project_text">
+              <p>이디야</p>
+              <p>#반응형 #웹표준 #데이터최소화</p>
+              <p>혼자 독학하면서 만든 프로젝트로 디자인적면에서 좀 더 신경 쓰고 페이지 로드 속도를 빠르게 하기 위해 데이터 낭비를 최소화하고자 노력했습니다.</p>
+              <button class="btn" onclick="ediyaplan()">plan</button>
+              <button class="web_btn" onclick="ediya()">web</button>
+            </div>
+          </div>
+          <div class="portfolio1">
+            <div class="device_img"></div>
+            <div class="project_text">
+              <p>portfolio ver.1</p>
+              <p>#반응형 #웹표준 #가독성</p>
+              <p>처음으로 만든 포트폴리오로 필요한 정보만 빠르게 제공하고자 하였고  깔끔하게 제작하며 지루하지 않게 중간에 scrollmagic을 사용했습니다. 그 외에도 파비콘 로고를 직접 제작하는 등의 노력을 기울였습니다.</p>
+              <button class="btn" onclick="portfoilo1plan()">plan</button>
+              <button class="web_btn" onclick="portfolio1()">web</button>
+            </div>
+          </div>
+          <div class="interactive">
+            <div class="device_img"></div>
+            <div class="project_text">
+              <p>learning interactive</p>
+              <p>#interactive #pc최적화</p>
+              <p>인터렉티브한 페이지 만들기 교재를 읽으며 공부하다 직접 만들며 공부하고 싶어 만들었습니다.</p>
+              <button class="btn" onclick="interactiveplan()">plan</button>
+              <button class="web_btn" onclick="interactive()">web</button>
+            </div>
+          </div>
+          <div class="portfolio2">
+            <div class="device_img"></div>
+            <div class="project_text">
+              <p>portfolio ver.2</p>
+              <p>#sass #반응형 #웹표준 #다양한기술사용</p>
+              <p>첫번째 프로젝트로 학원 수업 들으며 배운 내용을 반영하며 제작한 페이지로 미흡한 점이 보이지만 초반에 제작한 만큼 최대한 웹 표준을 준수하고 짜임새 있게 만들었습니다.</p>
+              <button class="btn" onclick="portfolio2plan()">plan</button>
+              <button class="web_btn" onclick="portfolio2()">web</button>
+            </div>
+          </div>
+        </div>
       </section>
       <section id="clone">
         <h3>clone</h3>
-        <div class="coupang">
-          <a href="https://hyuna323.github.io/clone_coupang/html/01_coupang_clone.html" target="_blank">
-            <img src="../img/cupang_logo.png" alt="쿠팡 로고">
-          </a>
-          <span>로그인 페이지</span>
-          <span>쿠팡</span>
+        <div class="clone_inner">
+          <div class="clone_item">
+            <div class="coupang">
+              <a href="https://hyuna323.github.io/clone_coupang/html/01_coupang_clone.html" target="_blank">
+                <img src="../img/cupang_logo.png" alt="쿠팡 로고">
+              </a>
+            </div>
+            <p>로그인 페이지</p>
+            <span>쿠팡</span>
+          </div>
+          <div class="clone_item">
+            <div class="naver">
+              <a href="https://hyuna323.github.io/clone_naver/html/01_naver_clone.html" target="_blank">
+                <img src="../img/naver_logo.png" alt="네이버 로고">
+              </a>
+            </div>
+            <p>회원가입 페이지</p>
+            <span>네이버</span>
+          </div>
+          <div class="clone_item">
+            <div class="google">
+              <a href="https://hyuna323.github.io/clone_google/html/01_google_clone.html" target="_blank">
+                <img src="../img/google_logo.png" alt="구글 로고">
+              </a>
+            </div>
+            <p>로그인 페이지</p>
+            <span>구글</span>
+          </div>
+          <div class="clone_item">
+            <div class="spotify">
+              <a href="https://hyuna323.github.io/clone_spotify/html/01_spotify_clone.html" target="_blank">
+                <img src="../img/Spotify_logo.png" alt="스포티파이 로고">
+              </a>
+            </div>
+            <p>메인 페이지</p>
+            <span>스포티파이</span>
+          </div>
         </div>
-        <div class="naver">
-          <a href="https://hyuna323.github.io/clone_naver/html/01_naver_clone.html" target="_blank">
-            <img src="../img/naver_logo.png" alt="네이버 로고">
-          </a>
-          <span>회원가입 페이지</span>
-          <span>네이버</span>
-        </div>
-        <div class="google">
-          <a href="https://hyuna323.github.io/clone_google/html/01_google_clone.html" target="_blank">
-            <img src="../img/google_logo.png" alt="구글 로고">
-          </a>
-          <span>로그인 페이지</span>
-          <span>구글</span>
-        </div>
-        <div class="spotify">
-          <a href="https://hyuna323.github.io/clone_spotify/html/01_spotify_clone.html" target="_blank">
-            <img src="../img/Spotify_logo.png" alt="스포티파이 로고">
-          </a>
-          <span>메인 페이지</span>
-          <span>스포티파이</span>
-        </div>
+        <p class="small_text">*모든 클론 코딩은 pc size 기준으로 제작되었습니다&#46;</p>
       </section>
       <section id="contact">
         <h3 class="blind">contact</h3>
+        <div class="email_border"></div>
         <div class="contact_text">
           <ul>
             <li>부족한 제 포트폴리오를 끝까지 봐주셔서 감사합니다&#46;</li>

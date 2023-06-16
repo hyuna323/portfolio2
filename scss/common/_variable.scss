@@ -1,0 +1,52 @@
+// variable.scss
+
+// color =========================
+$color_down_black: #282C37;
+$color_point_blue: #2B90D9;
+$color_black: #000;
+$color_white: #fff;
+$color_html: #E34F26;
+$color_css: #1572B6;
+$color_sass: #CC6699;
+$color_javascript: #F7DF1E;
+$color_figma: #F24E1E;
+$color_react: #61DAFB;
+$color_github: #F05032;
+// ================================
+// border 
+$line1 : 1px solid $color_black;
+$line2 : 1px solid $color_white;
+$line3 : 2px solid $color_point_blue;
+$line4 : 5px solid $color_point_blue;
+
+// font ===========================
+$font_family_en: "Montserrat", "noto sans KR";
+$font_family_kr: "Montserrat", "noto sans KR";
+$font_family_common: sans-serif;
+$font_weight_thin: 400;
+$font_weight_normal: 500;
+$font_weight_semibold: 600;
+$font_weight_bold: 700;
+$font_weight_bolder: 800;
+$font_weight: (400, 500, 600, 700, 800);
+
+$font_size:(
+  title: 30px, pointtitle: 20px, banner: 128px,
+  content1: 15px, pointContent2: 33px, contactemail: 62px);
+
+$letter-spacing: (
+  title: 0.7em, content: 0.3em, content_kr: 0.1em );
+// device size ================================
+$mobile: 320px;
+$tablet: 600px;
+$laptop: 1024px;
+$pc: 1440px;
+$pcfull: 1920px;
+
+// width, height
+// $width100: 100%;
+// $auto: auto;
+// $displayflex: flex;
+// $box-sizing: border-box;
+
+

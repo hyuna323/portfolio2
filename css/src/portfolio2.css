@@ -392,10 +392,8 @@
   }
   #skill {
     width: 100%;
-    width: 100%;
     height: auto;
     padding: 50px 0;
-    height: 640px;
   }
   #skill h3 {
     width: 100%;
@@ -406,6 +404,102 @@
     letter-spacing: 0.3em;
     text-align: center;
     color: #2B90D9;
+  }
+  #skill .charts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  #skill .charts .chart {
+    width: 79%;
+    margin: 0 20px;
+    position: relative;
+  }
+  #skill .charts .chart h4 {
+    position: absolute;
+    left: 50%;
+    top: 72%;
+    transform: translate(-50%, -50%);
+  }
+  #skill .charts .chart .svg_img {
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 20%;
+    left: 28%;
+  }
+  #skill .charts .chart svg {
+    width: 150px;
+    height: 150px;
+  }
+  #skill .charts .chart svg circle {
+    fill: #dedede;
+    stroke-width: 20;
+    stroke-dasharray: 409;
+    stroke-dashoffset: 409;
+    animation: line 2s forwards;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+    stroke-linecap: round;
+  }
+  #skill .charts .charts_inner1 {
+    width: 17%;
+    display: grid;
+    gap: 15px;
+  }
+  #skill .charts .charts_inner1 .chart:nth-child(1) circle {
+    stroke: #E34F26;
+  }
+  #skill .charts .charts_inner1 .chart:nth-child(2) circle {
+    stroke: #1572B6;
+  }
+  #skill .charts .charts_inner1 .chart:nth-child(3) circle {
+    stroke: #CC6699;
+  }
+  #skill .charts .charts_inner1 .chart:nth-child(4) circle {
+    stroke: #F7DF1E;
+  }
+  #skill .charts .chart_text1, #skill .charts .chart_text2 {
+    width: 33%;
+    display: grid;
+    gap: 15px;
+  }
+  #skill .charts .chart_text1 .chart_text, #skill .charts .chart_text2 .chart_text {
+    margin: 20px;
+    line-height: 30px;
+  }
+  #skill .charts .chart_text1 p, #skill .charts .chart_text2 p {
+    font-size: 15px;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+  }
+  #skill .charts .chart_text1 p:nth-child(1), #skill .charts .chart_text2 p:nth-child(1) {
+    font-size: 20px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    color: #2B90D9;
+  }
+  #skill .charts .charts_inner2 {
+    width: 17%;
+    display: grid;
+    gap: 15px;
+  }
+  #skill .charts .charts_inner2 .chart:nth-child(1) circle {
+    stroke: #F24E1E;
+  }
+  #skill .charts .charts_inner2 .chart:nth-child(2) circle {
+    stroke: #61DAFB;
+  }
+  #skill .charts .charts_inner2 .chart:nth-child(3) circle {
+    stroke: #F05032;
+  }
+  #skill .charts .chart_bin {
+    width: 150px;
+    height: 150px;
+  }
+  #skill .charts .chart_text_bin {
+    height: 117px;
+    border: 1px solid #fff;
   }
   #project {
     width: 100%;

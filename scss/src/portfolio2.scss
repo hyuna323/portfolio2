@@ -434,13 +434,147 @@
       }
     }
     #skill {
-      width: 100%;
       @include sectionBasic;
-      height: 640px;
 
       & h3 {
         @include h3
       }
+
+      & .charts {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        & .chart {
+          width: 79%;
+          margin: 0 20px;
+          position: relative;
+
+          & h4 {
+            position: absolute;
+            left: 50%;
+            top: 72%;
+            transform: translate(-50%, -50%);
+          }
+
+          & .svg_img {
+            width: 64px;
+            height: 64px;
+            position: absolute;
+            top: 20%;
+            left: 28%;
+          }
+          & svg {
+            width: 150px;
+            height: 150px;
+
+            & circle {
+              fill: #dedede;
+              stroke-width: 20;
+              stroke-dasharray: 409;
+              stroke-dashoffset: 409;
+              animation: line 2s forwards;
+              transform: rotate(-90deg);
+              transform-origin: 50% 50%;
+              stroke-linecap: round;
+            }
+          }
+
+
+        }
+        & .charts_inner1 {
+          width: 17%;
+          display: grid;
+          gap: 15px;
+
+          & .chart:nth-child(1) circle {
+            stroke: $color_html;
+          }
+          & .chart:nth-child(2) circle {
+            stroke: $color_css;
+          }
+          & .chart:nth-child(3) circle {
+            stroke: $color_sass;
+          }
+          & .chart:nth-child(4) circle {
+            stroke: $color_javascript;
+          }
+        }
+
+        & .chart_text1, .chart_text2 {
+          width: 33%;
+          display: grid;
+          gap: 15px;
+
+          & .chart_text {
+            margin: 20px;
+            line-height: 30px;
+          }
+
+          & p {
+            font-size: map-get($map: $font-size, $key: content1);
+            font-weight: $font_weight_thin;
+            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          }
+          & p:nth-child(1) {
+            font-size: map-get($map: $font-size, $key: pointtitle);
+            font-weight: $font_weight_normal;
+            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+            color: $color_point_blue;
+          }
+        }
+        & .charts_inner2 {
+          width: 17%;
+          display: grid;
+          gap: 15px;
+
+          & .chart:nth-child(1) circle {
+            stroke: $color_figma;
+          }
+          & .chart:nth-child(2) circle {
+            stroke: $color_react;
+          }
+          & .chart:nth-child(3) circle {
+            stroke: $color_github;
+          }
+        }
+        .chart_bin {
+          width: 150px;
+          height: 150px;
+        }
+        .chart_text_bin {
+          height: 117px;
+          border: $line2;
+        }
+      }
+      // & .skill_inner {
+      //   display: flex;
+      //   gap: 15px;
+      //   margin-bottom: 20px;
+      // }
+      // & .html {
+      //   position: relative;
+      //   display: inline-block;
+      //   width: 150px;
+      //   height: 150px;
+      //   border-radius: 50%;
+      //   transition: 0.3s;
+      // }
+      // & .htm_skill{
+      //   display: block;
+      //   background: #fff;
+      //   position: relative;
+      //   top: 50%;
+      //   left: 50%;
+      //   width: 120px;
+      //   height: 120px;
+      //   border-radius: 50%;
+      //   text-align: center;
+      //   line-height: 40px;
+      //   font-size: 15px;
+      //   transform: translate(-50%, -50%);
+
+      // }
     }
     #project {
       @include sectionBasic;

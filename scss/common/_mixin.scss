@@ -69,31 +69,6 @@ $projectImg: 'ohou_mockup.png', 'ediya_mockup.png', 'portfolio1_mockup.png', 'in
   position: relative;
 }
 
-$mobilePercent: 320;
-$tabletPercent: 680;
-$laptopPercent: 1280;
-$pcPercent:1440;
-$pcfullPercent: 1920;
-
-@mixin mobileWidth ($width, $mobilePercent){
-  width: (($width/$mobilePercent)*100) + %;
-}
-
-@mixin tabletWidth ($width, $tabletPercent){
-  width: (($width/$tabletPercent)*100) + %;
-}
-
-@mixin laptopWidth ($width, $laptopPercent){
-  width: (($width/$laptopPercent)*100) + %;
-}
-
-@mixin pcWidth ($width, $pcPercent){
-  width: (($width/$pcPercent)*100) + %;
-}
-
-@mixin pcfullWidth ($width, $pcfullPercent){
-  width: (($width/$pcfullPercent)*100) + %;
-}
 
 // @media query --------------------------------------
 $mobile : 320px;

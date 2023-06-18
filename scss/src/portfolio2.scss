@@ -161,7 +161,7 @@
       width: 100%;
       height: 95vh;
       margin: auto;
-      padding: 83px 0 102px 0;
+      padding: 83px 0 145px 0;
       position: relative;
       display:  flex;
       justify-content: center;
@@ -177,8 +177,7 @@
       & img {
         display: block;
         margin: auto;
-        width: 80%;
-        @include pcWidth(314, $pcPercent)
+        width: 21.8056%;
       }
       & p {
         font-size: map-get($map: $font_size, $key: pointtitle);
@@ -547,34 +546,6 @@
           border: $line2;
         }
       }
-      // & .skill_inner {
-      //   display: flex;
-      //   gap: 15px;
-      //   margin-bottom: 20px;
-      // }
-      // & .html {
-      //   position: relative;
-      //   display: inline-block;
-      //   width: 150px;
-      //   height: 150px;
-      //   border-radius: 50%;
-      //   transition: 0.3s;
-      // }
-      // & .htm_skill{
-      //   display: block;
-      //   background: #fff;
-      //   position: relative;
-      //   top: 50%;
-      //   left: 50%;
-      //   width: 120px;
-      //   height: 120px;
-      //   border-radius: 50%;
-      //   text-align: center;
-      //   line-height: 40px;
-      //   font-size: 15px;
-      //   transform: translate(-50%, -50%);
-
-      // }
     }
     #project {
       @include sectionBasic;
@@ -621,6 +592,12 @@
           color: $color_white;
           border-radius: 20px;
           background-color: $color_point_blue;
+
+          &:hover {
+            color: $color_black;
+            background-color: $color_white;
+            border: $line3;
+          }
         }
       }
       & .ohou {
@@ -688,6 +665,17 @@
         width: 100%;
         height: 100%;
         display: block;
+
+        &:hover {
+          width: 210px;
+          height: 210px;
+          position: relative;
+          top: -1px;
+          left: -1px;
+          color: $color_black;
+          box-shadow: inset -3px 3px 20px rgba($color_point_blue, 0.6);
+          border-radius: 50%;
+        }
       }
       & p {
         margin-top: 42px;
@@ -710,11 +698,24 @@
         margin: auto;
         border-radius: 50%;
         border: $line4;
+        transform: matrix(1,0,0,1,0,10);
+
+      &.clone {
+          opacity: 0;
+          text-align: center;
+          box-shadow: 3px 14px 30px #ddd;
+          transition: all 0.5s;
+        }
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 0.5s;
+        }
+
       
         & img {
           @include cloneImg;
           top: 45%;
-          left: 15%;
         }
       }
       & .naver {
@@ -723,11 +724,23 @@
         margin: auto;
         border-radius: 50%;
         border: $line4;
+        transform: matrix(1,0,0,1,0,40);
+
+        &.clone {
+          opacity: 0;
+          text-align: center;
+          box-shadow: 3px 14px 30px #ddd;
+          transition: all 0.5s;
+        }
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 0.5s;
+        }
       
         & img {
           @include cloneImg;
           top: 45%;
-          left: 17%;
         }
       }
       & .google {
@@ -736,11 +749,25 @@
         margin: auto;
         border-radius: 50%;
         border: $line4;
+        transform: matrix(1,0,0,1,0,70);
+
+        &.clone {
+          opacity: 0;
+          text-align: center;
+          box-shadow: 3px 14px 30px #ddd;
+          transition: all 0.5s;
+        }
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 0.5s;
+        }
       
         & img {
           @include cloneImg;
           top: 41%;
-          left: 15%;
+          background-color: $color_white;
+          border-radius: 10px;
         }
       }
       & .spotify {
@@ -749,12 +776,23 @@
         margin: auto;
         border-radius: 50%;
         border: $line4;
-        background-color: $color_black;
+        transform: matrix(1,0,0,1,0,100);
+
+        &.clone {
+          opacity: 0;
+          text-align: center;
+          box-shadow: 3px 14px 30px #ddd;
+          transition: all 0.5s;
+        }
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 0.5s;
+        }
         
         & img {
           @include cloneImg;
           top: 41%;
-          left: 17%;
         }
       }
       & .small_text {

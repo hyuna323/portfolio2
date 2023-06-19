@@ -30,9 +30,17 @@ $font_weight_bold: 700;
 $font_weight_bolder: 800;
 $font_weight: (400, 500, 600, 700, 800);
 
+$font_size_m:(
+  title: 25px, pointtitle: 15px, banner: 90px,
+  content1: 14px, pointContent2: 30px, contactemail: 42px);
+
 $font_size:(
   title: 30px, pointtitle: 20px, banner: 128px,
   content1: 15px, pointContent2: 33px, contactemail: 62px);
+
+$font_size_pcFull:(
+  title: 35px, pointtitle: 24px, banner: 140px,
+  content1: 17px, pointContent2: 35px, contactemail: 64px);
 
 $letter-spacing: (
   title: 0.7em, content: 0.3em, content_kr: 0.1em );

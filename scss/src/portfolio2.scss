@@ -4,63 +4,68 @@
 @import "../common/variable";
 @import "../common/mixin";
 
-// *{
+// {
 //   font-family: $font_family_en, $font_family_common;
 // }
-#wrap {
-  width: 100%;
-  height: auto;
-  min-height: 800px;
-  background-color: $color_white;
-  padding: 0 162px;
-}
-@include pc {
-
-  /* header */
-  #headBox {
+  #wrap {
     width: 100%;
     height: auto;
-    position: sticky;
-    top: 0;
-    box-sizing: border-box;
-    z-index: 1000;
-    padding-top: 20px;
-  }
-  .headinner {
-    width: 100%;
-    height: 100%;
+    min-height: 800px;
     margin: auto;
-    box-sizing: border-box;
-    display: flex;
-    h1 {
-      width: 95%;
+    background-color: $color_white;
+    padding: 0 162px;
+    @include tablet {
+      padding: 34px;
+    }
+    @include laptop {
+      padding: 0 100px;
+    }
+    
+    /* header */
+    #headBox {
+      width: 100%;
+      height: auto;
+      position: sticky;
+      top: 0;
+      box-sizing: border-box;
+      z-index: 1000;
+      padding-top: 20px;
+    }
+    .headinner {
+      width: 100%;
       height: 100%;
-
-      & button {
-        width: 100%;
+      margin: auto;
+      box-sizing: border-box;
+      display: flex;
+      h1 {
+        width: 95%;
         height: 100%;
-        margin: auto;
-        color: $color_point_blue;
-        font-family: $font_family_en;
-        font-size: map-get($map:$font_size , $key:pointtitle);
-        font-weight: $font_weight_semibold;
-        text-align: left;
-        text-transform: uppercase;
-        letter-spacing: map-get($map: $letter-spacing, $key: title);
+
+        & button {
+          width: 100%;
+          height: 100%;
+          margin: auto;
+          color: $color_point_blue;
+          font-family: $font_family_en;
+          font-size: map-get($map:$font_size , $key:pointtitle);
+          font-weight: $font_weight_semibold;
+          text-align: left;
+          text-transform: uppercase;
+          letter-spacing: map-get($map: $letter-spacing, $key: title);
+        }
       }
     }
-  }
-  .unb {
-    width: 5%;
-    height: 52px;
-    margin: auto;
-    padding-top: 20px;
-  }
-
-    /* slide menu button */
+    .unb {
+      width: 5%;
+      height: 52px;
+      margin: auto;
+      padding-top: 20px;
+    }
+    
+    /* #slide_menu ------------------------------ */
     #check_box {
       display: none;
-      
+
       + label {
         width: 40px;
         height: 64%;
@@ -69,7 +74,7 @@
         position: relative;
         z-index: 100;
         cursor: pointer;
-        
+
         > span {
           width: 100%;
           height: 2px;
@@ -77,53 +82,50 @@
           position: absolute;
           transition: all 300ms;
           border-radius: 5px;
-          background: $color_point_blue;
+          background: $color_black;
         }
       }
     }
-    &:checked + label > span:nth-child(1) {
+    :checked + label > span:nth-child(1) {
       top: 50%;
-      /* transform: translate(0, -50%); */
+      transform: translate(0, -50%);
       transform: rotate(45deg);
-
+      background-color: #fff;
     }
+    
 
     #check_box + label > span:nth-child(2) {
       top: 50%;
       transform: translate(0, -50%);
     }
-    &:checked + label > span:nth-child(2) {
+    :checked + label > span:nth-child(2) {
       opacity: 0;
     }
-
+    
     #check_box + label > span:nth-child(3) {
       bottom: 0;
     }
-    &:checked + label > span:nth-child(3) {
+    :checked + label > span:nth-child(3) {
       top: 50%;
-      /* transform: translate(0, -50%); */
+      transform: translate(0, -50%);
       transform: rotate(-45deg);
-      ::after {
-      }
+      background-color: #fff;
     }
-
     #check_box:checked + label + #slide_menu {
-      left: 30%;
-
+      left: 50%;
     }
 
     /* #slide_menu ------------------------------ */
     #slide_menu {
       width: 100%;
       height: 100%;
-      padding: 70px 16px 70px 16px;
-      margin-bottom: 50px;
+      padding: 69px 16px 70px 16px;
       position: fixed;
       top: 0px;
       left: 100%;
-      box-sizing: border-box;
       overflow: auto;
       transition: all 300ms;
+      box-sizing: border-box;
       text-transform: uppercase;
       z-index: 1;
       background-color: rgba($color_point_blue, 0.9);
@@ -150,13 +152,13 @@
         }
       }
     }
-  
-    /* all scroll animation */
-    // .scroll {
+  }
+  /* all scroll animation */
+  // .scroll {
     //   opacity: 0;
     //   transition: all .9s steps(20);
     // }
-
+  main {
     #home{
       width: 100%;
       height: 95vh;
@@ -166,9 +168,15 @@
       display:  flex;
       justify-content: center;
       align-items: center;
-
+      
       & h2 {
-        font-size: map-get($map: $font-size, $key: pointtitle);
+        font-size: map-get($map: $font_size, $key: pointtitle);
+        @include tablet {
+          font-size: map-get($map: $font_size_m, $key: pointtitle);
+        }
+        @include pcfull {
+          font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
+        }
         font-weight: $font_weight_normal;
         letter-spacing: map-get($map: $letter-spacing, $key: title);
         text-transform: uppercase;
@@ -181,6 +189,12 @@
       }
       & p {
         font-size: map-get($map: $font_size, $key: pointtitle);
+        @include tablet {
+          font-size: map-get($map: $font_size_m, $key: pointtitle);
+        }
+        @include pcfull {
+          font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
+        }
         font-weight: $font_weight_normal;
         letter-spacing: map-get($map: $letter-spacing, $key: content);
         text-align: center;
@@ -192,9 +206,15 @@
     }
     #about {
       @include sectionBasic;
-
+      
       & h3 {
         @include h3;
+        @include tablet {
+          font-size: map-get($map: $font_size_m, $key: title);
+        }
+        @include pcfull {
+          font-size: map-get($map: $font_size_pcFull, $key: title);
+        }
       }
       & .about_inner{
         display: flex;
@@ -206,17 +226,31 @@
         margin-right: 12%;
         display: flex;
         flex-wrap: wrap;
-
+        @include tablet {
+          width: 54%;
+          margin-right: 6%;
+        }
+        
         & .aspiration {
           width: 100%;
           height: auto;
           margin-bottom: 20px;
+          @include tablet {
+          margin-bottom: 10px;
+          }
+
           & p {
             width: 100%;
             font-size: map-get($map: $font_size, $key: pointtitle);
             font-weight: $font_weight_normal;
             color: $color_point_blue;
             letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+            @include tablet {
+              font-size: map-get($map: $font_size_m, $key: pointtitle);
+            }
+            @include pcfull {
+              font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
+            }
           }
         }
         & .introduce {
@@ -224,6 +258,12 @@
         }
         & span {
           font-size: map-get($map: $font_size, $key: content1);
+          @include tablet {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
+          @include pcfull {
+            font-size: map-get($map: $font_size_pcFull, $key: content1);
+          }
           font-weight: $font_weight_thin;
           color: $color_black;
           letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
@@ -233,620 +273,974 @@
         width: 40%;
         height: auto;
         margin-top: 60px;
+        @include tablet {
+          margin-top: 41px;
+        }
         display: flex;
         flex-wrap: wrap;
-
+        
         & .name {
           width: 100%;
           height: auto;
-
+          
           & p {
-            font-size: map-get($map: $font-size, $key: content1);
+            font-size: map-get($map: $font_size, $key: content1);
+            @include pcfull {
+              font-size: map-get($map: $font_size_pcFull, $key: content1);
+            }
             font-weight: $font_weight_bold;
             line-height: 22px;
             letter-spacing: map-get($map: $letter-spacing, $key: content);
             color: $color_point_blue;
-
-            & span {
-              font-size: map-get($map: $font-size, $key: content1);
-              font-weight: $font_weight_thin;
-              letter-spacing: map-get($map: $letter-spacing, $key: content);
-              color: $color_black;
-            }
-          }
-        }
-
-        & .eduction {
-          width: 100%;
-          height: auto;
-          margin-top: 26px;
-
+          
           & span {
-            font-size: map-get($map: $font-size, $key: pointtitle);
-            font-weight: $font_weight_bold;
-            line-height: 22px;
-            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-            color: $color_point_blue;
-          }
-          & p {
-            font-size: map-get($map: $font-size, $key: content1);
-            font-weight: $font_weight_thin;
-            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-            color: $color_black;
-          }
-        }
-      }
-      & .about_button {
-        width: 42%;
-        height: 35px;
-        margin-top: 26px;
-        display: flex;
-        line-height: 35px;
-
-        & a:nth-child(1) {
-          width: 82px;
-          height: 30px;
-          margin-right: 15px;
-          background-color: $color_point_blue;
-          border-radius: 20px;
-          font-size: map-get($map: $font_size, $key: content1);
-          font-weight: $font_weight_normal;
-          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-          color: $color_white;
-          text-align: center;
-          line-height: 30px;
-
-          &:hover {
-            width: 78px;
-            height: 30px;
-            color: $color_black;
-            background-color: $color_white;
-            border: $line3;
-          }
-        }
-
-        & a:nth-child(2) {
-          width: 94px;
-          height: 30px;
-          background-color: $color_point_blue;
-          border-radius: 20px;
-          font-size: map-get($map: $font_size, $key: content1);
-          font-weight: $font_weight_normal;
-          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-          color: $color_white;
-          text-align: center;
-          line-height: 30px;
-
-          &:hover {
-            width: 90px;
-            height: 30px;
-            color: $color_black;
-            background-color: $color_white;
-            border: $line3;
-          }
-        }
-      }
-    }
-    #banner {
-      width: 100%;
-      height: auto;
-      margin: auto;
-      overflow: hidden;
-      @keyframes marquee {
-        0% {
-          -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
-        }
-        100% {
-          -webkit-transform: translate3d(-220%, 0, 0);
-          transform: translate3d(-220%, 0, 0);
-        }
-      }
-
-      p {
-        white-space: nowrap;
-        will-change: transform;
-        animation: marquee 20s linear infinite;
-        width: 100%;
-        padding: 1rem;
-        position: relative;
-        display: -webkit-box;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        flex-direction: column;
-        -webkit-box-align: center;
-        align-items: center;
-        -webkit-transition: -webkit-transform var(--d) var(--e);
-        transition: -webkit-transform var(--d) var(--e);
-        transition: transform var(--d) var(--e);
-        transition: transform var(--d) var(--e),-webkit-transform var(--d) var(--e);
-        z-index: 1;
-        font-family: $font_family_en, $font_family_common;
-        font-size: map-get($map:$font-size, $key: banner);
-        font-weight: $font_weight_bolder;
-        text-transform: uppercase;
-        color: $color_white;
-        text-shadow: -3px 0 $color_point_blue, 0 3px $color_point_blue, 3px 0 $color_point_blue,
-        0 -3px $color_point_blue;
-        letter-spacing: map-get($map: $letter-spacing, $key: content);
-        
-        &:hover{
-          animation-play-state: paused;
-        }
-      }
-    }
-    #advantage {
-      @include sectionBasic;
-
-      & .advantage_inner {
-        display: flex;
-
-        & .advantage_left {
-          width: 40%;
-          height: auto;
-          margin-right: 4%;
-          
-          & h3 {
-            margin-top: 20px;
-            margin-right: 60px;
-            font-size: map-get($map: $font-size, $key: title);
-            font-weight: $font_weight_bold;
-            text-align: right;
-            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-            color: $color_point_blue;
-          }
-          
-          & .advantage_3d {
-            width: 44.804%;
-            height: 47.15%;
-            margin: 150px;
-            @include img ($advantageImg)
-          }
-        }
-        & .advantage_right {
-          width: 56%;
-          height: auto;
-          display: flex;
-          flex-wrap: wrap;
-
-          & .Aright_inner {
-            margin-top: 20px;
-            & p {
-              font-size: map-get($map: $font-size, $key: pointtitle);
-              font-weight: $font_weight_bold;
-              text-transform: capitalize;
+            font-size: map-get($map: $font_size, $key: content1);
+            @include tablet {
+              font-size: map-get($map: $font_size_m, $key: content1);
             }
-            & span {
-              font-size: map-get($map: $font-size, $key: content1);
-              font-weight: $font_weight_thin;
-              letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+            @include pcfull {
+              font-size: map-get($map: $font_size_pcFull, $key: content1);
             }
-          }
-        }
-        &::before {
-          content: '';
-          border: $line1;
-          position: relative;
-          left: 39%;
-        }
-      }
-    }
-    #skill {
-      @include sectionBasic;
-
-      & h3 {
-        @include h3
-      }
-
-      & .charts {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-
-        & .chart {
-          width: 79%;
-          margin: 0 20px;
-          position: relative;
-
-          & h4 {
-            position: absolute;
-            left: 50%;
-            top: 72%;
-            transform: translate(-50%, -50%);
-          }
-
-          & .svg_img {
-            width: 64px;
-            height: 64px;
-            position: absolute;
-            top: 20%;
-            left: 28%;
-          }
-          & svg {
-            width: 150px;
-            height: 150px;
-
-            & circle {
-              fill: #dedede;
-              stroke-width: 20;
-              stroke-dasharray: 409;
-              stroke-dashoffset: 409;
-              animation: line 2s forwards;
-              transform: rotate(-90deg);
-              transform-origin: 50% 50%;
-              stroke-linecap: round;
-            }
-          }
-
-
-        }
-        & .charts_inner1 {
-          width: 17%;
-          display: grid;
-          gap: 15px;
-
-          & .chart:nth-child(1) circle {
-            stroke: $color_html;
-          }
-          & .chart:nth-child(2) circle {
-            stroke: $color_css;
-          }
-          & .chart:nth-child(3) circle {
-            stroke: $color_sass;
-          }
-          & .chart:nth-child(4) circle {
-            stroke: $color_javascript;
-          }
-        }
-
-        & .chart_text1, .chart_text2 {
-          width: 33%;
-          display: grid;
-          gap: 15px;
-
-          & .chart_text {
-            margin: 20px;
-            line-height: 30px;
-          }
-
-          & p {
-            font-size: map-get($map: $font-size, $key: content1);
-            font-weight: $font_weight_thin;
-            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-          }
-          & p:nth-child(1) {
-            font-size: map-get($map: $font-size, $key: pointtitle);
-            font-weight: $font_weight_normal;
-            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-            color: $color_point_blue;
-          }
-        }
-        & .charts_inner2 {
-          width: 17%;
-          display: grid;
-          gap: 15px;
-
-          & .chart:nth-child(1) circle {
-            stroke: $color_figma;
-          }
-          & .chart:nth-child(2) circle {
-            stroke: $color_react;
-          }
-          & .chart:nth-child(3) circle {
-            stroke: $color_github;
-          }
-        }
-        .chart_bin {
-          width: 150px;
-          height: 150px;
-        }
-        .chart_text_bin {
-          height: 117px;
-          border: $line2;
-        }
-      }
-    }
-    #project {
-      @include sectionBasic;
-
-      & h3 {
-        @include h3;
-      }
-
-      & .project_inner {
-        display: flex;
-        flex-wrap: wrap;
-
-        & .project_text {
-          width: 56%;
-          
-          & p {
-            width: 100%;
-            height: auto;
-          }
-          :nth-child(1) {
-            font-size: map-get($map: $font-size, $key: pointtitle);
-            font-weight: $font_weight_bold;
-            letter-spacing: map-get($map: $letter-spacing, $key: content);
-          }
-          :nth-child(2) {
-            line-height: 24px;
-            font-size: map-get($map: $font-size, $key: content1);
             font-weight: $font_weight_thin;
             letter-spacing: map-get($map: $letter-spacing, $key: content);
-          }
-          :nth-child(3) {
-            margin-top: 15px;
-            font-size: map-get($map: $font-size, $key: content1);
-            font-weight: $font_weight_thin;
-            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-          }
-        }
-        & button {
-          width: 86px;
-          height: 30px;
-          margin-top: 40px;
-          font-size: map-get($map: $font-size, $key: content1);
-          font-weight: $font_weight_normal;
-          color: $color_white;
-          border-radius: 20px;
-          background-color: $color_point_blue;
-
-          &:hover {
             color: $color_black;
-            background-color: $color_white;
-            border: $line3;
           }
         }
       }
-      & .ohou {
-        width: 100%;
-        height: 230px;
-        display: flex;
-        padding: 0 50px;
-
-        & .device_img {
-          @include device_img;
-          @include img(nth($projectImg, 1));
-        }
-      }
-      & .ediya {
-        @include project_flex;
-
-        & .device_img {
-          @include device_img;
-          @include img(nth($projectImg, 2));
-        }
-      }
-      & .portfolio1 {
-        @include project_flex;
-
-        & .device_img {
-          @include device_img;
-          @include img(nth($projectImg, 3));
-        }
-      }
-      & .interactive {
-        @include project_flex;
-
-        & .device_img {
-          width: 27.756%;
-          height: 100%;
-          margin: auto;
-          margin-right: 110px;
-          @include img(nth($projectImg, 4));
-        }
-      }
-      & .portfolio2 {
-        @include project_flex;
-
-        & .device_img {
-          @include device_img;
-          @include img(nth($projectImg, 1));
-        }
-      }
-    }
-    #clone {
-      @include sectionBasic;
-
-      & h3 {
-        @include h3;
-      }
-
-      & .clone_inner {
+      
+      & .eduction {
         width: 100%;
         height: auto;
-        display: grid;
-        grid-auto-flow: column;
-        grid-gap: 90px;
-      }
-      & a {
-        width: 100%;
-        height: 100%;
-        display: block;
-
-        &:hover {
-          width: 210px;
-          height: 210px;
-          position: relative;
-          top: -1px;
-          left: -1px;
-          color: $color_black;
-          box-shadow: inset -3px 3px 20px rgba($color_point_blue, 0.6);
-          border-radius: 50%;
-        }
-      }
-      & p {
-        margin-top: 42px;
-        font-size: map-get($map: $font-size, $key: content1);
-        font-weight: $font_weight_thin;
-        text-align: center;
-      }
-      & span {
-        margin-top: 20px;
-        display: block;
-        font-size: map-get($map: $font-size, $key: pointtitle);
-        font-weight: $font_weight_semibold;
-        text-align: center;
-        color: $color_point_blue;
-      }
-
-      & .coupang {
-        width: 214px;
-        height: 214px;
-        margin: auto;
-        border-radius: 50%;
-        border: $line4;
-        transform: matrix(1,0,0,1,0,10);
-
-      &.clone {
-          opacity: 0;
-          text-align: center;
-          box-shadow: 3px 14px 30px #ddd;
-          transition: all 0.5s;
-        }
-        &.visible {
-          opacity: 1;
-          transform: translateX(0);
-          transition: all 0.5s;
-        }
-
-      
-        & img {
-          @include cloneImg;
-          top: 45%;
-        }
-      }
-      & .naver {
-        width: 214px;
-        height: 214px;
-        margin: auto;
-        border-radius: 50%;
-        border: $line4;
-        transform: matrix(1,0,0,1,0,40);
-
-        &.clone {
-          opacity: 0;
-          text-align: center;
-          box-shadow: 3px 14px 30px #ddd;
-          transition: all 0.5s;
-        }
-        &.visible {
-          opacity: 1;
-          transform: translateX(0);
-          transition: all 0.5s;
-        }
-      
-        & img {
-          @include cloneImg;
-          top: 45%;
-        }
-      }
-      & .google {
-        width: 214px;
-        height: 214px;
-        margin: auto;
-        border-radius: 50%;
-        border: $line4;
-        transform: matrix(1,0,0,1,0,70);
-
-        &.clone {
-          opacity: 0;
-          text-align: center;
-          box-shadow: 3px 14px 30px #ddd;
-          transition: all 0.5s;
-        }
-        &.visible {
-          opacity: 1;
-          transform: translateX(0);
-          transition: all 0.5s;
-        }
-      
-        & img {
-          @include cloneImg;
-          top: 41%;
-          background-color: $color_white;
-          border-radius: 10px;
-        }
-      }
-      & .spotify {
-        width: 214px;
-        height: 214px;
-        margin: auto;
-        border-radius: 50%;
-        border: $line4;
-        transform: matrix(1,0,0,1,0,100);
-
-        &.clone {
-          opacity: 0;
-          text-align: center;
-          box-shadow: 3px 14px 30px #ddd;
-          transition: all 0.5s;
-        }
-        &.visible {
-          opacity: 1;
-          transform: translateX(0);
-          transition: all 0.5s;
+        margin-top: 26px;
+        @include tablet {
+          margin-top: 0;
         }
         
-        & img {
-          @include cloneImg;
-          top: 41%;
+        & span {
+          font-size: map-get($map: $font_size, $key: pointtitle);
+          @include tablet {
+            font-size: map-get($map: $font_size_m, $key: pointtitle);
+          }
+          @include pcfull {
+            font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
+          }
+          font-weight: $font_weight_bold;
+          line-height: 22px;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          color: $color_point_blue;
         }
-      }
-      & .small_text {
-        display: block;
-        width: 90%;
-        margin: auto;
-        margin-top: 70px;
-        font-size: 14px;
-        text-align: right;
-        color: #777;
+        & p {
+          font-size: map-get($map: $font_size, $key: content1);
+          @include tablet {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
+          @include pcfull {
+            font-size: map-get($map: $font_size_pcFull, $key: content1);
+          }
+          font-weight: $font_weight_thin;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          color: $color_black;
+        }
       }
     }
-
-    #contact {
-      @include sectionBasic;
-      padding-bottom: 180px;
-
-      & .email_border::after {
-        content: '';
-        width: 0;
-        height: 126px;
-        margin: auto;
-        margin-bottom: 54px;
-        border: $line4;
-        align-items: center;
-        display: flex;
+    & .about_button {
+      width: 42%;
+      height: 30px;
+      margin-top: 26px;
+      @include tablet {
+        width: 60%;
+        height: 35px;
+        margin-top: 0;
       }
-
-      & ul {
-        margin-bottom: 50px;
-        line-height: 35px;
+      display: flex;
+      line-height: 35px;
+      
+      & a:nth-child(1) {
+        width: 82px;
+        height: 100%;
+        margin-right: 15px;
+        background-color: $color_point_blue;
+        border-radius: 20px;
+        font-size: map-get($map: $font_size, $key: content1);
+        font-weight: $font_weight_normal;
+        letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+        color: $color_white;
+        text-align: center;
+        line-height: 30px;
+        @include tablet {
+          font-size: map-get($map: $font_size_m, $key: content1);
+          line-height: 35px;
+        }
+        @include pcfull {
+          font-size: map-get($map: $font_size_pcFull, $key: content1);
+        }
         
-        & li {
-          font-size: map-get($map: $font_size, $key: content1);
-          font-weight: $font_weight_normal;
-          text-align: center;
+        &:hover {
+          width: 78px;
+          height: 30px;
+          color: $color_black;
+          background-color: $color_white;
+          border: $line3;
         }
       }
-      & .email {
-        margin-top: 70px;
+      
+      & a:nth-child(2) {
+        width: 94px;
+        height: 100%;
+        background-color: $color_point_blue;
+        border-radius: 20px;
+        font-size: map-get($map: $font_size, $key: content1);
+        font-weight: $font_weight_normal;
+        letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+        color: $color_white;
         text-align: center;
-
-        & a {
-          font-size: map-get($map: $font-size, $key: contactemail);
+        line-height: 30px;
+        @include tablet {
+          font-size: map-get($map: $font_size_m, $key: content1);
+          line-height: 35px;
+        }
+        @include pcfull {
+          font-size: map-get($map: $font_size_pcFull, $key: content1);
+        }
+        
+        &:hover {
+          width: 90px;
+          height: 30px;
+          color: $color_black;
+          background-color: $color_white;
+          border: $line3;
+        }
+      }
+    }
+  }
+  #banner {
+    width: 100%;
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    @keyframes marquee {
+      0% {
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+      }
+      100% {
+        -webkit-transform: translate3d(-224%, 0, 0);
+        transform: translate3d(-224%, 0, 0);
+      }
+    }
+    
+    p {
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 20s linear infinite;
+      width: 100%;
+      padding: 1rem;
+      position: relative;
+      display: -webkit-box;
+      display: flex;
+      // -webkit-box-orient: vertical;
+      // -webkit-box-direction: normal;
+      flex-direction: column;
+      -webkit-box-align: center;
+      align-items: center;
+      // -webkit-transition: -webkit-transform var(--d) var(--e);
+      // transition: -webkit-transform var(--d) var(--e);
+      // transition: transform var(--d) var(--e);
+      // transition: transform var(--d) var(--e),-webkit-transform var(--d) var(--e);
+      z-index: 1;
+      font-family: $font_family_en, $font_family_common;
+      font-size: map-get($map: $font_size, $key: banner);
+      @include tablet {
+        font-size: map-get($map: $font_size_m, $key: banner);
+      }
+      font-weight: $font_weight_bolder;
+      text-transform: uppercase;
+      color: $color_white;
+      text-shadow: -3px 0 $color_point_blue, 0 3px $color_point_blue, 3px 0 $color_point_blue,
+      0 -3px $color_point_blue;
+      letter-spacing: map-get($map: $letter-spacing, $key: content);
+      
+      &:hover{
+        animation-play-state: paused;
+        cursor: default;
+      }
+    }
+  }
+  #advantage {
+    @include sectionBasic;
+    
+    & .advantage_inner {
+      display: flex;
+      
+      & .advantage_left {
+        width: 40%;
+        height: auto;
+        margin-right: 4%;
+        
+        & h3 {
+          margin-top: 20px;
+          margin-right: 60px;
+          font-size: map-get($map: $font_size, $key: title);
+          @include tablet {
+            font-size: map-get($map: $font_size_m, $key: title);
+          }
+          @include pcfull {
+            margin: auto 0;
+            text-align: center;
+            font-size: map-get($map: $font_size_pcFull, $key: title);
+          }
           font-weight: $font_weight_bold;
-          letter-spacing: map-get($map: $letter-spacing, $key: content);
+          text-align: right;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          color: $color_point_blue;
+        }
+        
+        & .advantage_3d {
+          width: 44.804%;
+          height: 47.15%;
+          margin: 150px;
+          @include tablet {
+            margin: 190px 90px;
+          }
+          @include pcfull {
+            margin: 150px auto 0 auto;
+          }
+          @include img ($advantageImg)
+        }
+      }
+      & .advantage_right {
+        width: 56%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        
+        & .Aright_inner {
+          margin-top: 20px;
+          & p {
+            font-size: map-get($map: $font_size, $key: pointtitle);
+            @include tablet {
+              font-size: map-get($map: $font_size_m, $key: pointtitle);
+            }
+            @include pcfull {
+              font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
+            }
+            font-weight: $font_weight_bold;
+            text-transform: capitalize;
+          }
+          & span {
+            font-size: map-get($map: $font_size, $key: content1);
+            @include tablet {
+              font-size: map-get($map: $font_size_m, $key: content1);
+            }
+            @include pcfull {
+              font-size: map-get($map: $font_size_pcFull, $key: content1);
+            }
+            font-weight: $font_weight_thin;
+            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          }
+        }
+      }
+      &::before {
+        content: '';
+        border: $line1;
+        position: relative;
+        left: 39%;
+      }
+    }
+  }
+  #skill {
+    @include sectionBasic;
+    
+    & h3 {
+      @include h3;
+      @include tablet {
+        font-size: map-get($map: $font_size_m, $key: title);
+      }
+      @include pcfull {
+        font-size: map-get($map: $font_size_pcFull, $key: title);
+      }
+    }
+    
+    & .charts {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      
+      & .chart {
+        width: 79%;
+        margin: 0 20px;
+        position: relative;
+        
+        & h4 {
+          font-size: map-get($map: $font_size, $key: content1);
+          position: absolute;
+          top: 113px;
+          left: 75px;
+          transform: translate(-50%, -50%);
+
+          @include tablet {
+            font-size: map-get($map: $font_size_m, $key: content1);
+            top: 91px;
+            left: 63px;
+          }
+        }
+        
+        & .svg_img {
+          width: 64px;
+          height: 64px;
+          position: absolute;
+          top: 31px;
+          left: 42px;
+
+          @include tablet {
+            width: 50px;
+            height: 50px;
+            top: 30px;
+            left: 33px;
+          }
+        }
+        & svg {
+          width: 150px;
+          height: 150px;
+
+          @include tablet {
+            width: 120px;
+            height: 120px;
+          }
+          
+          & circle {
+            fill: #dedede;
+            stroke-width: 20;
+            stroke-dasharray: 409;
+            stroke-dashoffset: 409;
+            animation: line 2s forwards;
+            transform: rotate(-90deg);
+            transform-origin: 50% 50%;
+            stroke-linecap: round;
+            cx: 75; 
+            cy: 75;
+            r: 65;
+            
+            @include tablet {
+              stroke-width: 10;
+              cx: 60; 
+              cy: 60;
+              r: 50;
+            }
+          }
+        }
+      }
+      & .charts_inner1 {
+        width: 17%;
+        display: grid;
+        gap: 15px;
+        
+        & .chart:nth-child(1) circle {
+          stroke: $color_html;
+        }
+        & .chart:nth-child(2) circle {
+          stroke: $color_css;
+        }
+        & .chart:nth-child(3) circle {
+          stroke: $color_sass;
+        }
+        & .chart:nth-child(4) circle {
+          stroke: $color_javascript;
+        }
+      }
+      
+      & .chart_text1, .chart_text2 {
+        width: 33%;
+        display: grid;
+        gap: 15px;
+        
+        & .chart_text {
+          margin: 20px;
+          line-height: 30px;
+        }
+        
+        & p {
+          font-size: map-get($map: $font_size, $key: content1);
+          @include tablet {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
+          @include pcfull {
+            font-size: map-get($map: $font_size_pcFull, $key: content1);
+          }
+          font-weight: $font_weight_thin;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+        }
+        & p:nth-child(1) {
+          font-size: map-get($map: $font_size, $key: pointtitle);
+          @include tablet {
+            font-size: map-get($map: $font_size_m, $key: pointtitle);
+          }
+          @include pcfull {
+            font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
+          }
+          font-weight: $font_weight_normal;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
           color: $color_point_blue;
         }
       }
-    }
-    .capyright p {
-      font-size: map-get($map: $font-size, $key: content1);
-      font-weight: 300;
-      text-align: center;
+      & .charts_inner2 {
+        width: 17%;
+        display: grid;
+        gap: 15px;
+        
+        & .chart:nth-child(1) circle {
+          stroke: $color_figma;
+        }
+        & .chart:nth-child(2) circle {
+          stroke: $color_react;
+        }
+        & .chart:nth-child(3) circle {
+          stroke: $color_github;
+        }
+      }
+      .chart_bin {
+        width: 78.95%;
+        height: 150px;
+      }
+      .chart_text_bin {
+        height: 150px;
+        border: $line2;
+      }
     }
   }
-
+  #project {
+    @include sectionBasic;
+    
+    & h3 {
+      @include h3;
+      @include tablet {
+        font-size: map-get($map: $font_size_m, $key: title);
+      }
+      @include pcfull {
+        font-size: map-get($map: $font_size_pcFull, $key: title);
+      }
+    }
+    
+    & .project_inner {
+      display: flex;
+      flex-wrap: wrap;
+      
+      & .project_text {
+        width: 56%;
+        transform: matrix(1, 0, 0, 1, 30, 0);
+        @include pcfull {
+          margin: auto 0;
+        }
+        
+        &.project {
+          opacity: 0;
+          transition: all 0.5s;
+        }
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 0.5s;
+        }
+        
+        & p {
+          width: 100%;
+          height: auto;
+        }
+        :nth-child(1) {
+          font-size: map-get($map: $font_size, $key: pointtitle);
+          @include tablet {
+            font-size: map-get($map: $font_size_m, $key: pointtitle);
+          }
+          @include pcfull {
+            font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
+          }
+          font-weight: $font_weight_bold;
+          letter-spacing: map-get($map: $letter-spacing, $key: content);
+        }
+        :nth-child(2) {
+          line-height: 24px;
+          font-size: map-get($map: $font_size, $key: content1);
+          @include tablet {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
+          @include pcfull {
+            font-size: map-get($map: $font_size_pcFull, $key: content1);
+          }
+          font-weight: $font_weight_thin;
+          letter-spacing: map-get($map: $letter-spacing, $key: content);
+        }
+        :nth-child(3) {
+          margin-top: 15px;
+          font-size: map-get($map: $font_size, $key: content1);
+          @include tablet {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
+          @include pcfull {
+            font-size: map-get($map: $font_size_pcFull, $key: content1);
+          }
+          font-weight: $font_weight_thin;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+        }
+      }
+      & button {
+        width: 86px;
+        height: 30px;
+        margin-top: 40px;
+        font-size: map-get($map: $font_size, $key: content1);
+        @include tablet {
+          margin-top: 10px;
+          font-size: map-get($map: $font_size_m, $key: content1);
+        }
+        @include pcfull {
+          font-size: map-get($map: $font_size_pcFull, $key: content1);
+        }
+        font-weight: $font_weight_normal;
+        color: $color_white;
+        border-radius: 20px;
+        background-color: $color_point_blue;
+        
+        &:hover {
+          color: $color_black;
+          background-color: $color_white;
+          border: $line3;
+        }
+      }
+    }
+    & .ohou {
+      @include project_flex;
+      margin-top: 0;
+      @include tablet {
+        height: 37vh;
+        padding: 0;
+      }
+      @include pcfull {
+        height: 40vh;
+      }
+      
+      & .device_img {
+        @include device_img;
+        @include img(nth($projectImg, 1));
+        transform: matrix(1, 0, 0, 1, 30, 0);
+        
+        &.project {
+          opacity: 0;
+          text-align: center;
+          transition: all 1s;
+        }
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 1s;
+        }
+      }
+    }
+    & .ediya {
+      @include project_flex;
+      @include tablet {
+        height: 37vh;
+        margin-top: 50px;
+        padding: 0;
+      }
+      @include pcfull {
+        height: 40vh;
+      }
+      
+      & .device_img {
+        @include device_img;
+        @include img(nth($projectImg, 2));
+        transform: matrix(1,0,0,1,-200,0);
+        
+        &.project {
+          opacity: 0;
+          text-align: center;
+          transition: all 1s;
+        }
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 1s;
+        }
+      }
+    }
+    & .portfolio1 {
+      @include project_flex;
+      @include tablet {
+        height: 37vh;
+        margin-top: 50px;
+        padding: 0;
+      }
+      @include pcfull {
+        height: 40vh;
+      }
+      
+      & .device_img {
+        @include device_img;
+        @include img(nth($projectImg, 3));
+        transform: matrix(1,0,0,1,-200,0);
+        
+        &.project {
+          opacity: 0;
+          text-align: center;
+          transition: all 1s;
+        }
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 1s;
+        }
+      }
+    }
+    & .interactive {
+      @include project_flex;
+      @include tablet {
+        height: 37vh;
+        margin-top: 50px;
+        padding: 0;
+      }
+      @include pcfull {
+        height: 40vh;
+      }
+      
+      & .device_img {
+        width: 27.756%;
+        height: 100%;
+        margin: auto;
+        margin-right: 146px;
+        @include img(nth($projectImg, 4));
+        transform: matrix(1,0,0,1,-200,0);
+        
+        &.project {
+          opacity: 0;
+          text-align: center;
+          transition: all 1s;
+        }
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 1s;
+        }
+      }
+    }
+    & .portfolio2 {
+      @include project_flex;
+      @include tablet {
+        height: 37vh;
+        margin-top: 50px;
+        padding: 0;
+      }
+      @include pcfull {
+        height: 40vh;
+      }
+      
+      & .device_img {
+        @include device_img;
+        @include img(nth($projectImg, 1));
+        transform: matrix(1,0,0,1,-100,0);
+        
+        &.project {
+          opacity: 0;
+          text-align: center;
+          transition: all 1s;
+        }
+        &.visible {
+          opacity: 1;
+          transform: translateX(0);
+          transition: all 1s;
+        }
+      }
+    }
+  }
+  #clone {
+    @include sectionBasic;
+    
+    & h3 {
+      @include h3;
+      @include tablet {
+        font-size: map-get($map: $font_size_m, $key: title);
+      }
+      @include pcfull {
+        font-size: map-get($map: $font_size_pcFull, $key: title);
+      }
+    }
+    
+    & .clone_inner {
+      width: 100%;
+      height: auto;
+      display: grid;
+      grid-auto-flow: column;
+      grid-gap: 90px;
+      @include tablet {
+        grid-gap: 0;
+      }
+    }
+    & a {
+      width: 100%;
+      height: 100%;
+      display: block;
+      
+      &:hover {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        color: $color_black;
+        box-shadow: inset -3px 3px 20px rgba($color_point_blue, 0.6);
+        border-radius: 50%;
+      }
+    }
+    & p {
+      margin-top: 42px;
+      font-size: map-get($map: $font_size, $key: content1);
+      @include tablet {
+        font-size: map-get($map: $font_size_m, $key: content1);
+      }
+      @include pcfull {
+        font-size: map-get($map: $font_size_pcFull, $key: content1);
+      }
+      font-weight: $font_weight_thin;
+      text-align: center;
+    }
+    & span {
+      margin-top: 20px;
+      display: block;
+      font-size: map-get($map: $font_size, $key: pointtitle);
+      @include tablet {
+        font-size: map-get($map: $font_size_m, $key: pointtitle);
+      }
+      @include pcfull {
+        font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
+      }
+      font-weight: $font_weight_semibold;
+      text-align: center;
+      color: $color_point_blue;
+    }
+    
+    & .coupang {
+      width: 214px;
+      height: 214px;
+      @include tablet {
+        width: 128px;
+        height: 128px;
+      }
+      @include laptop {
+        width: 190px;
+        height: 190px;
+      }
+      margin: auto;
+      border-radius: 50%;
+      border: $line4;
+      transform: matrix(1,0,0,1,0,10);
+      
+      &.clone {
+        opacity: 0;
+        text-align: center;
+        box-shadow: 3px 14px 30px #ddd;
+        transition: all 0.5s;
+      }
+      &.visible {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.5s;
+      }
+      
+      
+      & img {
+        @include cloneImg;
+        @include tablet {
+          width: 87px;
+        }
+        @include laptop {
+          width: 135px;
+        }
+        top: 45%;
+      }
+    }
+    & .naver {
+      width: 214px;
+      height: 214px;
+      @include tablet {
+        width: 128px;
+        height: 128px;
+      }
+      @include laptop {
+        width: 190px;
+        height: 190px;
+      }
+      margin: auto;
+      border-radius: 50%;
+      border: $line4;
+      transform: matrix(1,0,0,1,0,40);
+      
+      &.clone {
+        opacity: 0;
+        text-align: center;
+        box-shadow: 3px 14px 30px #ddd;
+        transition: all 0.5s;
+      }
+      &.visible {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.5s;
+      }
+      
+      & img {
+        @include cloneImg;
+        @include tablet {
+          width: 87px;
+          top: 40%;
+        }
+        @include laptop {
+          width: 135px;
+        }
+        top: 45%;
+      }
+    }
+    & .google {
+      width: 214px;
+      height: 214px;
+      @include tablet {
+        width: 128px;
+        height: 128px;
+      }
+      @include laptop {
+        width: 190px;
+        height: 190px;
+      }
+      margin: auto;
+      border-radius: 50%;
+      border: $line4;
+      transform: matrix(1,0,0,1,0,70);
+      
+      &.clone {
+        opacity: 0;
+        text-align: center;
+        box-shadow: 3px 14px 30px #ddd;
+        transition: all 0.5s;
+      }
+      &.visible {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.5s;
+      }
+      
+      & img {
+        @include cloneImg;
+        @include tablet {
+          width: 87px;
+        }
+        @include laptop {
+          width: 135px;
+        }
+        top: 41%;
+      }
+    }
+    & .spotify {
+      width: 214px;
+      height: 214px;
+      @include tablet {
+        width: 128px;
+        height: 128px;
+      }
+      @include laptop {
+        width: 190px;
+        height: 190px;
+      }
+      margin: auto;
+      border-radius: 50%;
+      border: $line4;
+      transform: matrix(1,0,0,1,0,100);
+      
+      &.clone {
+        opacity: 0;
+        text-align: center;
+        box-shadow: 3px 14px 30px #ddd;
+        transition: all 0.5s;
+      }
+      &.visible {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.5s;
+      }
+      
+      & img {
+        @include cloneImg;
+        @include tablet {
+          width: 87px;
+        }
+        @include laptop {
+          width: 135px;
+        }
+        top: 41%;
+      }
+    }
+    & .small_text {
+      display: block;
+      width: 90%;
+      margin: auto;
+      margin-top: 70px;
+      font-size: 14px;
+      text-align: right;
+      color: #777;
+    }
+  }
+  
+  #contact {
+    @include sectionBasic;
+    padding-bottom: 180px;
+    
+    & .email_border::after {
+      content: '';
+      width: 0;
+      height: 126px;
+      margin: auto;
+      margin-bottom: 54px;
+      border: $line4;
+      align-items: center;
+      display: flex;
+    }
+    
+    & ul {
+      margin-bottom: 50px;
+      line-height: 35px;
+      
+      & li {
+        font-size: map-get($map: $font_size, $key: content1);
+        @include tablet {
+          font-size: map-get($map: $font_size_m, $key: content1);
+        }
+        @include pcfull {
+          font-size: map-get($map: $font_size_pcFull, $key: content1);
+        }
+        font-weight: $font_weight_normal;
+        text-align: center;
+      }
+    }
+    & .email {
+      margin-top: 70px;
+      text-align: center;
+      
+      & a {
+        font-size: map-get($map: $font_size, $key: contactemail);
+        @include tablet {
+          font-size: map-get($map: $font_size_m, $key: contactemail);
+        }
+        @include pcfull {
+          font-size: map-get($map: $font_size_pcFull, $key: contactemail);
+        }
+        font-weight: $font_weight_bold;
+        letter-spacing: map-get($map: $letter-spacing, $key: content);
+        color: $color_point_blue;
+      }
+    }
+  }
+}
+.capyright p {
+  font-size: map-get($map: $font_size, $key: content1);
+  @include tablet {
+    font-size: map-get($map: $font_size_m, $key: content1);
+  }
+  @include pcfull {
+    font-size: map-get($map: $font_size_pcFull, $key: content1);
+  }
+  font-weight: 300;
+  text-align: center;
+}

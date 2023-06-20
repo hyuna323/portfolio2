@@ -41,6 +41,12 @@ $projectImg: 'ohou_mockup.png', 'ediya_mockup.png', 'portfolio1_mockup.png', 'in
   margin-right: 110px;
 }
 
+@mixin h3_m () {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-size: map-get($map: $font-size_m, $key: title);
+}
+
 @mixin h3 () {
   width: 100%;
   margin-top: 50px;

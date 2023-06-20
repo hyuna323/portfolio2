@@ -14,6 +14,9 @@
     margin: auto;
     background-color: $color_white;
     padding: 0 162px;
+    @include mobile {
+      padding: 0 10px;
+    }
     @include tablet {
       padding: 34px;
     }
@@ -41,6 +44,10 @@
         width: 95%;
         height: 100%;
 
+        @include mobile {
+          width: 80%;
+        }
+
         & button {
           width: 100%;
           height: 100%;
@@ -52,6 +59,9 @@
           text-align: left;
           text-transform: uppercase;
           letter-spacing: map-get($map: $letter-spacing, $key: title);
+          @include mobile {
+            font-size: map-get($map: $font_size_m, $key: pointtitle);
+          }
         }
       }
     }
@@ -60,6 +70,12 @@
       height: 52px;
       margin: auto;
       padding-top: 20px;
+
+      @include mobile {
+        width: 20%;
+        height: 45px;
+        padding-top: 12px;
+      }
     }
     
     /* #slide_menu ------------------------------ */
@@ -75,6 +91,11 @@
         z-index: 100;
         cursor: pointer;
 
+        @include mobile {
+          width: 30px;
+          margin: auto 0 0 30px;
+        }
+
         > span {
           width: 100%;
           height: 2px;
@@ -83,6 +104,10 @@
           transition: all 300ms;
           border-radius: 5px;
           background: $color_black;
+
+          @include mobile {
+            height: 1.5px;
+          }
         }
       }
     }
@@ -113,6 +138,10 @@
     }
     #check_box:checked + label + #slide_menu {
       left: 50%;
+
+      @include mobile {
+        left: 0%;
+      }
     }
 
     /* #slide_menu ------------------------------ */
@@ -139,11 +168,15 @@
         position: relative;
         border-bottom: $line2;
         font-family: $font_family_en;
-        font-size: map-get($map:$font_size, $key:content1);
+        font-size: map-get($map: $font_size, $key: content1);
         font-weight: $font_weight_normal;
         color: $color_white;
         letter-spacing: map-get($map:$letter-spacing, $key:content);
         cursor: pointer;
+
+        @include mobile {
+        font-size: map-get($map: $font_size_m, $key: content1);
+        }
 
         &:hover {
           background-color: $color_white;
@@ -168,36 +201,52 @@
       display:  flex;
       justify-content: center;
       align-items: center;
+
+      @include mobile {
+        gap: 10px;
+        flex-wrap: wrap;
+        padding: 83px 0 100px 0;
+      }
       
       & h2 {
         font-size: map-get($map: $font_size, $key: pointtitle);
+        font-weight: $font_weight_normal;
+        letter-spacing: map-get($map: $letter-spacing, $key: title);
+        text-transform: uppercase;
+        text-align: center;
+        @include mobile {
+          font-size: map-get($map: $font_size_m, $key: pointtitle);
+        }
         @include tablet {
           font-size: map-get($map: $font_size_m, $key: pointtitle);
         }
         @include pcfull {
           font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
         }
-        font-weight: $font_weight_normal;
-        letter-spacing: map-get($map: $letter-spacing, $key: title);
-        text-transform: uppercase;
-        text-align: center;
       }
       & img {
         display: block;
         margin: auto;
         width: 21.8056%;
+
+        @include mobile {
+          width: 49%;
+        }
       }
       & p {
         font-size: map-get($map: $font_size, $key: pointtitle);
+        font-weight: $font_weight_normal;
+        letter-spacing: map-get($map: $letter-spacing, $key: content);
+        text-align: center;
+        @include mobile {
+          font-size: map-get($map: $font_size_m, $key: pointtitle);
+        }
         @include tablet {
           font-size: map-get($map: $font_size_m, $key: pointtitle);
         }
         @include pcfull {
           font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
         }
-        font-weight: $font_weight_normal;
-        letter-spacing: map-get($map: $letter-spacing, $key: content);
-        text-align: center;
         
         span {
           color: $color_point_blue;
@@ -209,6 +258,9 @@
       
       & h3 {
         @include h3;
+        @include mobile {
+          @include h3_m;
+        }
         @include tablet {
           font-size: map-get($map: $font_size_m, $key: title);
         }
@@ -219,6 +271,10 @@
       & .about_inner{
         display: flex;
         flex-wrap: nowrap;
+
+        @include mobile {
+          flex-wrap: wrap;
+        }
       }
       & .about_left {
         width: 48%;
@@ -226,6 +282,11 @@
         margin-right: 12%;
         display: flex;
         flex-wrap: wrap;
+
+        @include mobile {
+          width: 100%;
+          margin-right: 0;
+        }
         @include tablet {
           width: 54%;
           margin-right: 6%;
@@ -245,6 +306,9 @@
             font-weight: $font_weight_normal;
             color: $color_point_blue;
             letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+            @include mobile {
+              font-size: map-get($map: $font_size_m, $key: pointtitle);
+            }
             @include tablet {
               font-size: map-get($map: $font_size_m, $key: pointtitle);
             }
@@ -258,26 +322,40 @@
         }
         & span {
           font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_thin;
+          color: $color_black;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+
+          @include mobile {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: content1);
           }
           @include pcfull {
             font-size: map-get($map: $font_size_pcFull, $key: content1);
           }
-          font-weight: $font_weight_thin;
-          color: $color_black;
-          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+        }
+      }
+      & .about_right_inner {
+        @include mobile {
+          flex-wrap: wrap-reverse;
         }
       }
       & .about_right {
         width: 40%;
         height: auto;
         margin-top: 60px;
+        display: flex;
+        flex-wrap: wrap;
+
+        @include mobile {
+          width: 100%;
+          margin-top: 30px;
+        }
         @include tablet {
           margin-top: 41px;
         }
-        display: flex;
-        flex-wrap: wrap;
         
         & .name {
           width: 100%;
@@ -285,25 +363,31 @@
           
           & p {
             font-size: map-get($map: $font_size, $key: content1);
-            @include pcfull {
-              font-size: map-get($map: $font_size_pcFull, $key: content1);
-            }
             font-weight: $font_weight_bold;
             line-height: 22px;
             letter-spacing: map-get($map: $letter-spacing, $key: content);
             color: $color_point_blue;
+            @include mobile {
+              font-size: map-get($map: $font_size_m, $key: content1);
+            }
+            @include pcfull {
+              font-size: map-get($map: $font_size_pcFull, $key: content1);
+            }
           
           & span {
             font-size: map-get($map: $font_size, $key: content1);
+            font-weight: $font_weight_thin;
+            letter-spacing: map-get($map: $letter-spacing, $key: content);
+            color: $color_black;
+            @include mobile {
+              font-size: map-get($map: $font_size_m, $key: content1);
+            }
             @include tablet {
               font-size: map-get($map: $font_size_m, $key: content1);
             }
             @include pcfull {
               font-size: map-get($map: $font_size_pcFull, $key: content1);
             }
-            font-weight: $font_weight_thin;
-            letter-spacing: map-get($map: $letter-spacing, $key: content);
-            color: $color_black;
           }
         }
       }
@@ -312,34 +396,46 @@
         width: 100%;
         height: auto;
         margin-top: 26px;
+
+        @include mobile {
+          margin-top: 20px;
+        }
         @include tablet {
           margin-top: 0;
         }
         
         & span {
           font-size: map-get($map: $font_size, $key: pointtitle);
+          font-weight: $font_weight_bold;
+          line-height: 22px;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          color: $color_point_blue;
+
+          @include mobile {
+            font-size: map-get($map: $font_size_m, $key: pointtitle);
+          }
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: pointtitle);
           }
           @include pcfull {
             font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
           }
-          font-weight: $font_weight_bold;
-          line-height: 22px;
-          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-          color: $color_point_blue;
         }
         & p {
           font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_thin;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          color: $color_black;
+
+          @include mobile {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: content1);
           }
           @include pcfull {
             font-size: map-get($map: $font_size_pcFull, $key: content1);
           }
-          font-weight: $font_weight_thin;
-          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-          color: $color_black;
         }
       }
     }
@@ -347,13 +443,20 @@
       width: 42%;
       height: 30px;
       margin-top: 26px;
+      display: flex;
+      line-height: 35px;
+
+      @include mobile {
+        width: 63%;
+        height: 35px;
+        margin: auto;
+        margin-top: 26px;
+      }
       @include tablet {
         width: 60%;
         height: 35px;
         margin-top: 0;
       }
-      display: flex;
-      line-height: 35px;
       
       & a:nth-child(1) {
         width: 82px;
@@ -367,6 +470,12 @@
         color: $color_white;
         text-align: center;
         line-height: 30px;
+
+
+        @include mobile {
+          font-size: map-get($map: $font_size_m, $key: content1);
+          line-height: 35px;
+        }
         @include tablet {
           font-size: map-get($map: $font_size_m, $key: content1);
           line-height: 35px;
@@ -395,6 +504,11 @@
         color: $color_white;
         text-align: center;
         line-height: 30px;
+
+        @include mobile {
+          font-size: map-get($map: $font_size_m, $key: content1);
+          line-height: 35px;
+        }
         @include tablet {
           font-size: map-get($map: $font_size_m, $key: content1);
           line-height: 35px;
@@ -450,15 +564,19 @@
       z-index: 1;
       font-family: $font_family_en, $font_family_common;
       font-size: map-get($map: $font_size, $key: banner);
-      @include tablet {
-        font-size: map-get($map: $font_size_m, $key: banner);
-      }
       font-weight: $font_weight_bolder;
       text-transform: uppercase;
       color: $color_white;
       text-shadow: -3px 0 $color_point_blue, 0 3px $color_point_blue, 3px 0 $color_point_blue,
       0 -3px $color_point_blue;
       letter-spacing: map-get($map: $letter-spacing, $key: content);
+
+      @include mobile {
+        font-size: map-get($map: $font_size_m, $key: banner);
+      }
+      @include tablet {
+        font-size: map-get($map: $font_size_m, $key: banner);
+      }
       
       &:hover{
         animation-play-state: paused;
@@ -471,16 +589,33 @@
     
     & .advantage_inner {
       display: flex;
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
       
       & .advantage_left {
         width: 40%;
         height: auto;
         margin-right: 4%;
+
+        @include mobile {
+          width: 100%;
+          margin: auto;
+        }
         
         & h3 {
           margin-top: 20px;
           margin-right: 60px;
           font-size: map-get($map: $font_size, $key: title);
+          font-weight: $font_weight_bold;
+          text-align: right;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          color: $color_point_blue;
+
+          @include mobile {
+            @include h3_m;
+          }
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: title);
           }
@@ -489,16 +624,17 @@
             text-align: center;
             font-size: map-get($map: $font_size_pcFull, $key: title);
           }
-          font-weight: $font_weight_bold;
-          text-align: right;
-          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-          color: $color_point_blue;
         }
         
         & .advantage_3d {
           width: 44.804%;
           height: 47.15%;
           margin: 150px;
+
+
+          @include mobile {
+            display: none;
+          }
           @include tablet {
             margin: 190px 90px;
           }
@@ -513,30 +649,42 @@
         height: auto;
         display: flex;
         flex-wrap: wrap;
+
+        @include mobile {
+          width: 100%;
+        }
         
         & .Aright_inner {
           margin-top: 20px;
           & p {
             font-size: map-get($map: $font_size, $key: pointtitle);
+            font-weight: $font_weight_bold;
+            text-transform: capitalize;
+
+            @include mobile {
+              font-size: map-get($map: $font_size_m, $key: pointtitle);
+            }
             @include tablet {
               font-size: map-get($map: $font_size_m, $key: pointtitle);
             }
             @include pcfull {
               font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
             }
-            font-weight: $font_weight_bold;
-            text-transform: capitalize;
           }
           & span {
             font-size: map-get($map: $font_size, $key: content1);
+            font-weight: $font_weight_thin;
+            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+
+            @include mobile {
+              font-size: map-get($map: $font_size_m, $key: content1);
+            }
             @include tablet {
               font-size: map-get($map: $font_size_m, $key: content1);
             }
             @include pcfull {
               font-size: map-get($map: $font_size_pcFull, $key: content1);
             }
-            font-weight: $font_weight_thin;
-            letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
           }
         }
       }
@@ -545,6 +693,10 @@
         border: $line1;
         position: relative;
         left: 39%;
+
+        @include mobile {
+          display: none;
+        }
       }
     }
   }
@@ -553,6 +705,10 @@
     
     & h3 {
       @include h3;
+
+      @include mobile {
+        @include h3_m;
+      }
       @include tablet {
         font-size: map-get($map: $font_size_m, $key: title);
       }
@@ -565,11 +721,18 @@
       width: 100%;
       display: flex;
       justify-content: center;
+
+      @include mobile {
+        flex-wrap: wrap;
+      }
       
       & .chart {
-        width: 79%;
-        margin: 0 20px;
+        width: 100%;
         position: relative;
+
+        @include mobile {
+          width: 100%;
+        }
         
         & h4 {
           font-size: map-get($map: $font_size, $key: content1);
@@ -578,10 +741,15 @@
           left: 75px;
           transform: translate(-50%, -50%);
 
+          @include mobile {
+            font-size: map-get($map: $font_size_m, $key: content1);
+            top: 81px;
+            left: 49px;
+          }
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: content1);
             top: 91px;
-            left: 63px;
+            left: 57px;
           }
         }
         
@@ -591,7 +759,13 @@
           position: absolute;
           top: 31px;
           left: 42px;
-
+          
+          @include mobile {
+            width: 50px;
+            height: 50px;
+            top: 21px;
+            left: 24px;
+          }
           @include tablet {
             width: 50px;
             height: 50px;
@@ -603,6 +777,10 @@
           width: 150px;
           height: 150px;
 
+          @include mobile {
+            width: 100px;
+            height: 100px;
+          }
           @include tablet {
             width: 120px;
             height: 120px;
@@ -621,6 +799,12 @@
             cy: 75;
             r: 65;
             
+            @include mobile {
+              stroke-width: 10;
+              cx: 50; 
+              cy: 50;
+              r: 44;
+            }
             @include tablet {
               stroke-width: 10;
               cx: 60; 
@@ -634,6 +818,11 @@
         width: 17%;
         display: grid;
         gap: 15px;
+
+        @include mobile {
+          width: 40%;
+          padding: 0 10px;
+        }
         
         & .chart:nth-child(1) circle {
           stroke: $color_html;
@@ -653,40 +842,61 @@
         width: 33%;
         display: grid;
         gap: 15px;
+
+        @include mobile {
+          width: 60%;
+        }
         
         & .chart_text {
           margin: 20px;
           line-height: 30px;
+
+          @include mobile {
+            margin: 10px;
+          }
         }
         
         & p {
           font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_thin;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+
+          @include mobile {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: content1);
           }
           @include pcfull {
             font-size: map-get($map: $font_size_pcFull, $key: content1);
           }
-          font-weight: $font_weight_thin;
-          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
         }
         & p:nth-child(1) {
           font-size: map-get($map: $font_size, $key: pointtitle);
+          font-weight: $font_weight_normal;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          color: $color_point_blue;
+
+          @include mobile {
+            font-size: map-get($map: $font_size_m, $key: pointtitle);
+          }
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: pointtitle);
           }
           @include pcfull {
             font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
           }
-          font-weight: $font_weight_normal;
-          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-          color: $color_point_blue;
         }
       }
       & .charts_inner2 {
         width: 17%;
         display: grid;
         gap: 15px;
+
+        @include mobile {
+          width: 40%;
+          padding: 0 10px;
+        }
         
         & .chart:nth-child(1) circle {
           stroke: $color_figma;
@@ -701,10 +911,18 @@
       .chart_bin {
         width: 78.95%;
         height: 150px;
+
+        @include mobile {
+          height: 0;
+        }
       }
       .chart_text_bin {
         height: 150px;
         border: $line2;
+
+        @include mobile {
+          height: 0;
+        }
       }
     }
   }
@@ -713,6 +931,9 @@
     
     & h3 {
       @include h3;
+      @include mobile {
+        @include h3_m;
+      }
       @include tablet {
         font-size: map-get($map: $font_size_m, $key: title);
       }
@@ -724,10 +945,19 @@
     & .project_inner {
       display: flex;
       flex-wrap: wrap;
+
+      // @include mobile {
+      //   display: none;
+      // }
       
       & .project_text {
         width: 56%;
         transform: matrix(1, 0, 0, 1, 30, 0);
+
+        @include mobile {
+          width: 100%;
+          margin: 10px auto;
+        }
         @include pcfull {
           margin: auto 0;
         }
@@ -748,38 +978,50 @@
         }
         :nth-child(1) {
           font-size: map-get($map: $font_size, $key: pointtitle);
+          font-weight: $font_weight_bold;
+          letter-spacing: map-get($map: $letter-spacing, $key: content);
+
+          @include mobile {
+            font-size: map-get($map: $font_size_m, $key: pointtitle);
+          }
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: pointtitle);
           }
           @include pcfull {
             font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
           }
-          font-weight: $font_weight_bold;
-          letter-spacing: map-get($map: $letter-spacing, $key: content);
         }
         :nth-child(2) {
           line-height: 24px;
           font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_thin;
+          letter-spacing: map-get($map: $letter-spacing, $key: content);
+
+          @include mobile {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: content1);
           }
           @include pcfull {
             font-size: map-get($map: $font_size_pcFull, $key: content1);
           }
-          font-weight: $font_weight_thin;
-          letter-spacing: map-get($map: $letter-spacing, $key: content);
         }
         :nth-child(3) {
           margin-top: 15px;
           font-size: map-get($map: $font_size, $key: content1);
+          font-weight: $font_weight_thin;
+          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+
+          @include mobile {
+            font-size: map-get($map: $font_size_m, $key: content1);
+          }
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: content1);
           }
           @include pcfull {
             font-size: map-get($map: $font_size_pcFull, $key: content1);
           }
-          font-weight: $font_weight_thin;
-          letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
         }
       }
       & button {
@@ -787,6 +1029,18 @@
         height: 30px;
         margin-top: 40px;
         font-size: map-get($map: $font_size, $key: content1);
+        font-weight: $font_weight_normal;
+        color: $color_white;
+        border-radius: 20px;
+        background-color: $color_point_blue;
+
+
+        @include mobile {
+          position: relative;
+          left: 13%;
+          margin-top: 10px;
+          font-size: map-get($map: $font_size_m, $key: content1);
+        }
         @include tablet {
           margin-top: 10px;
           font-size: map-get($map: $font_size_m, $key: content1);
@@ -794,10 +1048,6 @@
         @include pcfull {
           font-size: map-get($map: $font_size_pcFull, $key: content1);
         }
-        font-weight: $font_weight_normal;
-        color: $color_white;
-        border-radius: 20px;
-        background-color: $color_point_blue;
         
         &:hover {
           color: $color_black;
@@ -809,6 +1059,12 @@
     & .ohou {
       @include project_flex;
       margin-top: 0;
+
+      @include mobile {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 30px;
+      }
       @include tablet {
         height: 37vh;
         padding: 0;
@@ -821,6 +1077,12 @@
         @include device_img;
         @include img(nth($projectImg, 1));
         transform: matrix(1, 0, 0, 1, 30, 0);
+        
+        @include mobile {
+          width: 100%;
+          height: 35vh;
+          margin-right: 0;
+        }
         
         &.project {
           opacity: 0;
@@ -836,6 +1098,12 @@
     }
     & .ediya {
       @include project_flex;
+
+      @include mobile {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 30px;
+      }
       @include tablet {
         height: 37vh;
         margin-top: 50px;
@@ -849,6 +1117,12 @@
         @include device_img;
         @include img(nth($projectImg, 2));
         transform: matrix(1,0,0,1,-200,0);
+
+        @include mobile {
+          width: 100%;
+          height: 35vh;
+          margin-right: 0;
+        }
         
         &.project {
           opacity: 0;
@@ -864,6 +1138,12 @@
     }
     & .portfolio1 {
       @include project_flex;
+
+      @include mobile {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 30px;
+      }
       @include tablet {
         height: 37vh;
         margin-top: 50px;
@@ -877,6 +1157,12 @@
         @include device_img;
         @include img(nth($projectImg, 3));
         transform: matrix(1,0,0,1,-200,0);
+
+        @include mobile {
+          width: 100%;
+          height: 35vh;
+          margin-right: 0;
+        }
         
         &.project {
           opacity: 0;
@@ -892,6 +1178,12 @@
     }
     & .interactive {
       @include project_flex;
+
+      @include mobile {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 30px;
+      }
       @include tablet {
         height: 37vh;
         margin-top: 50px;
@@ -908,6 +1200,12 @@
         margin-right: 146px;
         @include img(nth($projectImg, 4));
         transform: matrix(1,0,0,1,-200,0);
+
+        @include mobile {
+          width: 100%;
+          height: 35vh;
+          margin-right: 0;
+        }
         
         &.project {
           opacity: 0;
@@ -923,6 +1221,12 @@
     }
     & .portfolio2 {
       @include project_flex;
+
+      @include mobile {
+        height: auto;
+        flex-wrap: wrap;
+        padding: 30px;
+      }
       @include tablet {
         height: 37vh;
         margin-top: 50px;
@@ -936,6 +1240,12 @@
         @include device_img;
         @include img(nth($projectImg, 1));
         transform: matrix(1,0,0,1,-100,0);
+
+        @include mobile {
+          width: 100%;
+          height: 35vh;
+          margin-right: 0;
+        }
         
         &.project {
           opacity: 0;
@@ -955,6 +1265,10 @@
     
     & h3 {
       @include h3;
+
+      @include mobile {
+        @include h3_m;
+      }
       @include tablet {
         font-size: map-get($map: $font_size_m, $key: title);
       }
@@ -969,6 +1283,10 @@
       display: grid;
       grid-auto-flow: column;
       grid-gap: 90px;
+
+      @include mobile {
+        grid-auto-flow: inherit;
+      }
       @include tablet {
         grid-gap: 0;
       }
@@ -1017,6 +1335,15 @@
     & .coupang {
       width: 214px;
       height: 214px;
+      margin: auto;
+      border-radius: 50%;
+      border: $line4;
+      transform: matrix(1,0,0,1,0,10);
+
+      @include mobile {
+        width: 180px;
+        height: 180px;
+      }
       @include tablet {
         width: 128px;
         height: 128px;
@@ -1025,10 +1352,6 @@
         width: 190px;
         height: 190px;
       }
-      margin: auto;
-      border-radius: 50%;
-      border: $line4;
-      transform: matrix(1,0,0,1,0,10);
       
       &.clone {
         opacity: 0;
@@ -1045,18 +1368,32 @@
       
       & img {
         @include cloneImg;
+        top: 45%;
+
+        @include mobile {
+          width: 140px;
+          top: 43%;
+        }
         @include tablet {
           width: 87px;
         }
         @include laptop {
           width: 135px;
         }
-        top: 45%;
       }
     }
     & .naver {
       width: 214px;
       height: 214px;
+      margin: auto;
+      border-radius: 50%;
+      border: $line4;
+      transform: matrix(1,0,0,1,0,40);
+
+      @include mobile {
+        width: 180px;
+        height: 180px;
+      }
       @include tablet {
         width: 128px;
         height: 128px;
@@ -1065,10 +1402,6 @@
         width: 190px;
         height: 190px;
       }
-      margin: auto;
-      border-radius: 50%;
-      border: $line4;
-      transform: matrix(1,0,0,1,0,40);
       
       &.clone {
         opacity: 0;
@@ -1084,6 +1417,12 @@
       
       & img {
         @include cloneImg;
+        top: 45%;
+
+        @include mobile {
+          width: 140px;
+          top: 43%;
+        }
         @include tablet {
           width: 87px;
           top: 40%;
@@ -1091,51 +1430,20 @@
         @include laptop {
           width: 135px;
         }
-        top: 45%;
       }
     }
     & .google {
       width: 214px;
       height: 214px;
-      @include tablet {
-        width: 128px;
-        height: 128px;
-      }
-      @include laptop {
-        width: 190px;
-        height: 190px;
-      }
       margin: auto;
       border-radius: 50%;
       border: $line4;
       transform: matrix(1,0,0,1,0,70);
       
-      &.clone {
-        opacity: 0;
-        text-align: center;
-        box-shadow: 3px 14px 30px #ddd;
-        transition: all 0.5s;
+      @include mobile {
+        width: 180px;
+        height: 180px;
       }
-      &.visible {
-        opacity: 1;
-        transform: translateX(0);
-        transition: all 0.5s;
-      }
-      
-      & img {
-        @include cloneImg;
-        @include tablet {
-          width: 87px;
-        }
-        @include laptop {
-          width: 135px;
-        }
-        top: 41%;
-      }
-    }
-    & .spotify {
-      width: 214px;
-      height: 214px;
       @include tablet {
         width: 128px;
         height: 128px;
@@ -1144,10 +1452,6 @@
         width: 190px;
         height: 190px;
       }
-      margin: auto;
-      border-radius: 50%;
-      border: $line4;
-      transform: matrix(1,0,0,1,0,100);
       
       &.clone {
         opacity: 0;
@@ -1163,13 +1467,67 @@
       
       & img {
         @include cloneImg;
+        top: 41%;
+
+        @include mobile {
+          width: 140px;
+          top: 43%;
+        }
         @include tablet {
           width: 87px;
         }
         @include laptop {
           width: 135px;
         }
+      }
+    }
+    & .spotify {
+      width: 214px;
+      height: 214px;
+      margin: auto;
+      border-radius: 50%;
+      border: $line4;
+      transform: matrix(1,0,0,1,0,100);
+
+      @include mobile {
+        width: 180px;
+        height: 180px;
+      }
+      @include tablet {
+        width: 128px;
+        height: 128px;
+      }
+      @include laptop {
+        width: 190px;
+        height: 190px;
+      }
+      
+      &.clone {
+        opacity: 0;
+        text-align: center;
+        box-shadow: 3px 14px 30px #ddd;
+        transition: all 0.5s;
+      }
+      &.visible {
+        opacity: 1;
+        transform: translateX(0);
+        transition: all 0.5s;
+      }
+      
+      & img {
+        @include cloneImg;
         top: 41%;
+
+        @include mobile {
+          width: 140px;
+          top: 43%;
+        }
+        @include tablet {
+          width: 87px;
+        }
+        @include laptop {
+          width: 135px;
+        }
       }
     }
     & .small_text {
@@ -1180,12 +1538,21 @@
       font-size: 14px;
       text-align: right;
       color: #777;
+
+      @include mobile {
+        width: 100%;
+        font-size: map-get($map: $font_size_m, $key: content1);
+      }
     }
   }
   
   #contact {
     @include sectionBasic;
     padding-bottom: 180px;
+
+    @include mobile {
+      padding-bottom: 110px;
+    }
     
     & .email_border::after {
       content: '';
@@ -1204,14 +1571,18 @@
       
       & li {
         font-size: map-get($map: $font_size, $key: content1);
+        font-weight: $font_weight_normal;
+        text-align: center;
+
+        @include mobile {
+          font-size: map-get($map: $font_size_m, $key: content1);
+        }
         @include tablet {
           font-size: map-get($map: $font_size_m, $key: content1);
         }
         @include pcfull {
           font-size: map-get($map: $font_size_pcFull, $key: content1);
         }
-        font-weight: $font_weight_normal;
-        text-align: center;
       }
     }
     & .email {
@@ -1220,27 +1591,35 @@
       
       & a {
         font-size: map-get($map: $font_size, $key: contactemail);
+        font-weight: $font_weight_bold;
+        letter-spacing: map-get($map: $letter-spacing, $key: content);
+        color: $color_point_blue;
+
+        @include mobile {
+          font-size: 18px;
+        }
         @include tablet {
           font-size: map-get($map: $font_size_m, $key: contactemail);
         }
         @include pcfull {
           font-size: map-get($map: $font_size_pcFull, $key: contactemail);
         }
-        font-weight: $font_weight_bold;
-        letter-spacing: map-get($map: $letter-spacing, $key: content);
-        color: $color_point_blue;
       }
     }
   }
 }
 .capyright p {
   font-size: map-get($map: $font_size, $key: content1);
+  font-weight: 300;
+  text-align: center;
+
+  @include mobile {
+    font-size: map-get($map: $font_size_m, $key: content1);
+  }
   @include tablet {
     font-size: map-get($map: $font_size_m, $key: content1);
   }
   @include pcfull {
     font-size: map-get($map: $font_size_pcFull, $key: content1);
   }
-  font-weight: 300;
-  text-align: center;
 }

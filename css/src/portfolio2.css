@@ -11,6 +11,12 @@
   /* #slide_menu ------------------------------ */
 }
 
+@media all and (max-width: 679px) {
+  #wrap {
+    padding: 0 10px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   #wrap {
     padding: 34px;
@@ -46,6 +52,12 @@
   height: 100%;
 }
 
+@media all and (max-width: 679px) {
+  #wrap .headinner h1 {
+    width: 80%;
+  }
+}
+
 #wrap .headinner h1 button {
   width: 100%;
   height: 100%;
@@ -59,11 +71,25 @@
   letter-spacing: 0.7em;
 }
 
+@media all and (max-width: 679px) {
+  #wrap .headinner h1 button {
+    font-size: 15px;
+  }
+}
+
 #wrap .unb {
   width: 5%;
   height: 52px;
   margin: auto;
   padding-top: 20px;
+}
+
+@media all and (max-width: 679px) {
+  #wrap .unb {
+    width: 20%;
+    height: 45px;
+    padding-top: 12px;
+  }
 }
 
 #wrap #check_box {
@@ -80,6 +106,13 @@
   cursor: pointer;
 }
 
+@media all and (max-width: 679px) {
+  #wrap #check_box + label {
+    width: 30px;
+    margin: auto 0 0 30px;
+  }
+}
+
 #wrap #check_box + label > span {
   width: 100%;
   height: 2px;
@@ -88,6 +121,12 @@
   transition: all 300ms;
   border-radius: 5px;
   background: #000;
+}
+
+@media all and (max-width: 679px) {
+  #wrap #check_box + label > span {
+    height: 1.5px;
+  }
 }
 
 #wrap :checked + label > span:nth-child(1) {
@@ -119,6 +158,12 @@
 
 #wrap #check_box:checked + label + #slide_menu {
   left: 50%;
+}
+
+@media all and (max-width: 679px) {
+  #wrap #check_box:checked + label + #slide_menu {
+    left: 0%;
+  }
 }
 
 #wrap #slide_menu {
@@ -154,6 +199,12 @@
   cursor: pointer;
 }
 
+@media all and (max-width: 679px) {
+  #wrap input[id*="slide_btn"] + label {
+    font-size: 14px;
+  }
+}
+
 #wrap input[id*="slide_btn"] + label:hover {
   background-color: #fff;
   color: #000;
@@ -172,12 +223,26 @@ main #home {
   align-items: center;
 }
 
+@media all and (max-width: 679px) {
+  main #home {
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 83px 0 100px 0;
+  }
+}
+
 main #home h2 {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.7em;
   text-transform: uppercase;
   text-align: center;
+}
+
+@media all and (max-width: 679px) {
+  main #home h2 {
+    font-size: 15px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -198,11 +263,23 @@ main #home img {
   width: 21.8056%;
 }
 
+@media all and (max-width: 679px) {
+  main #home img {
+    width: 49%;
+  }
+}
+
 main #home p {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.3em;
   text-align: center;
+}
+
+@media all and (max-width: 679px) {
+  main #home p {
+    font-size: 15px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -238,6 +315,14 @@ main #about h3 {
   color: #2B90D9;
 }
 
+@media all and (max-width: 679px) {
+  main #about h3 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 25px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #about h3 {
     font-size: 25px;
@@ -255,12 +340,25 @@ main #about .about_inner {
   flex-wrap: nowrap;
 }
 
+@media all and (max-width: 679px) {
+  main #about .about_inner {
+    flex-wrap: wrap;
+  }
+}
+
 main #about .about_left {
   width: 48%;
   height: auto;
   margin-right: 12%;
   display: flex;
   flex-wrap: wrap;
+}
+
+@media all and (max-width: 679px) {
+  main #about .about_left {
+    width: 100%;
+    margin-right: 0;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -290,6 +388,12 @@ main #about .about_left .aspiration p {
   letter-spacing: 0.1em;
 }
 
+@media all and (max-width: 679px) {
+  main #about .about_left .aspiration p {
+    font-size: 15px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #about .about_left .aspiration p {
     font-size: 15px;
@@ -313,6 +417,12 @@ main #about .about_left span {
   letter-spacing: 0.1em;
 }
 
+@media all and (max-width: 679px) {
+  main #about .about_left span {
+    font-size: 14px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #about .about_left span {
     font-size: 14px;
@@ -325,12 +435,25 @@ main #about .about_left span {
   }
 }
 
+@media all and (max-width: 679px) {
+  main #about .about_right_inner {
+    flex-wrap: wrap-reverse;
+  }
+}
+
 main #about .about_right {
   width: 40%;
   height: auto;
   margin-top: 60px;
   display: flex;
   flex-wrap: wrap;
+}
+
+@media all and (max-width: 679px) {
+  main #about .about_right {
+    width: 100%;
+    margin-top: 30px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -352,6 +475,12 @@ main #about .about_right .name p {
   color: #2B90D9;
 }
 
+@media all and (max-width: 679px) {
+  main #about .about_right .name p {
+    font-size: 14px;
+  }
+}
+
 @media all and (min-width: 1920px) {
   main #about .about_right .name p {
     font-size: 17px;
@@ -363,6 +492,12 @@ main #about .about_right .name p span {
   font-weight: 400;
   letter-spacing: 0.3em;
   color: #000;
+}
+
+@media all and (max-width: 679px) {
+  main #about .about_right .name p span {
+    font-size: 14px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -383,6 +518,12 @@ main #about .about_right .eduction {
   margin-top: 26px;
 }
 
+@media all and (max-width: 679px) {
+  main #about .about_right .eduction {
+    margin-top: 20px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #about .about_right .eduction {
     margin-top: 0;
@@ -395,6 +536,12 @@ main #about .about_right .eduction span {
   line-height: 22px;
   letter-spacing: 0.1em;
   color: #2B90D9;
+}
+
+@media all and (max-width: 679px) {
+  main #about .about_right .eduction span {
+    font-size: 15px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -414,6 +561,12 @@ main #about .about_right .eduction p {
   font-weight: 400;
   letter-spacing: 0.1em;
   color: #000;
+}
+
+@media all and (max-width: 679px) {
+  main #about .about_right .eduction p {
+    font-size: 14px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -436,6 +589,15 @@ main #about .about_button {
   line-height: 35px;
 }
 
+@media all and (max-width: 679px) {
+  main #about .about_button {
+    width: 63%;
+    height: 35px;
+    margin: auto;
+    margin-top: 26px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #about .about_button {
     width: 60%;
@@ -456,6 +618,13 @@ main #about .about_button a:nth-child(1) {
   color: #fff;
   text-align: center;
   line-height: 30px;
+}
+
+@media all and (max-width: 679px) {
+  main #about .about_button a:nth-child(1) {
+    font-size: 14px;
+    line-height: 35px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -490,6 +659,13 @@ main #about .about_button a:nth-child(2) {
   color: #fff;
   text-align: center;
   line-height: 30px;
+}
+
+@media all and (max-width: 679px) {
+  main #about .about_button a:nth-child(2) {
+    font-size: 14px;
+    line-height: 35px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -549,9 +725,15 @@ main #banner p {
   letter-spacing: 0.3em;
 }
 
+@media all and (max-width: 679px) {
+  main #banner p {
+    font-size: 80px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #banner p {
-    font-size: 90px;
+    font-size: 80px;
   }
 }
 
@@ -570,10 +752,23 @@ main #advantage .advantage_inner {
   display: flex;
 }
 
+@media all and (max-width: 679px) {
+  main #advantage .advantage_inner {
+    flex-wrap: wrap;
+  }
+}
+
 main #advantage .advantage_inner .advantage_left {
   width: 40%;
   height: auto;
   margin-right: 4%;
+}
+
+@media all and (max-width: 679px) {
+  main #advantage .advantage_inner .advantage_left {
+    width: 100%;
+    margin: auto;
+  }
 }
 
 main #advantage .advantage_inner .advantage_left h3 {
@@ -584,6 +779,14 @@ main #advantage .advantage_inner .advantage_left h3 {
   text-align: right;
   letter-spacing: 0.1em;
   color: #2B90D9;
+}
+
+@media all and (max-width: 679px) {
+  main #advantage .advantage_inner .advantage_left h3 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 25px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -609,6 +812,12 @@ main #advantage .advantage_inner .advantage_left .advantage_3d {
   background-size: 100% 100%;
 }
 
+@media all and (max-width: 679px) {
+  main #advantage .advantage_inner .advantage_left .advantage_3d {
+    display: none;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #advantage .advantage_inner .advantage_left .advantage_3d {
     margin: 190px 90px;
@@ -628,6 +837,12 @@ main #advantage .advantage_inner .advantage_right {
   flex-wrap: wrap;
 }
 
+@media all and (max-width: 679px) {
+  main #advantage .advantage_inner .advantage_right {
+    width: 100%;
+  }
+}
+
 main #advantage .advantage_inner .advantage_right .Aright_inner {
   margin-top: 20px;
 }
@@ -636,6 +851,12 @@ main #advantage .advantage_inner .advantage_right .Aright_inner p {
   font-size: 20px;
   font-weight: 700;
   text-transform: capitalize;
+}
+
+@media all and (max-width: 679px) {
+  main #advantage .advantage_inner .advantage_right .Aright_inner p {
+    font-size: 15px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -654,6 +875,12 @@ main #advantage .advantage_inner .advantage_right .Aright_inner span {
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.1em;
+}
+
+@media all and (max-width: 679px) {
+  main #advantage .advantage_inner .advantage_right .Aright_inner span {
+    font-size: 14px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -675,6 +902,12 @@ main #advantage .advantage_inner::before {
   left: 39%;
 }
 
+@media all and (max-width: 679px) {
+  main #advantage .advantage_inner::before {
+    display: none;
+  }
+}
+
 main #skill {
   width: 100%;
   height: auto;
@@ -690,6 +923,14 @@ main #skill h3 {
   letter-spacing: 0.3em;
   text-align: center;
   color: #2B90D9;
+}
+
+@media all and (max-width: 679px) {
+  main #skill h3 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 25px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -710,10 +951,21 @@ main #skill .charts {
   justify-content: center;
 }
 
+@media all and (max-width: 679px) {
+  main #skill .charts {
+    flex-wrap: wrap;
+  }
+}
+
 main #skill .charts .chart {
-  width: 79%;
-  margin: 0 20px;
+  width: 100%;
   position: relative;
+}
+
+@media all and (max-width: 679px) {
+  main #skill .charts .chart {
+    width: 100%;
+  }
 }
 
 main #skill .charts .chart h4 {
@@ -724,11 +976,19 @@ main #skill .charts .chart h4 {
   transform: translate(-50%, -50%);
 }
 
+@media all and (max-width: 679px) {
+  main #skill .charts .chart h4 {
+    font-size: 14px;
+    top: 81px;
+    left: 49px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #skill .charts .chart h4 {
     font-size: 14px;
     top: 91px;
-    left: 63px;
+    left: 57px;
   }
 }
 
@@ -738,6 +998,15 @@ main #skill .charts .chart .svg_img {
   position: absolute;
   top: 31px;
   left: 42px;
+}
+
+@media all and (max-width: 679px) {
+  main #skill .charts .chart .svg_img {
+    width: 50px;
+    height: 50px;
+    top: 21px;
+    left: 24px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -752,6 +1021,13 @@ main #skill .charts .chart .svg_img {
 main #skill .charts .chart svg {
   width: 150px;
   height: 150px;
+}
+
+@media all and (max-width: 679px) {
+  main #skill .charts .chart svg {
+    width: 100px;
+    height: 100px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -775,6 +1051,15 @@ main #skill .charts .chart svg circle {
   r: 65;
 }
 
+@media all and (max-width: 679px) {
+  main #skill .charts .chart svg circle {
+    stroke-width: 10;
+    cx: 50;
+    cy: 50;
+    r: 44;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #skill .charts .chart svg circle {
     stroke-width: 10;
@@ -788,6 +1073,13 @@ main #skill .charts .charts_inner1 {
   width: 17%;
   display: grid;
   gap: 15px;
+}
+
+@media all and (max-width: 679px) {
+  main #skill .charts .charts_inner1 {
+    width: 40%;
+    padding: 0 10px;
+  }
 }
 
 main #skill .charts .charts_inner1 .chart:nth-child(1) circle {
@@ -812,15 +1104,33 @@ main #skill .charts .chart_text1, main #skill .charts .chart_text2 {
   gap: 15px;
 }
 
+@media all and (max-width: 679px) {
+  main #skill .charts .chart_text1, main #skill .charts .chart_text2 {
+    width: 60%;
+  }
+}
+
 main #skill .charts .chart_text1 .chart_text, main #skill .charts .chart_text2 .chart_text {
   margin: 20px;
   line-height: 30px;
+}
+
+@media all and (max-width: 679px) {
+  main #skill .charts .chart_text1 .chart_text, main #skill .charts .chart_text2 .chart_text {
+    margin: 10px;
+  }
 }
 
 main #skill .charts .chart_text1 p, main #skill .charts .chart_text2 p {
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.1em;
+}
+
+@media all and (max-width: 679px) {
+  main #skill .charts .chart_text1 p, main #skill .charts .chart_text2 p {
+    font-size: 14px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -842,6 +1152,12 @@ main #skill .charts .chart_text1 p:nth-child(1), main #skill .charts .chart_text
   color: #2B90D9;
 }
 
+@media all and (max-width: 679px) {
+  main #skill .charts .chart_text1 p:nth-child(1), main #skill .charts .chart_text2 p:nth-child(1) {
+    font-size: 15px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #skill .charts .chart_text1 p:nth-child(1), main #skill .charts .chart_text2 p:nth-child(1) {
     font-size: 15px;
@@ -858,6 +1174,13 @@ main #skill .charts .charts_inner2 {
   width: 17%;
   display: grid;
   gap: 15px;
+}
+
+@media all and (max-width: 679px) {
+  main #skill .charts .charts_inner2 {
+    width: 40%;
+    padding: 0 10px;
+  }
 }
 
 main #skill .charts .charts_inner2 .chart:nth-child(1) circle {
@@ -877,9 +1200,21 @@ main #skill .charts .chart_bin {
   height: 150px;
 }
 
+@media all and (max-width: 679px) {
+  main #skill .charts .chart_bin {
+    height: 0;
+  }
+}
+
 main #skill .charts .chart_text_bin {
   height: 150px;
   border: 1px solid #fff;
+}
+
+@media all and (max-width: 679px) {
+  main #skill .charts .chart_text_bin {
+    height: 0;
+  }
 }
 
 main #project {
@@ -897,6 +1232,14 @@ main #project h3 {
   letter-spacing: 0.3em;
   text-align: center;
   color: #2B90D9;
+}
+
+@media all and (max-width: 679px) {
+  main #project h3 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 25px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -919,6 +1262,13 @@ main #project .project_inner {
 main #project .project_inner .project_text {
   width: 56%;
   transform: matrix(1, 0, 0, 1, 30, 0);
+}
+
+@media all and (max-width: 679px) {
+  main #project .project_inner .project_text {
+    width: 100%;
+    margin: 10px auto;
+  }
 }
 
 @media all and (min-width: 1920px) {
@@ -949,6 +1299,12 @@ main #project .project_inner .project_text :nth-child(1) {
   letter-spacing: 0.3em;
 }
 
+@media all and (max-width: 679px) {
+  main #project .project_inner .project_text :nth-child(1) {
+    font-size: 15px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #project .project_inner .project_text :nth-child(1) {
     font-size: 15px;
@@ -968,6 +1324,12 @@ main #project .project_inner .project_text :nth-child(2) {
   letter-spacing: 0.3em;
 }
 
+@media all and (max-width: 679px) {
+  main #project .project_inner .project_text :nth-child(2) {
+    font-size: 14px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #project .project_inner .project_text :nth-child(2) {
     font-size: 14px;
@@ -985,6 +1347,12 @@ main #project .project_inner .project_text :nth-child(3) {
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.1em;
+}
+
+@media all and (max-width: 679px) {
+  main #project .project_inner .project_text :nth-child(3) {
+    font-size: 14px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1008,6 +1376,15 @@ main #project .project_inner button {
   color: #fff;
   border-radius: 20px;
   background-color: #2B90D9;
+}
+
+@media all and (max-width: 679px) {
+  main #project .project_inner button {
+    position: relative;
+    left: 13%;
+    margin-top: 10px;
+    font-size: 14px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1038,6 +1415,14 @@ main #project .ohou {
   margin-top: 0;
 }
 
+@media all and (max-width: 679px) {
+  main #project .ohou {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #project .ohou {
     height: 37vh;
@@ -1062,6 +1447,14 @@ main #project .ohou .device_img {
   transform: matrix(1, 0, 0, 1, 30, 0);
 }
 
+@media all and (max-width: 679px) {
+  main #project .ohou .device_img {
+    width: 100%;
+    height: 35vh;
+    margin-right: 0;
+  }
+}
+
 main #project .ohou .device_img.project {
   opacity: 0;
   text-align: center;
@@ -1080,6 +1473,14 @@ main #project .ediya {
   display: flex;
   margin-top: 100px;
   padding: 0 50px;
+}
+
+@media all and (max-width: 679px) {
+  main #project .ediya {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1107,6 +1508,14 @@ main #project .ediya .device_img {
   transform: matrix(1, 0, 0, 1, -200, 0);
 }
 
+@media all and (max-width: 679px) {
+  main #project .ediya .device_img {
+    width: 100%;
+    height: 35vh;
+    margin-right: 0;
+  }
+}
+
 main #project .ediya .device_img.project {
   opacity: 0;
   text-align: center;
@@ -1125,6 +1534,14 @@ main #project .portfolio1 {
   display: flex;
   margin-top: 100px;
   padding: 0 50px;
+}
+
+@media all and (max-width: 679px) {
+  main #project .portfolio1 {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1152,6 +1569,14 @@ main #project .portfolio1 .device_img {
   transform: matrix(1, 0, 0, 1, -200, 0);
 }
 
+@media all and (max-width: 679px) {
+  main #project .portfolio1 .device_img {
+    width: 100%;
+    height: 35vh;
+    margin-right: 0;
+  }
+}
+
 main #project .portfolio1 .device_img.project {
   opacity: 0;
   text-align: center;
@@ -1170,6 +1595,14 @@ main #project .interactive {
   display: flex;
   margin-top: 100px;
   padding: 0 50px;
+}
+
+@media all and (max-width: 679px) {
+  main #project .interactive {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1197,6 +1630,14 @@ main #project .interactive .device_img {
   transform: matrix(1, 0, 0, 1, -200, 0);
 }
 
+@media all and (max-width: 679px) {
+  main #project .interactive .device_img {
+    width: 100%;
+    height: 35vh;
+    margin-right: 0;
+  }
+}
+
 main #project .interactive .device_img.project {
   opacity: 0;
   text-align: center;
@@ -1215,6 +1656,14 @@ main #project .portfolio2 {
   display: flex;
   margin-top: 100px;
   padding: 0 50px;
+}
+
+@media all and (max-width: 679px) {
+  main #project .portfolio2 {
+    height: auto;
+    flex-wrap: wrap;
+    padding: 30px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1240,6 +1689,14 @@ main #project .portfolio2 .device_img {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transform: matrix(1, 0, 0, 1, -100, 0);
+}
+
+@media all and (max-width: 679px) {
+  main #project .portfolio2 .device_img {
+    width: 100%;
+    height: 35vh;
+    margin-right: 0;
+  }
 }
 
 main #project .portfolio2 .device_img.project {
@@ -1271,6 +1728,14 @@ main #clone h3 {
   color: #2B90D9;
 }
 
+@media all and (max-width: 679px) {
+  main #clone h3 {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 25px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #clone h3 {
     font-size: 25px;
@@ -1289,6 +1754,12 @@ main #clone .clone_inner {
   display: grid;
   grid-auto-flow: column;
   grid-gap: 90px;
+}
+
+@media all and (max-width: 679px) {
+  main #clone .clone_inner {
+    grid-auto-flow: inherit;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1361,6 +1832,13 @@ main #clone .coupang {
   transform: matrix(1, 0, 0, 1, 0, 10);
 }
 
+@media all and (max-width: 679px) {
+  main #clone .coupang {
+    width: 180px;
+    height: 180px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #clone .coupang {
     width: 128px;
@@ -1394,6 +1872,13 @@ main #clone .coupang img {
   top: 45%;
 }
 
+@media all and (max-width: 679px) {
+  main #clone .coupang img {
+    width: 140px;
+    top: 43%;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #clone .coupang img {
     width: 87px;
@@ -1413,6 +1898,13 @@ main #clone .naver {
   border-radius: 50%;
   border: 5px solid #2B90D9;
   transform: matrix(1, 0, 0, 1, 0, 40);
+}
+
+@media all and (max-width: 679px) {
+  main #clone .naver {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1448,6 +1940,13 @@ main #clone .naver img {
   top: 45%;
 }
 
+@media all and (max-width: 679px) {
+  main #clone .naver img {
+    width: 140px;
+    top: 43%;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #clone .naver img {
     width: 87px;
@@ -1468,6 +1967,13 @@ main #clone .google {
   border-radius: 50%;
   border: 5px solid #2B90D9;
   transform: matrix(1, 0, 0, 1, 0, 70);
+}
+
+@media all and (max-width: 679px) {
+  main #clone .google {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1503,6 +2009,13 @@ main #clone .google img {
   top: 41%;
 }
 
+@media all and (max-width: 679px) {
+  main #clone .google img {
+    width: 140px;
+    top: 43%;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #clone .google img {
     width: 87px;
@@ -1522,6 +2035,13 @@ main #clone .spotify {
   border-radius: 50%;
   border: 5px solid #2B90D9;
   transform: matrix(1, 0, 0, 1, 0, 100);
+}
+
+@media all and (max-width: 679px) {
+  main #clone .spotify {
+    width: 180px;
+    height: 180px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1557,6 +2077,13 @@ main #clone .spotify img {
   top: 41%;
 }
 
+@media all and (max-width: 679px) {
+  main #clone .spotify img {
+    width: 140px;
+    top: 43%;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #clone .spotify img {
     width: 87px;
@@ -1579,11 +2106,24 @@ main #clone .small_text {
   color: #777;
 }
 
+@media all and (max-width: 679px) {
+  main #clone .small_text {
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
 main #contact {
   width: 100%;
   height: auto;
   padding: 50px 0;
   padding-bottom: 180px;
+}
+
+@media all and (max-width: 679px) {
+  main #contact {
+    padding-bottom: 110px;
+  }
 }
 
 main #contact .email_border::after {
@@ -1606,6 +2146,12 @@ main #contact ul li {
   font-size: 15px;
   font-weight: 500;
   text-align: center;
+}
+
+@media all and (max-width: 679px) {
+  main #contact ul li {
+    font-size: 14px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -1632,6 +2178,12 @@ main #contact .email a {
   color: #2B90D9;
 }
 
+@media all and (max-width: 679px) {
+  main #contact .email a {
+    font-size: 18px;
+  }
+}
+
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #contact .email a {
     font-size: 42px;
@@ -1648,6 +2200,12 @@ main #contact .email a {
   font-size: 15px;
   font-weight: 300;
   text-align: center;
+}
+
+@media all and (max-width: 679px) {
+  .capyright p {
+    font-size: 14px;
+  }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {

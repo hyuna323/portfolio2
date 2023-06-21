@@ -26,13 +26,28 @@ $(function(){
       const title = item.find('h4');
       const targetNum = title.attr('data-num');
       const circle = item.find('circle');
+      var strokeWidth = 0;
+
+    //  debugger;
+
+    if(screen.width < 320){
+      // debugger;
+      strokeWidth = 290;
+    } else if(screen.width < 768) {
+      strokeWidth = 325;
+    }
+    else {
+      strokeWidth = 409;
+    }
+      
   
       $({rate:0}).animate({rate:targetNum},
         {
           duration: 1500,
+
           progress: function(){
             const now = this.rate;
-            const amount = 409 - (409*now/100);
+            const amount = strokeWidth - (strokeWidth*now/100);
             console.log(now);
             title.text(Math.floor(now));
             circle.css({strokeDashoffset:amount});

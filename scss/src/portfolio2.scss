@@ -532,6 +532,7 @@
     height: auto;
     margin: auto;
     overflow: hidden;
+
     @keyframes marquee {
       0% {
         -webkit-transform: translate3d(0, 0, 0);
@@ -795,18 +796,22 @@
             transform: rotate(-90deg);
             transform-origin: 50% 50%;
             stroke-linecap: round;
-            cx: 75; 
+            cx: 75;
             cy: 75;
             r: 65;
             
             @include mobile {
               stroke-width: 10;
+              stroke-dasharray: 290;
+              stroke-dashoffset: 290;
               cx: 50; 
               cy: 50;
               r: 44;
             }
             @include tablet {
               stroke-width: 10;
+              stroke-dasharray: 325;
+              stroke-dashoffset: 325;
               cx: 60; 
               cy: 60;
               r: 50;
@@ -1034,7 +1039,6 @@
         border-radius: 20px;
         background-color: $color_point_blue;
 
-
         @include mobile {
           position: relative;
           left: 13%;
@@ -1076,7 +1080,7 @@
       & .device_img {
         @include device_img;
         @include img(nth($projectImg, 1));
-        transform: matrix(1, 0, 0, 1, 30, 0);
+        transform: matrix(1,0,0,1,-200,0);
         
         @include mobile {
           width: 100%;
@@ -1321,15 +1325,16 @@
       margin-top: 20px;
       display: block;
       font-size: map-get($map: $font_size, $key: pointtitle);
+      font-weight: $font_weight_semibold;
+      text-align: center;
+      color: $color_point_blue;
+
       @include tablet {
         font-size: map-get($map: $font_size_m, $key: pointtitle);
       }
       @include pcfull {
         font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
       }
-      font-weight: $font_weight_semibold;
-      text-align: center;
-      color: $color_point_blue;
     }
     
     & .coupang {
@@ -1366,16 +1371,17 @@
       }
       
       
-      & img {
+      & span {
         @include cloneImg;
         top: 45%;
+        margin-top: 0;
 
         @include mobile {
-          width: 140px;
           top: 43%;
         }
         @include tablet {
-          width: 87px;
+          top: 37%;
+          margin-top: 0;
         }
         @include laptop {
           width: 135px;
@@ -1415,17 +1421,17 @@
         transition: all 0.5s;
       }
       
-      & img {
+      & span {
         @include cloneImg;
+        margin-top: 0;
         top: 45%;
 
         @include mobile {
-          width: 140px;
           top: 43%;
         }
         @include tablet {
-          width: 87px;
-          top: 40%;
+          top: 37%;
+          margin-top: 0;
         }
         @include laptop {
           width: 135px;
@@ -1465,16 +1471,17 @@
         transition: all 0.5s;
       }
       
-      & img {
+      & span {
         @include cloneImg;
+        margin-top: 0;
         top: 41%;
 
         @include mobile {
-          width: 140px;
           top: 43%;
         }
         @include tablet {
-          width: 87px;
+          top: 37%;
+          margin-top: 0;
         }
         @include laptop {
           width: 135px;
@@ -1514,16 +1521,17 @@
         transition: all 0.5s;
       }
       
-      & img {
+      & span {
         @include cloneImg;
+        margin-top: 0;
         top: 41%;
 
         @include mobile {
-          width: 140px;
           top: 43%;
         }
         @include tablet {
-          width: 87px;
+          top: 37%;
+          margin-top: 0;
         }
         @include laptop {
           width: 135px;

@@ -317,9 +317,11 @@ main #about h3 {
 
 @media all and (max-width: 679px) {
   main #about h3 {
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
     font-size: 25px;
+    text-align: center;
   }
 }
 
@@ -783,9 +785,11 @@ main #advantage .advantage_inner .advantage_left h3 {
 
 @media all and (max-width: 679px) {
   main #advantage .advantage_inner .advantage_left h3 {
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
     font-size: 25px;
+    text-align: center;
   }
 }
 
@@ -927,9 +931,11 @@ main #skill h3 {
 
 @media all and (max-width: 679px) {
   main #skill h3 {
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
     font-size: 25px;
+    text-align: center;
   }
 }
 
@@ -1054,6 +1060,8 @@ main #skill .charts .chart svg circle {
 @media all and (max-width: 679px) {
   main #skill .charts .chart svg circle {
     stroke-width: 10;
+    stroke-dasharray: 290;
+    stroke-dashoffset: 290;
     cx: 50;
     cy: 50;
     r: 44;
@@ -1063,6 +1071,8 @@ main #skill .charts .chart svg circle {
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #skill .charts .chart svg circle {
     stroke-width: 10;
+    stroke-dasharray: 325;
+    stroke-dashoffset: 325;
     cx: 60;
     cy: 60;
     r: 50;
@@ -1236,9 +1246,11 @@ main #project h3 {
 
 @media all and (max-width: 679px) {
   main #project h3 {
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
     font-size: 25px;
+    text-align: center;
   }
 }
 
@@ -1444,7 +1456,7 @@ main #project .ohou .device_img {
   background-image: url(../../img/ohou_mockup.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
-  transform: matrix(1, 0, 0, 1, 30, 0);
+  transform: matrix(1, 0, 0, 1, -200, 0);
 }
 
 @media all and (max-width: 679px) {
@@ -1730,9 +1742,11 @@ main #clone h3 {
 
 @media all and (max-width: 679px) {
   main #clone h3 {
+    margin: auto;
     margin-top: 20px;
     margin-bottom: 50px;
     font-size: 25px;
+    text-align: center;
   }
 }
 
@@ -1866,27 +1880,28 @@ main #clone .coupang.visible {
   transition: all 0.5s;
 }
 
-main #clone .coupang img {
-  width: 145px;
+main #clone .coupang span {
+  font-size: 30px;
   position: relative;
   top: 45%;
+  margin-top: 0;
 }
 
 @media all and (max-width: 679px) {
-  main #clone .coupang img {
-    width: 140px;
+  main #clone .coupang span {
     top: 43%;
   }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
-  main #clone .coupang img {
-    width: 87px;
+  main #clone .coupang span {
+    top: 37%;
+    margin-top: 0;
   }
 }
 
 @media all and (min-width: 1280px) and (max-width: 1439px) {
-  main #clone .coupang img {
+  main #clone .coupang span {
     width: 135px;
   }
 }
@@ -1934,28 +1949,28 @@ main #clone .naver.visible {
   transition: all 0.5s;
 }
 
-main #clone .naver img {
-  width: 145px;
+main #clone .naver span {
+  font-size: 30px;
   position: relative;
+  margin-top: 0;
   top: 45%;
 }
 
 @media all and (max-width: 679px) {
-  main #clone .naver img {
-    width: 140px;
+  main #clone .naver span {
     top: 43%;
   }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
-  main #clone .naver img {
-    width: 87px;
-    top: 40%;
+  main #clone .naver span {
+    top: 37%;
+    margin-top: 0;
   }
 }
 
 @media all and (min-width: 1280px) and (max-width: 1439px) {
-  main #clone .naver img {
+  main #clone .naver span {
     width: 135px;
   }
 }
@@ -2003,27 +2018,28 @@ main #clone .google.visible {
   transition: all 0.5s;
 }
 
-main #clone .google img {
-  width: 145px;
+main #clone .google span {
+  font-size: 30px;
   position: relative;
+  margin-top: 0;
   top: 41%;
 }
 
 @media all and (max-width: 679px) {
-  main #clone .google img {
-    width: 140px;
+  main #clone .google span {
     top: 43%;
   }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
-  main #clone .google img {
-    width: 87px;
+  main #clone .google span {
+    top: 37%;
+    margin-top: 0;
   }
 }
 
 @media all and (min-width: 1280px) and (max-width: 1439px) {
-  main #clone .google img {
+  main #clone .google span {
     width: 135px;
   }
 }
@@ -2071,27 +2087,28 @@ main #clone .spotify.visible {
   transition: all 0.5s;
 }
 
-main #clone .spotify img {
-  width: 145px;
+main #clone .spotify span {
+  font-size: 30px;
   position: relative;
+  margin-top: 0;
   top: 41%;
 }
 
 @media all and (max-width: 679px) {
-  main #clone .spotify img {
-    width: 140px;
+  main #clone .spotify span {
     top: 43%;
   }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
-  main #clone .spotify img {
-    width: 87px;
+  main #clone .spotify span {
+    top: 37%;
+    margin-top: 0;
   }
 }
 
 @media all and (min-width: 1280px) and (max-width: 1439px) {
-  main #clone .spotify img {
+  main #clone .spotify span {
     width: 135px;
   }
 }

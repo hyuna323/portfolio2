@@ -59,4 +59,4 @@ $(function(){
 
 
 // 이력서 다운로드
-document.contect_info = '../download/publisher.pdf';
+document.contect_info = '../download/publisher_ohhyuna.pdf';

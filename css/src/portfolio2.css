@@ -240,6 +240,7 @@ main #home h2 {
 
 @media all and (max-width: 679px) {
   main #home h2 {
+    width: 100%;
     font-size: 15px;
   }
 }
@@ -277,6 +278,7 @@ main #home p {
 
 @media all and (max-width: 679px) {
   main #home p {
+    width: 100%;
     font-size: 15px;
   }
 }

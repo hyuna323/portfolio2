@@ -19,7 +19,7 @@
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
   #wrap {
-    padding: 34px;
+    padding: 10px 34px;
   }
 }
 

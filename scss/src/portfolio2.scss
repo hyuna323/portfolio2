@@ -1100,7 +1100,7 @@
         padding: 30px;
       }
       @include tablet {
-        height: 37vh;
+        height: 27vh;
         padding: 0;
       }
       @include pcfull {
@@ -1139,7 +1139,7 @@
         padding: 30px;
       }
       @include tablet {
-        height: 37vh;
+        height: 27vh;
         margin-top: 50px;
         padding: 0;
       }
@@ -1179,7 +1179,7 @@
         padding: 30px;
       }
       @include tablet {
-        height: 37vh;
+        height: 27vh;
         margin-top: 50px;
         padding: 0;
       }
@@ -1211,6 +1211,7 @@
       }
     }
     & .interactive {
+      display: none !important;
       @include project_flex;
 
       @include mobile {
@@ -1219,7 +1220,7 @@
         padding: 30px;
       }
       @include tablet {
-        height: 37vh;
+        height: 27vh;
         margin-top: 50px;
         padding: 0;
       }
@@ -1262,7 +1263,7 @@
         padding: 30px;
       }
       @include tablet {
-        height: 37vh;
+        height: 27vh;
         margin-top: 50px;
         padding: 0;
       }

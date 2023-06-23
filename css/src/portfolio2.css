@@ -5,7 +5,7 @@
   min-height: 800px;
   margin: auto;
   background-color: #fff;
-  padding: 0 162px;
+  padding: 10px 162px;
   /* header */
   /* #slide_menu ------------------------------ */
   /* #slide_menu ------------------------------ */
@@ -13,7 +13,7 @@
 
 @media all and (max-width: 679px) {
   #wrap {
-    padding: 0 10px;
+    padding: 10px;
   }
 }
 
@@ -25,7 +25,7 @@
 
 @media all and (min-width: 1280px) and (max-width: 1439px) {
   #wrap {
-    padding: 0 100px;
+    padding: 10px 100px;
   }
 }
 

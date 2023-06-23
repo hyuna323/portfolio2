@@ -26,21 +26,21 @@ function portfolio2(){
 
 // notion으로 이동
 function ohouplan(){
-  window.open("https://www.notion.so/01-71c60410f5c74f69b8b49065891e48e6?pvs=4", "_blank");
+  window.open("https://www.notion.so/ohou-5fa68ff2e8c54f198952ed052d59fb78?pvs=4", "_blank");
 }
 
 function ediyaplan(){
-  window.open("https://www.notion.so/02-3d5c4a90ba414e3da535fa7a8317be6d?pvs=4", "_blank");
+  window.open("https://www.notion.so/ediya-8fa59e47090c43059f3b8368ccf103fc?pvs=4", "_blank");
 }
 
 function portfoilo1plan(){
-  window.open("https://www.notion.so/03-1ace6e61c74a4a8aa76c130b1b3e4007?pvs=4", "_blank");
+  window.open("https://www.notion.so/portflio-ver-1-490b43c5cd96489e95c7ca61a4908a0e?pvs=4", "_blank");
 }
 
 function interactiveplan(){
-  window.open("https://www.notion.so/05-Interactive-learning-de57dfa3643c470dbfcef449f1f2003e?pvs=4", "_blank");
+  window.open("https://www.notion.so/4d3a1058e76043248b6e98fb8bce2f20?pvs=4", "_blank");
 }
 
-// function portfolio2plan(){
-//   window.open("", "_blank");
-// }
+function portfolio2plan(){
+  window.open("https://www.notion.so/portfolio-ver-2-57c000bca1264a60bca3301f9b3ad0f1?pvs=4", "_blank");
+}

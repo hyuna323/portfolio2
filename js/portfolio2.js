@@ -32,7 +32,7 @@ $(function(){
 
     if(screen.width < 320){
       // debugger;
-      strokeWidth = 290;
+      strokeWidth = 331;
     } else if(screen.width < 768) {
       strokeWidth = 325;
     }

@@ -1068,7 +1068,7 @@ main #skill .charts .chart h4 {
   main #skill .charts .chart h4 {
     font-size: 14px;
     top: 91px;
-    left: 57px;
+    left: 60px;
   }
 }
 
@@ -1093,8 +1093,8 @@ main #skill .charts .chart .svg_img {
   main #skill .charts .chart .svg_img {
     width: 50px;
     height: 50px;
-    top: 30px;
-    left: 33px;
+    top: 26px;
+    left: 35px;
   }
 }
 
@@ -1119,7 +1119,7 @@ main #skill .charts .chart svg {
 
 main #skill .charts .chart svg circle {
   fill: #dedede;
-  stroke-width: 20;
+  stroke-width: 15;
   stroke-dasharray: 409;
   stroke-dashoffset: 409;
   animation: line 2s forwards;
@@ -1136,8 +1136,8 @@ main #skill .charts .chart svg circle {
     stroke-width: 10;
     stroke-dasharray: 315;
     stroke-dashoffset: 315;
-    cx: 56;
-    cy: 56;
+    cx: 54;
+    cy: 55;
     r: 49;
   }
 }
@@ -1148,88 +1148,132 @@ main #skill .charts .chart svg circle {
     stroke-dasharray: 325;
     stroke-dashoffset: 325;
     cx: 60;
-    cy: 60;
+    cy: 61;
     r: 50;
   }
 }
 
-main #skill .charts .charts_inner1 {
-  width: 17%;
-  display: grid;
+main #skill .charts .chart_inner {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
   gap: 15px;
+}
+
+@media all and (max-width: 679px) {
+  main #skill .charts .chart_inner {
+    gap: 0;
+  }
+}
+
+@media all and (min-width: 680px) and (max-width: 1279px) {
+  main #skill .charts .chart_inner {
+    gap: 0;
+  }
+}
+
+main #skill .charts .chart {
+  width: 26.8%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media all and (max-width: 679px) {
+  main #skill .charts .chart {
+    width: 36%;
+  }
+}
+
+@media all and (min-width: 680px) and (max-width: 1279px) {
+  main #skill .charts .chart {
+    width: 34.8%;
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+main #skill .charts .charts_inner1 {
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 @media all and (max-width: 679px) {
   main #skill .charts .charts_inner1 {
-    width: 40%;
-    padding: 0 5px;
+    width: 100%;
   }
 }
 
-main #skill .charts .charts_inner1 .chart:nth-child(1) circle {
+main #skill .charts .charts_inner1 .chart_html {
   stroke: #E34F26;
+  stroke-dashoffset: 40;
 }
 
-main #skill .charts .charts_inner1 .chart:nth-child(2) circle {
+main #skill .charts .charts_inner1 .chart_css {
   stroke: #1572B6;
+  stroke-dashoffset: 40;
 }
 
-main #skill .charts .charts_inner1 .chart:nth-child(3) circle {
+main #skill .charts .charts_inner1 .chart_sass {
   stroke: #CC6699;
+  stroke-dashoffset: 120;
 }
 
-main #skill .charts .charts_inner1 .chart:nth-child(4) circle {
+main #skill .charts .charts_inner1 .chart_javascript {
   stroke: #F7DF1E;
+  stroke-dashoffset: 160;
 }
 
-main #skill .charts .chart_text1, main #skill .charts .chart_text2 {
-  width: 33%;
-  display: grid;
-  gap: 15px;
-}
-
-@media all and (max-width: 679px) {
-  main #skill .charts .chart_text1, main #skill .charts .chart_text2 {
-    width: 60%;
-  }
-}
-
-main #skill .charts .chart_text1 .chart_text, main #skill .charts .chart_text2 .chart_text {
-  margin: 20px;
+main #skill .charts .chart_text {
+  width: 70.5%;
+  text-align-last: left;
+  padding: 20px;
   line-height: 30px;
 }
 
 @media all and (max-width: 679px) {
-  main #skill .charts .chart_text1 .chart_text, main #skill .charts .chart_text2 .chart_text {
-    margin: 10px;
+  main #skill .charts .chart_text {
+    width: 64%;
+    padding: 0;
+    padding-left: 5px;
+    line-height: 20px;
   }
 }
 
-main #skill .charts .chart_text1 p, main #skill .charts .chart_text2 p {
+@media all and (min-width: 680px) and (max-width: 1279px) {
+  main #skill .charts .chart_text {
+    width: 65.2%;
+    text-align-last: left;
+    padding: 10px 0 10px 5px;
+  }
+}
+
+main #skill .charts .chart_text p {
   font-size: 15px;
   font-weight: 400;
   letter-spacing: 0.1em;
 }
 
 @media all and (max-width: 679px) {
-  main #skill .charts .chart_text1 p, main #skill .charts .chart_text2 p {
+  main #skill .charts .chart_text p {
     font-size: 14px;
   }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
-  main #skill .charts .chart_text1 p, main #skill .charts .chart_text2 p {
+  main #skill .charts .chart_text p {
     font-size: 14px;
   }
 }
 
 @media all and (min-width: 1920px) {
-  main #skill .charts .chart_text1 p, main #skill .charts .chart_text2 p {
+  main #skill .charts .chart_text p {
     font-size: 17px;
   }
 }
 
-main #skill .charts .chart_text1 p:nth-child(1), main #skill .charts .chart_text2 p:nth-child(1) {
+main #skill .charts .chart_text p:nth-child(1) {
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.1em;
@@ -1237,46 +1281,50 @@ main #skill .charts .chart_text1 p:nth-child(1), main #skill .charts .chart_text
 }
 
 @media all and (max-width: 679px) {
-  main #skill .charts .chart_text1 p:nth-child(1), main #skill .charts .chart_text2 p:nth-child(1) {
+  main #skill .charts .chart_text p:nth-child(1) {
     font-size: 15px;
   }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
-  main #skill .charts .chart_text1 p:nth-child(1), main #skill .charts .chart_text2 p:nth-child(1) {
+  main #skill .charts .chart_text p:nth-child(1) {
     font-size: 15px;
   }
 }
 
 @media all and (min-width: 1920px) {
-  main #skill .charts .chart_text1 p:nth-child(1), main #skill .charts .chart_text2 p:nth-child(1) {
+  main #skill .charts .chart_text p:nth-child(1) {
     font-size: 24px;
   }
 }
 
 main #skill .charts .charts_inner2 {
-  width: 17%;
-  display: grid;
-  gap: 15px;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 
 @media all and (max-width: 679px) {
   main #skill .charts .charts_inner2 {
-    width: 40%;
-    padding: 0 10px;
+    width: 100%;
+    margin-top: 30px;
   }
 }
 
-main #skill .charts .charts_inner2 .chart:nth-child(1) circle {
+main #skill .charts .charts_inner2 .chart_figma {
   stroke: #F24E1E;
+  stroke-dashoffset: 80;
 }
 
-main #skill .charts .charts_inner2 .chart:nth-child(2) circle {
+main #skill .charts .charts_inner2 .chart_react {
   stroke: #61DAFB;
+  stroke-dashoffset: 280;
 }
 
-main #skill .charts .charts_inner2 .chart:nth-child(3) circle {
+main #skill .charts .charts_inner2 .chart_git {
   stroke: #F05032;
+  stroke-dashoffset: 120;
 }
 
 main #skill .charts .chart_bin {
@@ -1297,7 +1345,7 @@ main #skill .charts .chart_text_bin {
 
 @media all and (max-width: 679px) {
   main #skill .charts .chart_text_bin {
-    height: 0;
+    display: none;
   }
 }
 

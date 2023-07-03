@@ -766,7 +766,7 @@
     
     & h3 {
       @include h3;
-
+  
       @include mobile {
         @include h3_m;
       }
@@ -782,7 +782,7 @@
       width: 100%;
       display: flex;
       justify-content: center;
-
+  
       @include mobile {
         flex-wrap: wrap;
       }
@@ -790,7 +790,7 @@
       & .chart {
         width: 100%;
         position: relative;
-
+  
         @include mobile {
           width: 100%;
         }
@@ -801,7 +801,7 @@
           top: 113px;
           left: 75px;
           transform: translate(-50%, -50%);
-
+  
           @include mobile {
             font-size: map-get($map: $font_size_m, $key: content1);
             top: 81px;
@@ -810,7 +810,7 @@
           @include tablet {
             font-size: map-get($map: $font_size_m, $key: content1);
             top: 91px;
-            left: 57px;
+            left: 60px;
           }
         }
         
@@ -830,14 +830,14 @@
           @include tablet {
             width: 50px;
             height: 50px;
-            top: 30px;
-            left: 33px;
+            top: 26px;
+            left: 35px;
           }
         }
         & svg {
           width: 150px;
           height: 150px;
-
+  
           @include mobile {
             width: 110px;
             height: 110px;
@@ -849,7 +849,7 @@
           
           & circle {
             fill: #dedede;
-            stroke-width: 20;
+            stroke-width: 15;
             stroke-dasharray: 409;
             stroke-dashoffset: 409;
             animation: line 2s forwards;
@@ -864,68 +864,103 @@
               stroke-width: 10;
               stroke-dasharray: 315;
               stroke-dashoffset: 315;
-              cx: 56; 
-              cy: 56;
+              cx: 54;
+              cy: 55;      
               r: 49;
             }
             @include tablet {
               stroke-width: 10;
               stroke-dasharray: 325;
               stroke-dashoffset: 325;
-              cx: 60; 
-              cy: 60;
+              cx: 60;
+              cy: 61;        
               r: 50;
             }
           }
         }
       }
-      & .charts_inner1 {
-        width: 17%;
-        display: grid;
+      .chart_inner {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
         gap: 15px;
-
+  
         @include mobile {
-          width: 40%;
-          padding: 0 5px;
+          gap: 0;
         }
         
-        & .chart:nth-child(1) circle {
+        @include tablet {
+          gap: 0;
+        }
+      }
+      .chart {
+        width: 26.8%;
+        display: flex;
+        flex-wrap: wrap;
+  
+        @include mobile {
+          width: 36%;
+        }
+  
+        @include tablet {
+          width: 34.8%;
+          display: flex;
+          flex-wrap: wrap;
+        }
+      }
+      & .charts_inner1 {
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+  
+        @include mobile {
+          width: 100%;
+          // padding: 0 5px;
+        }
+        
+        & .chart_html {
           stroke: $color_html;
+          stroke-dashoffset: 40;
         }
-        & .chart:nth-child(2) circle {
+        & .chart_css {
           stroke: $color_css;
+          stroke-dashoffset: 40;
         }
-        & .chart:nth-child(3) circle {
+        & .chart_sass {
           stroke: $color_sass;
+          stroke-dashoffset: 120;
         }
-        & .chart:nth-child(4) circle {
+        & .chart_javascript {
           stroke: $color_javascript;
+          stroke-dashoffset: 160;
         }
       }
       
-      & .chart_text1, .chart_text2 {
-        width: 33%;
-        display: grid;
-        gap: 15px;
-
+      & .chart_text {
+        width: 70.5%;
+        text-align-last: left;
+        padding: 20px;
+        line-height: 30px;
+  
         @include mobile {
-          width: 60%;
+          width: 64%;
+          padding: 0;
+          padding-left: 5px;
+          line-height: 20px;
         }
-        
-        & .chart_text {
-          margin: 20px;
-          line-height: 30px;
-
-          @include mobile {
-            margin: 10px;
-          }
+  
+        @include tablet {
+          width: 65.2%;
+          text-align-last: left;
+          padding: 10px 0 10px 5px;
         }
         
         & p {
           font-size: map-get($map: $font_size, $key: content1);
           font-weight: $font_weight_thin;
           letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-
+  
           @include mobile {
             font-size: map-get($map: $font_size_m, $key: content1);
           }
@@ -941,7 +976,7 @@
           font-weight: $font_weight_normal;
           letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
           color: $color_point_blue;
-
+  
           @include mobile {
             font-size: map-get($map: $font_size_m, $key: pointtitle);
           }
@@ -954,29 +989,34 @@
         }
       }
       & .charts_inner2 {
-        width: 17%;
-        display: grid;
-        gap: 15px;
-
+        width: 50%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+  
         @include mobile {
-          width: 40%;
-          padding: 0 10px;
+          width: 100%;
+          margin-top: 30px;
+          // padding: 0 5px;
         }
-        
-        & .chart:nth-child(1) circle {
+  
+        & .chart_figma {
           stroke: $color_figma;
+          stroke-dashoffset: 80;
         }
-        & .chart:nth-child(2) circle {
+        & .chart_react {
           stroke: $color_react;
+          stroke-dashoffset: 280;
         }
-        & .chart:nth-child(3) circle {
+        & .chart_git {
           stroke: $color_github;
+          stroke-dashoffset: 120;
         }
       }
       .chart_bin {
         width: 78.95%;
         height: 150px;
-
+  
         @include mobile {
           height: 0;
         }
@@ -984,13 +1024,15 @@
       .chart_text_bin {
         height: 150px;
         border: $line2;
-
+  
         @include mobile {
-          height: 0;
+          display: none;
+          // height: 0;
         }
       }
     }
   }
+  
   #project {
     @include sectionBasic;
     

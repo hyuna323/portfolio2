@@ -7,6 +7,8 @@
 // {
 //   font-family: $font_family_en, $font_family_common;
 // }
+
+/* 로딩 */
 .loader{
   position: fixed;
   top: 0; left: 0;
@@ -32,11 +34,12 @@
   color: #fff;
 }
 
-  
   @keyframes spin {
     0% { transform: translate(-50%, -50%) rotate(0deg); }
     100% { transform: translate(-50%, -50%) rotate(360deg); }
   }
+
+  /* 전체 레이아웃 설정 */
   #wrap {
     width: 100%;
     height: auto;
@@ -54,7 +57,7 @@
       padding: 10px 100px;
     }
     
-    /* header */
+    /* #header */
     #headBox {
       width: 100%;
       height: auto;
@@ -69,6 +72,8 @@
       margin: auto;
       box-sizing: border-box;
       display: flex;
+
+      /* logo */
       h1 {
         width: 94%;
         height: 100%;
@@ -94,6 +99,8 @@
         }
       }
     }
+
+    /* navigation */
     .unb {
       width: 6%;
       height: 52px;
@@ -140,6 +147,8 @@
         }
       }
     }
+
+    /* hamburger menu icon 첫번째 줄 */
     :checked + label > span:nth-child(1) {
       top: 50%;
       transform: translate(0, -50%);
@@ -147,7 +156,7 @@
       background-color: #fff;
     }
     
-
+    /* hamburger menu icon 두번째 줄 */
     #check_box + label > span:nth-child(2) {
       top: 50%;
       transform: translate(0, -50%);
@@ -156,6 +165,7 @@
       opacity: 0;
     }
     
+    /* hamburger menu icon 세번째 줄 */
     #check_box + label > span:nth-child(3) {
       bottom: 0;
     }
@@ -173,7 +183,7 @@
       }
     }
 
-    /* #slide_menu ------------------------------ */
+    /* #slide_menu 내부 ------------------------------ */
     #slide_menu {
       width: 100%;
       height: 100%;
@@ -207,6 +217,13 @@
         font-size: map-get($map: $font_size_m, $key: content1);
         }
 
+        a {
+          display: block;
+          width: 100%;
+          height: 30px;
+          line-height: 30px;
+        }
+
         &:hover {
           background-color: $color_white;
           color: $color_black;
@@ -215,12 +232,10 @@
       }
     }
   }
-  /* all scroll animation */
-  // .scroll {
-    //   opacity: 0;
-    //   transition: all .9s steps(20);
-    // }
+
   main {
+
+    /* #home */
     #home{
       width: 100%;
       height: 95vh;
@@ -237,6 +252,7 @@
         padding: 83px 0 100px 0;
       }
       
+      /* 이름 */
       & h2 {
         font-size: map-get($map: $font_size, $key: pointtitle);
         font-weight: $font_weight_normal;
@@ -254,6 +270,8 @@
           font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
         }
       }
+
+      /* 인물사진 */
       & img {
         display: block;
         margin: auto;
@@ -263,6 +281,8 @@
           width: 49%;
         }
       }
+
+      /* 한줄소개 */
       & p {
         font-size: map-get($map: $font_size, $key: pointtitle);
         font-weight: $font_weight_normal;
@@ -278,12 +298,15 @@
         @include pcfull {
           font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
         }
-        
+
+        /* 강조컬러 */
         span {
           color: $color_point_blue;
         }
       }
     }
+
+    /* #about */
     #about {
       @include sectionBasic;
       
@@ -323,6 +346,7 @@
           margin-right: 6%;
         }
         
+        /* 한줄소개 */
         & .aspiration {
           width: 100%;
           height: auto;
@@ -348,6 +372,8 @@
             }
           }
         }
+
+        /* 자기소개 */
         & .introduce {
           width: 100%;
         }
@@ -388,10 +414,12 @@
           margin-top: 41px;
         }
         
+        /* 이름 기본 소개 */
         & .name {
           width: 100%;
           height: auto;
           
+          /* 강조제목 */
           & p {
             font-size: map-get($map: $font_size, $key: content1);
             font-weight: $font_weight_bold;
@@ -404,7 +432,8 @@
             @include pcfull {
               font-size: map-get($map: $font_size_pcFull, $key: content1);
             }
-          
+
+          /* 내용 */
           & span {
             font-size: map-get($map: $font_size, $key: content1);
             font-weight: $font_weight_thin;
@@ -422,7 +451,8 @@
           }
         }
       }
-      
+
+      /* 학력 */
       & .eduction {
         width: 100%;
         height: auto;
@@ -434,7 +464,8 @@
         @include tablet {
           margin-top: 0;
         }
-        
+
+        /* 소제목 */
         & span {
           font-size: map-get($map: $font_size, $key: pointtitle);
           font-weight: $font_weight_bold;
@@ -452,6 +483,8 @@
             font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
           }
         }
+
+        /* 내용 */
         & p {
           font-size: map-get($map: $font_size, $key: content1);
           font-weight: $font_weight_thin;
@@ -470,6 +503,8 @@
         }
       }
     }
+
+    /* 각종 관련 사이트 이동 버튼 */
     & .about_button {
       width: 100%;
       height: 35px;
@@ -487,6 +522,7 @@
         margin-top: 0;
       }
       
+      /* 이력서 다운로드 버튼 */
       & a:nth-child(1) {
         width: 30%;
         height: 100%;
@@ -510,7 +546,8 @@
         @include pcfull {
           font-size: map-get($map: $font_size_pcFull, $key: content1);
         }
-        
+
+        /* 마우스 오버 시 */        
         &:hover {
           width: 29.1%;
           height: 31px;
@@ -521,6 +558,7 @@
         }
       }
       
+      /* git 이동 버튼 */
       & a:nth-child(2) {
         width: 30%;
         height: 100%;
@@ -543,7 +581,8 @@
         @include pcfull {
           font-size: map-get($map: $font_size_pcFull, $key: content1);
         }
-        
+
+        /* 마우스 오버 시 */
         &:hover {
           width: 29.1%;
           height: 31px;
@@ -554,6 +593,7 @@
         }
       }
 
+      /* 노션 포트폴리오 이동 버튼 */
       & a:nth-child(3) {
         width: 30%;
         height: 100%;
@@ -575,7 +615,8 @@
         @include pcfull {
           font-size: map-get($map: $font_size_pcFull, $key: content1);
         }
-        
+
+        /* 마우스 오버 시 */
         &:hover {
           width: 29.1%;
           height: 31px;
@@ -587,6 +628,8 @@
       }
     }
   }
+
+  /* #banner */
   #banner {
     width: 100%;
     height: auto;
@@ -640,11 +683,13 @@
       }
       
       &:hover{
-        animation-play-state: paused;
+        animation-play-state: paused; /* 마우스 오버 시 멈춤 */
         cursor: default;
       }
     }
   }
+
+  /* #advantage */
   #advantage {
     @include sectionBasic;
     
@@ -665,6 +710,7 @@
           margin: auto;
         }
         
+        /* 소제목 */
         & h3 {
           margin-top: 20px;
           margin-right: 60px;
@@ -687,6 +733,7 @@
           }
         }
         
+        /* 왼쪽 하단 이미지 */
         & .advantage_3d {
           width: 44.804%;
           height: 47.15%;
@@ -694,7 +741,7 @@
 
 
           @include mobile {
-            display: none;
+            display: none; /* 모바일 화면에선 비노출 */
           }
           @include tablet {
             margin: 190px 90px;
@@ -715,8 +762,11 @@
           width: 100%;
         }
         
+        /* 내용 */
         & .Aright_inner {
           margin-top: 20px;
+
+          /* 제목 */
           & p {
             font-size: map-get($map: $font_size, $key: pointtitle);
             font-weight: $font_weight_bold;
@@ -732,6 +782,8 @@
               font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
             }
           }
+
+          /* 내용 */
           & span {
             font-size: map-get($map: $font_size, $key: content1);
             font-weight: $font_weight_thin;
@@ -749,6 +801,8 @@
           }
         }
       }
+
+      /* 중간 경계선 */
       &::before {
         content: '';
         border: $line1;
@@ -761,6 +815,8 @@
       }
     }
   }
+
+  /* #skill */
   #skill {
     @include sectionBasic;
     
@@ -786,7 +842,8 @@
       @include mobile {
         flex-wrap: wrap;
       }
-      
+
+      /* 그래프 */
       & .chart {
         width: 100%;
         position: relative;
@@ -795,6 +852,7 @@
           width: 100%;
         }
         
+        /* 능력치 */
         & h4 {
           font-size: map-get($map: $font_size, $key: content1);
           position: absolute;
@@ -813,7 +871,8 @@
             left: 60px;
           }
         }
-        
+
+        /* skill 이미지 */
         & .svg_img {
           width: 64px;
           height: 64px;
@@ -834,6 +893,8 @@
             left: 35px;
           }
         }
+
+        /* skill 이미지 크기 설정 */
         & svg {
           width: 150px;
           height: 150px;
@@ -847,6 +908,7 @@
             height: 120px;
           }
           
+          /* 원형 차트 설정 */
           & circle {
             fill: #dedede;
             stroke-width: 15;
@@ -918,25 +980,29 @@
           width: 100%;
           // padding: 0 5px;
         }
-        
+        /* html */
         & .chart_html {
           stroke: $color_html;
           stroke-dashoffset: 40;
         }
+        /* css */
         & .chart_css {
           stroke: $color_css;
           stroke-dashoffset: 40;
         }
+        /* sass */
         & .chart_sass {
           stroke: $color_sass;
           stroke-dashoffset: 120;
         }
+        /* javascript */
         & .chart_javascript {
           stroke: $color_javascript;
           stroke-dashoffset: 160;
         }
       }
       
+      /* 능력치 설명 */
       & .chart_text {
         width: 70.5%;
         text-align-last: left;
@@ -971,6 +1037,8 @@
             font-size: map-get($map: $font_size_pcFull, $key: content1);
           }
         }
+
+        /* 각 skill 제목 */
         & p:nth-child(1) {
           font-size: map-get($map: $font_size, $key: pointtitle);
           font-weight: $font_weight_normal;
@@ -999,20 +1067,25 @@
           margin-top: 30px;
           // padding: 0 5px;
         }
-  
+
+        /* figma */
         & .chart_figma {
           stroke: $color_figma;
           stroke-dashoffset: 80;
         }
+        /* react */
         & .chart_react {
           stroke: $color_react;
           stroke-dashoffset: 280;
         }
+        /* git */
         & .chart_git {
           stroke: $color_github;
           stroke-dashoffset: 120;
         }
       }
+
+      /* 빈박스 */
       .chart_bin {
         width: 78.95%;
         height: 150px;
@@ -1033,6 +1106,7 @@
     }
   }
   
+  /* #project */
   #project {
     @include sectionBasic;
     
@@ -1083,6 +1157,8 @@
           width: 100%;
           height: auto;
         }
+
+        /* 프로젝트 제목 */
         :nth-child(1) {
           font-size: map-get($map: $font_size, $key: pointtitle);
           font-weight: $font_weight_bold;
@@ -1098,6 +1174,8 @@
             font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
           }
         }
+
+        /* 해시태그 특징 */
         :nth-child(2) {
           line-height: 24px;
           font-size: map-get($map: $font_size, $key: content1);
@@ -1114,6 +1192,8 @@
             font-size: map-get($map: $font_size_pcFull, $key: content1);
           }
         }
+
+        /* 프로젝트 설명 */
         :nth-child(3) {
           margin-top: 15px;
           font-size: map-get($map: $font_size, $key: content1);
@@ -1131,6 +1211,8 @@
           }
         }
       }
+
+      /* 프로젝트 이동 버튼 */
       & button {
         width: 86px;
         height: 30px;
@@ -1162,6 +1244,8 @@
         }
       }
     }
+
+    /* 오늘의집 */
     & .ohou {
       @include project_flex;
       margin-top: 0;
@@ -1178,7 +1262,7 @@
       @include pcfull {
         height: 40vh;
       }
-      
+      /* 오늘의집 프로젝트 이미지 */
       & .device_img {
         @include device_img;
         @include img(nth($projectImg, 1));
@@ -1202,6 +1286,8 @@
         }
       }
     }
+
+    /* 이디야 프로젝트 */
     & .ediya {
       @include project_flex;
 
@@ -1218,7 +1304,7 @@
       @include pcfull {
         height: 40vh;
       }
-      
+      /* 이디야 프로젝트 이미지 */
       & .device_img {
         @include device_img;
         @include img(nth($projectImg, 2));
@@ -1230,6 +1316,7 @@
           margin-right: 0;
         }
         
+        /* scroll magic */
         &.project {
           opacity: 0;
           text-align: center;
@@ -1242,6 +1329,8 @@
         }
       }
     }
+
+    /* 첫번째 프로젝트 */
     & .portfolio1 {
       @include project_flex;
 
@@ -1258,7 +1347,8 @@
       @include pcfull {
         height: 40vh;
       }
-      
+
+      /* 첫번째 프로젝트 이미지 */
       & .device_img {
         @include device_img;
         @include img(nth($projectImg, 3));
@@ -1270,6 +1360,7 @@
           margin-right: 0;
         }
         
+        /* scroll magic */
         &.project {
           opacity: 0;
           text-align: center;
@@ -1282,6 +1373,8 @@
         }
       }
     }
+
+    /* 인터랙티브 러닝 */
     & .interactive {
       display: none !important;
       @include project_flex;
@@ -1299,7 +1392,8 @@
       @include pcfull {
         height: 40vh;
       }
-      
+
+      /* 인터랙티브 러닝 이미지 */
       & .device_img {
         width: 27.756%;
         height: 100%;
@@ -1314,6 +1408,7 @@
           margin-right: 0;
         }
         
+        /* scroll magic */
         &.project {
           opacity: 0;
           text-align: center;
@@ -1326,6 +1421,8 @@
         }
       }
     }
+
+    /* 두번째 프로젝트 */
     & .portfolio2 {
       @include project_flex;
 
@@ -1343,6 +1440,7 @@
         height: 40vh;
       }
       
+      /* 두번째 프로젝트 이미지 */
       & .device_img {
         @include device_img;
         @include img(nth($projectImg, 5));
@@ -1354,6 +1452,7 @@
           margin-right: 0;
         }
         
+        /* scroll magic */
         &.project {
           opacity: 0;
           text-align: center;
@@ -1367,6 +1466,8 @@
       }
     }
   }
+
+  /* #clone */
   #clone {
     @include sectionBasic;
     
@@ -1398,6 +1499,8 @@
         grid-gap: 0;
       }
     }
+
+    /* 링크 이동 */
     & a {
       width: 100%;
       height: 100%;
@@ -1412,6 +1515,8 @@
         border-radius: 50%;
       }
     }
+
+    /* 설명 */
     & p {
       margin-top: 42px;
       font-size: map-get($map: $font_size, $key: content1);
@@ -1424,6 +1529,8 @@
       font-weight: $font_weight_thin;
       text-align: center;
     }
+    
+    /* 페이지 제목 */
     & span {
       margin-top: 20px;
       display: block;
@@ -1440,6 +1547,7 @@
       }
     }
     
+    /* 쿠팡 */
     & .coupang {
       width: 214px;
       height: 214px;
@@ -1461,6 +1569,7 @@
         height: 190px;
       }
       
+      /* scroll magic */
       &.clone {
         opacity: 0;
         text-align: center;
@@ -1472,7 +1581,6 @@
         transform: translateX(0);
         transition: all 0.5s;
       }
-      
       
       & span {
         @include cloneImg;
@@ -1491,6 +1599,8 @@
         }
       }
     }
+
+    /* 네이버 */
     & .naver {
       width: 214px;
       height: 214px;
@@ -1512,6 +1622,7 @@
         height: 190px;
       }
       
+      /* scroll magic */
       &.clone {
         opacity: 0;
         text-align: center;
@@ -1541,6 +1652,8 @@
         }
       }
     }
+
+    /* 구글 */
     & .google {
       width: 214px;
       height: 214px;
@@ -1562,6 +1675,7 @@
         height: 190px;
       }
       
+      /* scroll magic */
       &.clone {
         opacity: 0;
         text-align: center;
@@ -1591,6 +1705,8 @@
         }
       }
     }
+
+    /* 스포티파이 */
     & .spotify {
       width: 214px;
       height: 214px;
@@ -1612,6 +1728,7 @@
         height: 190px;
       }
       
+      /* scroll magic */
       &.clone {
         opacity: 0;
         text-align: center;
@@ -1641,6 +1758,8 @@
         }
       }
     }
+
+    /* 별첨 */
     & .small_text {
       display: block;
       width: 90%;
@@ -1657,6 +1776,7 @@
     }
   }
   
+  /* #contact */
   #contact {
     @include sectionBasic;
     padding-bottom: 180px;
@@ -1665,6 +1785,7 @@
       padding-bottom: 110px;
     }
     
+    /* 상단 바 */
     & .email_border::after {
       content: '';
       width: 0;
@@ -1676,6 +1797,7 @@
       display: flex;
     }
     
+    /* 인사말 */
     & ul {
       margin-bottom: 50px;
       line-height: 35px;
@@ -1696,6 +1818,8 @@
         }
       }
     }
+
+    /* 이메일 주소 */
     & .email {
       margin-top: 70px;
       text-align: center;
@@ -1719,7 +1843,9 @@
     }
   }
 }
-.capyright p {
+
+/* copyright */
+.copyright p {
   font-size: map-get($map: $font_size, $key: content1);
   font-weight: 300;
   text-align: center;

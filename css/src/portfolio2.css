@@ -1,4 +1,6 @@
+@charset "UTF-8";
 /* portfolio2.css */
+/* 로딩 */
 .loader {
   position: fixed;
   top: 0;
@@ -35,6 +37,7 @@
   }
 }
 
+/* 전체 레이아웃 설정 */
 #wrap {
   width: 100%;
   height: auto;
@@ -42,9 +45,13 @@
   margin: auto;
   background-color: #fff;
   padding: 10px 162px;
-  /* header */
+  /* #header */
+  /* navigation */
   /* #slide_menu ------------------------------ */
-  /* #slide_menu ------------------------------ */
+  /* hamburger menu icon 첫번째 줄 */
+  /* hamburger menu icon 두번째 줄 */
+  /* hamburger menu icon 세번째 줄 */
+  /* #slide_menu 내부 ------------------------------ */
 }
 
 @media all and (max-width: 679px) {
@@ -80,6 +87,7 @@
   margin: auto;
   box-sizing: border-box;
   display: flex;
+  /* logo */
 }
 
 #wrap .headinner h1 {
@@ -240,13 +248,30 @@
   }
 }
 
+#wrap input[id*="slide_btn"] + label a {
+  display: block;
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+}
+
 #wrap input[id*="slide_btn"] + label:hover {
   background-color: #fff;
   color: #000;
   font-weight: 500;
 }
 
-/* all scroll animation */
+main {
+  /* #home */
+  /* #about */
+  /* #banner */
+  /* #advantage */
+  /* #skill */
+  /* #project */
+  /* #clone */
+  /* #contact */
+}
+
 main #home {
   width: 100%;
   height: 95vh;
@@ -256,6 +281,9 @@ main #home {
   display: flex;
   justify-content: center;
   align-items: center;
+  /* 이름 */
+  /* 인물사진 */
+  /* 한줄소개 */
 }
 
 @media all and (max-width: 679px) {
@@ -310,6 +338,7 @@ main #home p {
   font-weight: 500;
   letter-spacing: 0.3em;
   text-align: center;
+  /* 강조컬러 */
 }
 
 @media all and (max-width: 679px) {
@@ -339,6 +368,7 @@ main #about {
   width: 100%;
   height: auto;
   padding: 50px 0;
+  /* 각종 관련 사이트 이동 버튼 */
 }
 
 main #about h3 {
@@ -391,6 +421,8 @@ main #about .about_left {
   margin-right: 12%;
   display: flex;
   flex-wrap: wrap;
+  /* 한줄소개 */
+  /* 자기소개 */
 }
 
 @media all and (max-width: 679px) {
@@ -486,6 +518,8 @@ main #about .about_right {
   margin-top: 74px;
   display: flex;
   flex-wrap: wrap;
+  /* 이름 기본 소개 */
+  /* 학력 */
 }
 
 @media all and (max-width: 679px) {
@@ -504,6 +538,7 @@ main #about .about_right {
 main #about .about_right .name {
   width: 100%;
   height: auto;
+  /* 강조제목 */
 }
 
 main #about .about_right .name p {
@@ -512,6 +547,7 @@ main #about .about_right .name p {
   line-height: 22px;
   letter-spacing: 0.3em;
   color: #2B90D9;
+  /* 내용 */
 }
 
 @media all and (max-width: 679px) {
@@ -555,6 +591,8 @@ main #about .about_right .eduction {
   width: 100%;
   height: auto;
   margin-top: 26px;
+  /* 소제목 */
+  /* 내용 */
 }
 
 @media all and (max-width: 679px) {
@@ -626,6 +664,9 @@ main #about .about_button {
   margin-top: 26px;
   display: flex;
   line-height: 35px;
+  /* 이력서 다운로드 버튼 */
+  /* git 이동 버튼 */
+  /* 노션 포트폴리오 이동 버튼 */
 }
 
 @media all and (max-width: 679px) {
@@ -655,6 +696,7 @@ main #about .about_button a:nth-child(1) {
   color: #fff;
   text-align: center;
   line-height: 35px;
+  /* 마우스 오버 시 */
 }
 
 @media all and (max-width: 679px) {
@@ -696,6 +738,7 @@ main #about .about_button a:nth-child(2) {
   color: #fff;
   text-align: center;
   line-height: 35px;
+  /* 마우스 오버 시 */
 }
 
 @media all and (max-width: 679px) {
@@ -736,6 +779,7 @@ main #about .about_button a:nth-child(3) {
   color: #fff;
   text-align: center;
   line-height: 35px;
+  /* 마우스 오버 시 */
 }
 
 @media all and (max-width: 679px) {
@@ -815,6 +859,7 @@ main #banner p {
 
 main #banner p:hover {
   animation-play-state: paused;
+  /* 마우스 오버 시 멈춤 */
   cursor: default;
 }
 
@@ -826,6 +871,7 @@ main #advantage {
 
 main #advantage .advantage_inner {
   display: flex;
+  /* 중간 경계선 */
 }
 
 @media all and (max-width: 679px) {
@@ -838,6 +884,8 @@ main #advantage .advantage_inner .advantage_left {
   width: 40%;
   height: auto;
   margin-right: 4%;
+  /* 소제목 */
+  /* 왼쪽 하단 이미지 */
 }
 
 @media all and (max-width: 679px) {
@@ -893,6 +941,7 @@ main #advantage .advantage_inner .advantage_left .advantage_3d {
 @media all and (max-width: 679px) {
   main #advantage .advantage_inner .advantage_left .advantage_3d {
     display: none;
+    /* 모바일 화면에선 비노출 */
   }
 }
 
@@ -913,6 +962,7 @@ main #advantage .advantage_inner .advantage_right {
   height: auto;
   display: flex;
   flex-wrap: wrap;
+  /* 내용 */
 }
 
 @media all and (max-width: 679px) {
@@ -923,6 +973,8 @@ main #advantage .advantage_inner .advantage_right {
 
 main #advantage .advantage_inner .advantage_right .Aright_inner {
   margin-top: 20px;
+  /* 제목 */
+  /* 내용 */
 }
 
 main #advantage .advantage_inner .advantage_right .Aright_inner p {
@@ -1029,6 +1081,9 @@ main #skill .charts {
   width: 100%;
   display: flex;
   justify-content: center;
+  /* 그래프 */
+  /* 능력치 설명 */
+  /* 빈박스 */
 }
 
 @media all and (max-width: 679px) {
@@ -1040,6 +1095,9 @@ main #skill .charts {
 main #skill .charts .chart {
   width: 100%;
   position: relative;
+  /* 능력치 */
+  /* skill 이미지 */
+  /* skill 이미지 크기 설정 */
 }
 
 @media all and (max-width: 679px) {
@@ -1101,6 +1159,7 @@ main #skill .charts .chart .svg_img {
 main #skill .charts .chart svg {
   width: 150px;
   height: 150px;
+  /* 원형 차트 설정 */
 }
 
 @media all and (max-width: 679px) {
@@ -1197,6 +1256,10 @@ main #skill .charts .charts_inner1 {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  /* html */
+  /* css */
+  /* sass */
+  /* javascript */
 }
 
 @media all and (max-width: 679px) {
@@ -1230,6 +1293,7 @@ main #skill .charts .chart_text {
   text-align-last: left;
   padding: 20px;
   line-height: 30px;
+  /* 각 skill 제목 */
 }
 
 @media all and (max-width: 679px) {
@@ -1303,6 +1367,9 @@ main #skill .charts .charts_inner2 {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  /* figma */
+  /* react */
+  /* git */
 }
 
 @media all and (max-width: 679px) {
@@ -1353,6 +1420,11 @@ main #project {
   width: 100%;
   height: auto;
   padding: 50px 0;
+  /* 오늘의집 */
+  /* 이디야 프로젝트 */
+  /* 첫번째 프로젝트 */
+  /* 인터랙티브 러닝 */
+  /* 두번째 프로젝트 */
 }
 
 main #project h3 {
@@ -1391,11 +1463,15 @@ main #project h3 {
 main #project .project_inner {
   display: flex;
   flex-wrap: wrap;
+  /* 프로젝트 이동 버튼 */
 }
 
 main #project .project_inner .project_text {
   width: 56%;
   transform: matrix(1, 0, 0, 1, 30, 0);
+  /* 프로젝트 제목 */
+  /* 해시태그 특징 */
+  /* 프로젝트 설명 */
 }
 
 @media all and (max-width: 679px) {
@@ -1547,6 +1623,7 @@ main #project .ohou {
   margin-top: 100px;
   padding: 0 50px;
   margin-top: 0;
+  /* 오늘의집 프로젝트 이미지 */
 }
 
 @media all and (max-width: 679px) {
@@ -1607,6 +1684,7 @@ main #project .ediya {
   display: flex;
   margin-top: 100px;
   padding: 0 50px;
+  /* 이디야 프로젝트 이미지 */
 }
 
 @media all and (max-width: 679px) {
@@ -1640,6 +1718,7 @@ main #project .ediya .device_img {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transform: matrix(1, 0, 0, 1, -200, 0);
+  /* scroll magic */
 }
 
 @media all and (max-width: 679px) {
@@ -1668,6 +1747,7 @@ main #project .portfolio1 {
   display: flex;
   margin-top: 100px;
   padding: 0 50px;
+  /* 첫번째 프로젝트 이미지 */
 }
 
 @media all and (max-width: 679px) {
@@ -1701,6 +1781,7 @@ main #project .portfolio1 .device_img {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transform: matrix(1, 0, 0, 1, -200, 0);
+  /* scroll magic */
 }
 
 @media all and (max-width: 679px) {
@@ -1730,6 +1811,7 @@ main #project .interactive {
   display: flex;
   margin-top: 100px;
   padding: 0 50px;
+  /* 인터랙티브 러닝 이미지 */
 }
 
 @media all and (max-width: 679px) {
@@ -1763,6 +1845,7 @@ main #project .interactive .device_img {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transform: matrix(1, 0, 0, 1, -200, 0);
+  /* scroll magic */
 }
 
 @media all and (max-width: 679px) {
@@ -1791,6 +1874,7 @@ main #project .portfolio2 {
   display: flex;
   margin-top: 100px;
   padding: 0 50px;
+  /* 두번째 프로젝트 이미지 */
 }
 
 @media all and (max-width: 679px) {
@@ -1824,6 +1908,7 @@ main #project .portfolio2 .device_img {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   transform: matrix(1, 0, 0, 1, -100, 0);
+  /* scroll magic */
 }
 
 @media all and (max-width: 679px) {
@@ -1850,6 +1935,14 @@ main #clone {
   width: 100%;
   height: auto;
   padding: 50px 0;
+  /* 링크 이동 */
+  /* 설명 */
+  /* 페이지 제목 */
+  /* 쿠팡 */
+  /* 네이버 */
+  /* 구글 */
+  /* 스포티파이 */
+  /* 별첨 */
 }
 
 main #clone h3 {
@@ -1967,6 +2060,7 @@ main #clone .coupang {
   border-radius: 50%;
   border: 5px solid #2B90D9;
   transform: matrix(1, 0, 0, 1, 0, 10);
+  /* scroll magic */
 }
 
 @media all and (max-width: 679px) {
@@ -2036,6 +2130,7 @@ main #clone .naver {
   border-radius: 50%;
   border: 5px solid #2B90D9;
   transform: matrix(1, 0, 0, 1, 0, 40);
+  /* scroll magic */
 }
 
 @media all and (max-width: 679px) {
@@ -2105,6 +2200,7 @@ main #clone .google {
   border-radius: 50%;
   border: 5px solid #2B90D9;
   transform: matrix(1, 0, 0, 1, 0, 70);
+  /* scroll magic */
 }
 
 @media all and (max-width: 679px) {
@@ -2174,6 +2270,7 @@ main #clone .spotify {
   border-radius: 50%;
   border: 5px solid #2B90D9;
   transform: matrix(1, 0, 0, 1, 0, 100);
+  /* scroll magic */
 }
 
 @media all and (max-width: 679px) {
@@ -2258,6 +2355,9 @@ main #contact {
   height: auto;
   padding: 50px 0;
   padding-bottom: 180px;
+  /* 상단 바 */
+  /* 인사말 */
+  /* 이메일 주소 */
 }
 
 @media all and (max-width: 679px) {
@@ -2336,26 +2436,27 @@ main #contact .email a {
   }
 }
 
-.capyright p {
+/* copyright */
+.copyright p {
   font-size: 15px;
   font-weight: 300;
   text-align: center;
 }
 
 @media all and (max-width: 679px) {
-  .capyright p {
+  .copyright p {
     font-size: 14px;
   }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
-  .capyright p {
+  .copyright p {
     font-size: 14px;
   }
 }
 
 @media all and (min-width: 1920px) {
-  .capyright p {
+  .copyright p {
     font-size: 17px;
   }
 }

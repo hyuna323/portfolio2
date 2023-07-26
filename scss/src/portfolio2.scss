@@ -1585,14 +1585,14 @@
       & span {
         @include cloneImg;
         top: 45%;
-        margin-top: 0;
+        margin: auto;
 
         @include mobile {
           top: 43%;
         }
         @include tablet {
           top: 37%;
-          margin-top: 0;
+          // margin-top: 0;
         }
         @include laptop {
           width: 135px;

@@ -2101,7 +2101,7 @@ main #clone .coupang span {
   font-size: 30px;
   position: relative;
   top: 45%;
-  margin-top: 0;
+  margin: auto;
 }
 
 @media all and (max-width: 679px) {
@@ -2113,7 +2113,6 @@ main #clone .coupang span {
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #clone .coupang span {
     top: 37%;
-    margin-top: 0;
   }
 }
 

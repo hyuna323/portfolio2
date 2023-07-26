@@ -1637,7 +1637,7 @@
       
       & span {
         @include cloneImg;
-        margin-top: 0;
+        margin: auto;
         top: 45%;
 
         @include mobile {
@@ -1645,7 +1645,6 @@
         }
         @include tablet {
           top: 37%;
-          margin-top: 0;
         }
         @include laptop {
           width: 135px;
@@ -1690,7 +1689,7 @@
       
       & span {
         @include cloneImg;
-        margin-top: 0;
+        margin: auto;
         top: 41%;
 
         @include mobile {
@@ -1698,7 +1697,6 @@
         }
         @include tablet {
           top: 37%;
-          margin-top: 0;
         }
         @include laptop {
           width: 135px;
@@ -1743,7 +1741,7 @@
       
       & span {
         @include cloneImg;
-        margin-top: 0;
+        margin: auto;
         top: 41%;
 
         @include mobile {
@@ -1751,7 +1749,6 @@
         }
         @include tablet {
           top: 37%;
-          margin-top: 0;
         }
         @include laptop {
           width: 135px;

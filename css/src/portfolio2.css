@@ -2169,7 +2169,7 @@ main #clone .naver.visible {
 main #clone .naver span {
   font-size: 30px;
   position: relative;
-  margin-top: 0;
+  margin: auto;
   top: 45%;
 }
 
@@ -2182,7 +2182,6 @@ main #clone .naver span {
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #clone .naver span {
     top: 37%;
-    margin-top: 0;
   }
 }
 
@@ -2239,7 +2238,7 @@ main #clone .google.visible {
 main #clone .google span {
   font-size: 30px;
   position: relative;
-  margin-top: 0;
+  margin: auto;
   top: 41%;
 }
 
@@ -2252,7 +2251,6 @@ main #clone .google span {
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #clone .google span {
     top: 37%;
-    margin-top: 0;
   }
 }
 
@@ -2309,7 +2307,7 @@ main #clone .spotify.visible {
 main #clone .spotify span {
   font-size: 30px;
   position: relative;
-  margin-top: 0;
+  margin: auto;
   top: 41%;
 }
 
@@ -2322,7 +2320,6 @@ main #clone .spotify span {
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #clone .spotify span {
     top: 37%;
-    margin-top: 0;
   }
 }
 

@@ -48,7 +48,7 @@
     background-color: $color_white;
     padding: 10px 162px;
     @include mobile {
-      padding: 10px;
+      padding: 0 20px;
     }
     @include tablet {
       padding: 10px 34px;
@@ -79,7 +79,8 @@
         height: 100%;
 
         @include mobile {
-          width: 80%;
+          width: 91%;
+          margin-left: 9px;
         }
 
         & button {
@@ -108,7 +109,7 @@
       padding-top: 20px;
 
       @include mobile {
-        width: 20%;
+        width: 9%;
         height: 45px;
         padding-top: 12px;
       }
@@ -129,7 +130,7 @@
 
         @include mobile {
           width: 30px;
-          margin: auto 0 0 30px;
+          // margin: auto 0 0 30px;
         }
 
         > span {
@@ -946,26 +947,29 @@
         display: flex;
         flex-wrap: wrap;
         gap: 15px;
-  
+        
         @include mobile {
           gap: 0;
         }
         
         @include tablet {
           gap: 0;
+          height: 140px;
         }
       }
       .chart {
-        width: 26.8%;
+        width: 27.3%;
         display: flex;
         flex-wrap: wrap;
   
         @include mobile {
-          width: 36%;
+          width: 40%;
+          margin: auto;
         }
   
         @include tablet {
-          width: 34.8%;
+          width: 116px;
+          margin: auto;
           display: flex;
           flex-wrap: wrap;
         }
@@ -1004,22 +1008,24 @@
       
       /* 능력치 설명 */
       & .chart_text {
-        width: 70.5%;
+        width: 69.9%;
+        margin: auto;
         text-align-last: left;
-        padding: 20px;
         line-height: 30px;
   
         @include mobile {
-          width: 64%;
+          width: 60%;
+          margin: auto;
           padding: 0;
           padding-left: 5px;
           line-height: 20px;
         }
   
         @include tablet {
-          width: 65.2%;
+          width: 190px;
           text-align-last: left;
-          padding: 10px 0 10px 5px;
+          margin: auto;
+          padding-left: 10px;
         }
         
         & p {
@@ -1256,11 +1262,11 @@
         padding: 30px;
       }
       @include tablet {
-        height: 27vh;
+        height: 25vh;
         padding: 0;
       }
       @include pcfull {
-        height: 40vh;
+        // height: 40vh;
       }
       /* 오늘의집 프로젝트 이미지 */
       & .device_img {
@@ -1270,7 +1276,7 @@
         
         @include mobile {
           width: 100%;
-          height: 35vh;
+          height: 32vh;
           margin-right: 0;
         }
         
@@ -1280,6 +1286,7 @@
           transition: all 1s;
         }
         &.visible {
+          margin: auto;
           opacity: 1;
           transform: translateX(0);
           transition: all 1s;
@@ -1297,7 +1304,7 @@
         padding: 30px;
       }
       @include tablet {
-        height: 27vh;
+        height: 25vh;
         margin-top: 50px;
         padding: 0;
       }
@@ -1312,7 +1319,7 @@
 
         @include mobile {
           width: 100%;
-          height: 35vh;
+          height: 32vh;
           margin-right: 0;
         }
         
@@ -1323,6 +1330,7 @@
           transition: all 1s;
         }
         &.visible {
+          margin: auto;
           opacity: 1;
           transform: translateX(0);
           transition: all 1s;
@@ -1340,7 +1348,7 @@
         padding: 30px;
       }
       @include tablet {
-        height: 27vh;
+        height: 25vh;
         margin-top: 50px;
         padding: 0;
       }
@@ -1356,7 +1364,7 @@
 
         @include mobile {
           width: 100%;
-          height: 35vh;
+          height: 32vh;
           margin-right: 0;
         }
         
@@ -1367,6 +1375,7 @@
           transition: all 1s;
         }
         &.visible {
+          margin: auto;
           opacity: 1;
           transform: translateX(0);
           transition: all 1s;
@@ -1385,7 +1394,7 @@
         padding: 30px;
       }
       @include tablet {
-        height: 27vh;
+        height: 25vh;
         margin-top: 50px;
         padding: 0;
       }
@@ -1404,7 +1413,7 @@
 
         @include mobile {
           width: 100%;
-          height: 35vh;
+          height: 32vh;
           margin-right: 0;
         }
         
@@ -1415,6 +1424,7 @@
           transition: all 1s;
         }
         &.visible {
+          margin: auto;
           opacity: 1;
           transform: translateX(0);
           transition: all 1s;
@@ -1432,7 +1442,7 @@
         padding: 30px;
       }
       @include tablet {
-        height: 27vh;
+        height: 25vh;
         margin-top: 50px;
         padding: 0;
       }
@@ -1448,7 +1458,7 @@
 
         @include mobile {
           width: 100%;
-          height: 35vh;
+          height: 32vh;
           margin-right: 0;
         }
         
@@ -1459,6 +1469,7 @@
           transition: all 1s;
         }
         &.visible {
+          margin: auto;
           opacity: 1;
           transform: translateX(0);
           transition: all 1s;

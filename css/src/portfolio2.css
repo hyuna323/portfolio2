@@ -443,6 +443,7 @@ main #about .about_left .aspiration {
   width: 100%;
   height: auto;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
@@ -453,6 +454,7 @@ main #about .about_left .aspiration {
 
 main #about .about_left .aspiration p {
   width: 100%;
+  line-height: 30px;
   font-size: 20px;
   font-weight: 500;
   color: #2B90D9;
@@ -520,6 +522,8 @@ main #about .about_right {
   flex-wrap: wrap;
   /* 이름 기본 소개 */
   /* 학력 */
+  /* 소제목 */
+  /* 내용 */
 }
 
 @media all and (max-width: 679px) {
@@ -636,6 +640,7 @@ main #about .about_right .eduction span {
 main #about .about_right .eduction p {
   font-size: 15px;
   font-weight: 400;
+  line-height: 22px;
   letter-spacing: 0.1em;
   color: #000;
 }
@@ -654,6 +659,76 @@ main #about .about_right .eduction p {
 
 @media all and (min-width: 1920px) {
   main #about .about_right .eduction p {
+    font-size: 17px;
+  }
+}
+
+main #about .about_right .work {
+  width: 100%;
+  height: auto;
+  margin-top: 26px;
+}
+
+@media all and (max-width: 679px) {
+  main #about .about_right .work {
+    margin-top: 20px;
+  }
+}
+
+@media all and (min-width: 680px) and (max-width: 1279px) {
+  main #about .about_right .work {
+    margin-top: 0;
+  }
+}
+
+main #about .about_right span {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  color: #2B90D9;
+}
+
+@media all and (max-width: 679px) {
+  main #about .about_right span {
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 680px) and (max-width: 1279px) {
+  main #about .about_right span {
+    font-size: 15px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  main #about .about_right span {
+    font-size: 24px;
+  }
+}
+
+main #about .about_right p {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 22px;
+  letter-spacing: 0.1em;
+  color: #000;
+}
+
+@media all and (max-width: 679px) {
+  main #about .about_right p {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 680px) and (max-width: 1279px) {
+  main #about .about_right p {
+    font-size: 14px;
+  }
+}
+
+@media all and (min-width: 1920px) {
+  main #about .about_right p {
     font-size: 17px;
   }
 }

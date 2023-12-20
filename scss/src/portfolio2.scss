@@ -46,7 +46,7 @@
     min-height: 800px;
     margin: auto;
     background-color: $color_white;
-    padding: 10px 162px;
+    padding: 0 34px 10px 34px;;
     @include mobile {
       padding: 0 20px;
     }
@@ -87,6 +87,7 @@
           width: 100%;
           height: 100%;
           margin: auto;
+          margin-top: 10px;
           color: $color_point_blue;
           font-family: $font_family_en;
           font-size: map-get($map:$font_size , $key:pointtitle);
@@ -1193,13 +1194,14 @@
       & .project_text {
         width: 56%;
         transform: matrix(1, 0, 0, 1, 30, 0);
+        margin: auto;
 
         @include mobile {
           width: 100%;
           margin: 10px auto;
         }
         @include pcfull {
-          margin: auto 0;
+          // margin: auto 0;
         }
         
         &.project {
@@ -1254,10 +1256,11 @@
 
         /* 프로젝트 설명 */
         :nth-child(3) {
-          margin-top: 15px;
+          margin-top: 22px;
           font-size: map-get($map: $font_size, $key: content1);
           font-weight: $font_weight_thin;
           letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+          line-height: 20px;
 
           @include mobile {
             font-size: map-get($map: $font_size_m, $key: content1);
@@ -1273,9 +1276,10 @@
 
       /* 프로젝트 이동 버튼 */
       & button {
-        width: 86px;
-        height: 30px;
-        margin-top: 40px;
+        width: 49%;
+        height: 34px;
+        margin-top: 22px;
+        // left: 13%;
         font-size: map-get($map: $font_size, $key: content1);
         font-weight: $font_weight_normal;
         color: $color_white;
@@ -1283,9 +1287,10 @@
         background-color: $color_point_blue;
 
         @include mobile {
+          width: 48%;
           position: relative;
-          left: 13%;
-          margin-top: 10px;
+          // left: 25%;
+          // margin-top: 22px;
           font-size: map-get($map: $font_size_m, $key: content1);
         }
         @include tablet {
@@ -1312,14 +1317,20 @@
       @include mobile {
         height: auto;
         flex-wrap: wrap;
-        padding: 30px;
+        // padding: 30px;
       }
       @include tablet {
-        height: 25vh;
+        height: 180px;
         padding: 0;
       }
+      @include laptop {
+        height: 242px;
+      }
+      @include pc {
+        height: 240px;
+      }
       @include pcfull {
-        // height: 40vh;
+        height: 270px;
       }
       /* 오늘의집 프로젝트 이미지 */
       & .device_img {
@@ -1329,10 +1340,23 @@
         
         @include mobile {
           width: 100%;
-          height: 32vh;
+          height: 210px;
           margin-right: 0;
         }
-        
+
+        @include tablet {
+          width: 35%;
+        }
+
+        @include laptop {
+          width: 30%;
+        }
+        @include pc {
+          width: 30%;
+        }
+        @include pcfull {
+          width: 30%;
+        }
         &.project {
           opacity: 0;
           text-align: center;
@@ -1354,28 +1378,46 @@
       @include mobile {
         height: auto;
         flex-wrap: wrap;
-        padding: 30px;
+        // padding: 30px;
       }
       @include tablet {
-        height: 25vh;
+        height: 180px;
         margin-top: 50px;
         padding: 0;
       }
+      @include laptop {
+        height: 242px;
+      }
+      @include pc {
+        height: 240px;
+      }
       @include pcfull {
-        height: 40vh;
+        height: 270px;
       }
       /* 이디야 프로젝트 이미지 */
       & .device_img {
         @include device_img;
+        // width: 40%;
         @include img(nth($projectImg, 2));
         transform: matrix(1,0,0,1,-200,0);
 
         @include mobile {
           width: 100%;
-          height: 32vh;
+          height: 210px;
           margin-right: 0;
         }
-        
+        @include tablet {
+          width: 35%;
+        }
+        @include laptop {
+          width: 30%;
+        }
+        @include pc {
+          width: 30%;
+        }
+        @include pcfull {
+          width: 30%;
+        }
         /* scroll magic */
         &.project {
           opacity: 0;
@@ -1401,26 +1443,44 @@
         padding: 30px;
       }
       @include tablet {
-        height: 25vh;
+        height: 180px;
         margin-top: 50px;
         padding: 0;
       }
+      @include laptop {
+        height: 242px;
+      }
+      @include pc {
+        height: 240px;
+      }
       @include pcfull {
-        height: 40vh;
+        height: 270px;
       }
 
       /* 첫번째 프로젝트 이미지 */
       & .device_img {
         @include device_img;
+        width: 40%;
         @include img(nth($projectImg, 3));
         transform: matrix(1,0,0,1,-200,0);
 
         @include mobile {
           width: 100%;
-          height: 32vh;
+          height: 210px;
           margin-right: 0;
         }
-        
+        @include tablet {
+          width: 35%;
+        }
+        @include laptop {
+          width: 30%;
+        }
+        @include pc {
+          width: 30%;
+        }
+        @include pcfull {
+          width: 30%;
+        }
         /* scroll magic */
         &.project {
           opacity: 0;
@@ -1447,9 +1507,12 @@
         padding: 30px;
       }
       @include tablet {
-        height: 25vh;
+        // height: 25vh;
         margin-top: 50px;
         padding: 0;
+      }
+      @include laptop {
+        height: 242px;
       }
       @include pcfull {
         height: 40vh;
@@ -1495,26 +1558,44 @@
         padding: 30px;
       }
       @include tablet {
-        height: 25vh;
+        height: 180px;
         margin-top: 50px;
         padding: 0;
       }
+      @include laptop {
+        height: 242px;
+      }
+      @include pc {
+        height: 240px;
+      }
       @include pcfull {
-        height: 40vh;
+        height: 270px;
       }
       
       /* 두번째 프로젝트 이미지 */
       & .device_img {
         @include device_img;
+        width: 40%;
         @include img(nth($projectImg, 5));
         transform: matrix(1,0,0,1,-100,0);
-
+        
         @include mobile {
           width: 100%;
-          height: 32vh;
+          height: 210px;
           margin-right: 0;
         }
-        
+        @include tablet {
+          width: 35%;
+        }
+        @include laptop {
+          width: 30%;
+        }
+        @include pc {
+          width: 30%;
+        }
+        @include pcfull {
+          width: 30%;
+        }
         /* scroll magic */
         &.project {
           opacity: 0;

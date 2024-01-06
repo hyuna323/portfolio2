@@ -30,7 +30,7 @@
   position: absolute;
   top: 50%;
   left: 48%;
-  margin: -40px 0 0 -40px;
+  margin: -50px 0 0 -50px;
   color: #fff;
 }
 
@@ -890,11 +890,15 @@
     }
     
     & .charts {
-      width: 100%;
+      width: 79%;
+      margin: auto;
       display: flex;
       justify-content: center;
+      align-items: center;
+      min-height: 100vh;
   
       @include mobile {
+        width: 100%;
         flex-wrap: wrap;
       }
 
@@ -1143,24 +1147,9 @@
           stroke: $color_github;
           stroke-dashoffset: 120;
         }
-      }
-
-      /* 빈박스 */
-      .chart_bin {
-        width: 78.95%;
-        height: 150px;
-  
-        @include mobile {
-          height: 0;
-        }
-      }
-      .chart_text_bin {
-        height: 150px;
-        border: $line2;
-  
-        @include mobile {
-          display: none;
-          // height: 0;
+        & .chart_jquery {
+          stroke: $color_javascript;
+          stroke-dashoffset: 320;
         }
       }
     }
@@ -1186,6 +1175,7 @@
     & .project_inner {
       display: flex;
       flex-wrap: wrap;
+      gap: 100px;
 
       // @include mobile {
       //   display: none;
@@ -1193,7 +1183,7 @@
       
       & .project_text {
         width: 56%;
-        transform: matrix(1, 0, 0, 1, 30, 0);
+        transform: matrix(1, 0, 0, 1, 10, 0);
         margin: auto;
 
         @include mobile {
@@ -1374,6 +1364,7 @@
     /* 이디야 프로젝트 */
     & .ediya {
       @include project_flex;
+      margin-top: 0;
 
       @include mobile {
         height: auto;
@@ -1382,7 +1373,6 @@
       }
       @include tablet {
         height: 180px;
-        margin-top: 50px;
         padding: 0;
       }
       @include laptop {
@@ -1436,15 +1426,15 @@
     /* 첫번째 프로젝트 */
     & .portfolio1 {
       @include project_flex;
+      margin-top: 0;
 
       @include mobile {
         height: auto;
         flex-wrap: wrap;
-        padding: 30px;
+        // padding: 30px;
       }
       @include tablet {
         height: 180px;
-        margin-top: 50px;
         padding: 0;
       }
       @include laptop {
@@ -1551,15 +1541,15 @@
     /* 두번째 프로젝트 */
     & .portfolio2 {
       @include project_flex;
+      margin-top: 0;
 
       @include mobile {
         height: auto;
         flex-wrap: wrap;
-        padding: 30px;
+        // padding: 30px;
       }
       @include tablet {
         height: 180px;
-        margin-top: 50px;
         padding: 0;
       }
       @include laptop {
@@ -1913,7 +1903,7 @@
 
       @include mobile {
         width: 100%;
-        font-size: map-get($map: $font_size_m, $key: content1);
+        font-size: 13px;
       }
     }
   }
@@ -1969,7 +1959,7 @@
       & a {
         font-size: map-get($map: $font_size, $key: contactemail);
         font-weight: $font_weight_bold;
-        letter-spacing: map-get($map: $letter-spacing, $key: content);
+        letter-spacing: 0.2em;
         color: $color_point_blue;
 
         @include mobile {
@@ -1981,6 +1971,9 @@
         @include pcfull {
           font-size: map-get($map: $font_size_pcFull, $key: contactemail);
         }
+      }
+      .highlight {
+        width: auto;
       }
     }
   }

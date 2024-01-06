@@ -24,7 +24,7 @@
   position: absolute;
   top: 50%;
   left: 48%;
-  margin: -40px 0 0 -40px;
+  margin: -50px 0 0 -50px;
   color: #fff;
 }
 
@@ -1154,16 +1154,19 @@ main #skill h3 {
 }
 
 main #skill .charts {
-  width: 100%;
+  width: 79%;
+  margin: auto;
   display: flex;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh;
   /* 그래프 */
   /* 능력치 설명 */
-  /* 빈박스 */
 }
 
 @media all and (max-width: 679px) {
   main #skill .charts {
+    width: 100%;
     flex-wrap: wrap;
   }
 }
@@ -1475,26 +1478,9 @@ main #skill .charts .charts_inner2 .chart_git {
   stroke-dashoffset: 120;
 }
 
-main #skill .charts .chart_bin {
-  width: 78.95%;
-  height: 150px;
-}
-
-@media all and (max-width: 679px) {
-  main #skill .charts .chart_bin {
-    height: 0;
-  }
-}
-
-main #skill .charts .chart_text_bin {
-  height: 150px;
-  border: 1px solid #fff;
-}
-
-@media all and (max-width: 679px) {
-  main #skill .charts .chart_text_bin {
-    display: none;
-  }
+main #skill .charts .charts_inner2 .chart_jquery {
+  stroke: #F7DF1E;
+  stroke-dashoffset: 320;
 }
 
 main #project {
@@ -1544,12 +1530,13 @@ main #project h3 {
 main #project .project_inner {
   display: flex;
   flex-wrap: wrap;
+  gap: 100px;
   /* 프로젝트 이동 버튼 */
 }
 
 main #project .project_inner .project_text {
   width: 56%;
-  transform: matrix(1, 0, 0, 1, 30, 0);
+  transform: matrix(1, 0, 0, 1, 10, 0);
   margin: auto;
   /* 프로젝트 제목 */
   /* 해시태그 특징 */
@@ -1791,6 +1778,7 @@ main #project .ediya {
   width: 100%;
   display: flex;
   margin-top: 100px;
+  margin-top: 0;
   /* 이디야 프로젝트 이미지 */
 }
 
@@ -1804,7 +1792,6 @@ main #project .ediya {
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #project .ediya {
     height: 180px;
-    margin-top: 50px;
     padding: 0;
   }
 }
@@ -1887,6 +1874,7 @@ main #project .portfolio1 {
   width: 100%;
   display: flex;
   margin-top: 100px;
+  margin-top: 0;
   /* 첫번째 프로젝트 이미지 */
 }
 
@@ -1894,14 +1882,12 @@ main #project .portfolio1 {
   main #project .portfolio1 {
     height: auto;
     flex-wrap: wrap;
-    padding: 30px;
   }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #project .portfolio1 {
     height: 180px;
-    margin-top: 50px;
     padding: 0;
   }
 }
@@ -2053,6 +2039,7 @@ main #project .portfolio2 {
   width: 100%;
   display: flex;
   margin-top: 100px;
+  margin-top: 0;
   /* 두번째 프로젝트 이미지 */
 }
 
@@ -2060,14 +2047,12 @@ main #project .portfolio2 {
   main #project .portfolio2 {
     height: auto;
     flex-wrap: wrap;
-    padding: 30px;
   }
 }
 
 @media all and (min-width: 680px) and (max-width: 1279px) {
   main #project .portfolio2 {
     height: 180px;
-    margin-top: 50px;
     padding: 0;
   }
 }
@@ -2558,7 +2543,7 @@ main #clone .small_text {
 @media all and (max-width: 679px) {
   main #clone .small_text {
     width: 100%;
-    font-size: 14px;
+    font-size: 13px;
   }
 }
 
@@ -2626,7 +2611,7 @@ main #contact .email {
 main #contact .email a {
   font-size: 62px;
   font-weight: 700;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.2em;
   color: #2B90D9;
 }
 
@@ -2646,6 +2631,10 @@ main #contact .email a {
   main #contact .email a {
     font-size: 64px;
   }
+}
+
+main #contact .email .highlight {
+  width: auto;
 }
 
 /* copyright */

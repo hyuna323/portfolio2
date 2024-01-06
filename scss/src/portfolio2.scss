@@ -327,6 +327,8 @@
       & .about_inner{
         display: flex;
         flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
 
         @include mobile {
           flex-wrap: wrap;
@@ -335,7 +337,7 @@
       & .about_left {
         width: 48%;
         height: auto;
-        margin-right: 12%;
+        margin-right: 3%;
         display: flex;
         flex-wrap: wrap;
 
@@ -520,43 +522,42 @@
           margin-top: 0;
         }
       }
-              /* 소제목 */
-              & span {
-                font-size: map-get($map: $font_size, $key: pointtitle);
-                font-weight: $font_weight_bold;
-                line-height: 22px;
-                letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-                color: $color_point_blue;
-      
-                @include mobile {
-                  font-size: map-get($map: $font_size_m, $key: pointtitle);
-                }
-                @include tablet {
-                  font-size: map-get($map: $font_size_m, $key: pointtitle);
-                }
-                @include pcfull {
-                  font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
-                }
-              }
-      
-              /* 내용 */
-              & p {
-                font-size: map-get($map: $font_size, $key: content1);
-                font-weight: $font_weight_thin;
-                line-height: 22px;
-                letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
-                color: $color_black;
-      
-                @include mobile {
-                  font-size: map-get($map: $font_size_m, $key: content1);
-                }
-                @include tablet {
-                  font-size: map-get($map: $font_size_m, $key: content1);
-                }
-                @include pcfull {
-                  font-size: map-get($map: $font_size_pcFull, $key: content1);
-                }
-              }
+      /* 소제목 */
+      & span {
+        font-size: map-get($map: $font_size, $key: pointtitle);
+        font-weight: $font_weight_bold;
+        line-height: 22px;
+        letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+        color: $color_point_blue;
+
+        @include mobile {
+          font-size: map-get($map: $font_size_m, $key: pointtitle);
+        }
+        @include tablet {
+          font-size: map-get($map: $font_size_m, $key: pointtitle);
+        }
+        @include pcfull {
+          font-size: map-get($map: $font_size_pcFull, $key: pointtitle);
+        }
+      }
+
+      /* 내용 */
+      & p {
+        font-size: map-get($map: $font_size, $key: content1);
+        font-weight: $font_weight_thin;
+        line-height: 22px;
+        letter-spacing: map-get($map: $letter-spacing, $key: content_kr);
+        color: $color_black;
+        @include mobile {
+          font-size: map-get($map: $font_size_m, $key: content1);
+        }
+        @include tablet {
+          font-size: map-get($map: $font_size_m, $key: content1);
+        }
+        @include pcfull {
+          font-size: map-get($map: $font_size_pcFull, $key: content1);
+        }
+      }
     }
 
     /* 각종 관련 사이트 이동 버튼 */

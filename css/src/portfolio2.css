@@ -408,6 +408,8 @@ main #about h3 {
 main #about .about_inner {
   display: flex;
   flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 
 @media all and (max-width: 679px) {
@@ -419,7 +421,7 @@ main #about .about_inner {
 main #about .about_left {
   width: 48%;
   height: auto;
-  margin-right: 12%;
+  margin-right: 3%;
   display: flex;
   flex-wrap: wrap;
   /* 한줄소개 */
